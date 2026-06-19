@@ -281,23 +281,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==========================================================================
-       METHODOLOGY TIMELINE STEP REVEAL
+       METHODOLOGY TIMELINE STEP REVEAL (Progressive per-step)
        ========================================================================== */
-    const methodologySec = document.getElementById('methodology');
     const methodSteps = document.querySelectorAll('.method-timeline-step');
     
-    if (methodologySec && methodSteps.length > 0) {
+    if (methodSteps.length > 0) {
         const stepObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    methodSteps.forEach(step => {
-                        step.classList.add('reveal-visible');
-                    });
+                    entry.target.classList.add('reveal-visible');
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.15 });
+        }, { threshold: 0.2, rootMargin: '0px 0px -60px 0px' });
 
-        stepObserver.observe(methodologySec);
+        methodSteps.forEach(step => stepObserver.observe(step));
     }
 });
