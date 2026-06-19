@@ -1,0 +1,24 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background circle so spokes are visible in browser tabs -->
+  <circle cx="50" cy="50" r="50" fill="#0F100F"/>
+
+  <!-- Spokes in brand yellow -->
+  <g stroke="#F4E723" stroke-width="8" stroke-linecap="round">
+    <line x1="68" y1="50" x2="88" y2="50"/>
+    <line x1="68" y1="50" x2="88" y2="50" transform="rotate(30 50 50)"/>
+    <line x1="68" y1="50" x2="88" y2="50" transform="rotate(60 50 50)"/>
+    <line x1="68" y1="50" x2="88" y2="50" transform="rotate(90 50 50)"/>
+    <line x1="68" y1="50" x2="88" y2="50" transform="rotate(120 50 50)"/>
+    <line x1="68" y1="50" x2="88" y2="50" transform="rotate(150 50 50)"/>
+    <line x1="68" y1="50" x2="88" y2="50" transform="rotate(180 50 50)"/>
+    <line x1="68" y1="50" x2="88" y2="50" transform="rotate(210 50 50)"/>
+    <line x1="68" y1="50" x2="88" y2="50" transform="rotate(240 50 50)"/>
+    <line x1="68" y1="50" x2="88" y2="50" transform="rotate(270 50 50)"/>
+  </g>
+
+  <!-- Arrow in white, rotated -45° -->
+  <g stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" transform="rotate(-45 50 50)">
+    <line x1="56" y1="50" x2="84" y2="50"/>
+    <path d="M 72 38 L 86 50 L 72 62" fill="none"/>
+  </g>
+</svg>

@@ -98,6 +98,10 @@ html {
 }
 
 body {
+    overflow: visible;
+}
+
+.page-wrapper {
     overflow-x: hidden;
 }
 
@@ -1191,19 +1195,24 @@ a {
 .about-pill-left {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
+    flex: 1;
+    min-width: 0; /* Allow shrinking */
 }
 
 .about-pill-num {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--primary-dark);
+    flex-shrink: 0;
 }
 
 .about-pill-label {
-    font-size: 1.25rem;
+    display: block;
+    font-size: 1.15rem;
     font-weight: 700;
     color: var(--text-dark);
+    line-height: 1.4;
 }
 
 .about-pill-arrow {
@@ -1699,19 +1708,19 @@ a {
 .mockup-metric {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
 }
 
 .mockup-metric .m-val {
     font-size: 1.15rem;
     font-weight: 800;
-    line-height: 1;
+    line-height: 1.2;
     color: var(--primary-color);
 }
 
 .mockup-metric .m-lbl {
     font-size: 0.65rem;
-    line-height: 1;
+    line-height: 1.2;
     color: rgba(255, 255, 255, 0.4);
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -2478,9 +2487,9 @@ a {
     font-weight: 900;
     color: var(--primary-color);
     text-align: center;
-    line-height: 0.95;
+    line-height: 1.25;
     text-transform: uppercase;
-    letter-spacing: -0.03em;
+    letter-spacing: 0.03em;
     margin: 0 0 40px 0;
 }
 
