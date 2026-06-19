@@ -1803,12 +1803,16 @@ a {
     }
     .methodology-item-num {
         font-size: 0.8rem;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
+        line-height: 1.4;
+        display: block;
+        padding-top: 2px;
     }
     .methodology-item-title {
-        font-size: clamp(1.6rem, 8vw, 2.4rem);
+        font-size: clamp(1.5rem, 7.5vw, 2.2rem);
         margin-bottom: 12px;
-        line-height: 1.05;
+        line-height: 1.15;
+        padding-top: 4px; /* prevent accent clipping */
     }
     .methodology-item-desc {
         font-size: 0.95rem;
