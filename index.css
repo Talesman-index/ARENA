@@ -632,8 +632,8 @@ a {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 80px;
-    padding-bottom: 120px; /* Safety spacing for overlapping about section card */
+    gap: 48px;
+    padding-bottom: 60px;
 }
 
 .hero-main {
@@ -2861,7 +2861,24 @@ a {
 
 @media (max-width: 576px) {
     .hero-section {
-        padding-top: 130px;
+        padding-top: 110px;
+        padding-bottom: 60px;
+        min-height: auto;
+    }
+    .hero-content-wrapper {
+        gap: 0;
+        padding-bottom: 0;
+    }
+    .hero-ctas {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    .hero-primary-btn,
+    .hero-secondary-btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
     }
     .navbar-floating .btn-pill {
         display: none;
