@@ -823,6 +823,12 @@ a {
     text-decoration: none;
 }
 
+.realisations-cta-btn span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .realisations-cta-btn:hover {
     background-color: var(--text-dark);
     color: var(--primary-color);
@@ -2635,7 +2641,9 @@ a {
 }
 
 .footer-cta-arrow {
-    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     transition: transform 0.2s ease;
 }
 
