@@ -139,6 +139,7 @@ a {
 .section {
     padding: 100px 0;
     position: relative;
+    z-index: 10;
 }
 
 .section-dark {
@@ -598,7 +599,9 @@ a {
     height: 100dvh; /* Dynamic viewport height for modern browsers */
     height: calc(var(--vh, 1vh) * 100); /* Precise JS-calculated viewport height */
     min-height: 600px;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -768,6 +771,7 @@ a {
     position: relative;
     padding: 0;
     border-top: 1px solid var(--border-color-light);
+    z-index: 10;
 }
 
 .realisations-sticky-wrapper {
@@ -2576,6 +2580,8 @@ a {
     background-color: #121212;
     color: var(--text-light);
     overflow: hidden;
+    position: relative;
+    z-index: 10;
 }
 
 /* --- CTA Block --- */

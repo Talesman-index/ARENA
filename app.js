@@ -313,4 +313,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
         stepObserver.observe(methodGrid);
     }
+
+    /* ==========================================================================
+       HERO SCROLL PARALLAX / STACKING FADE EFFECT
+       ========================================================================== */
+    const heroSection = document.getElementById('hero');
+    if (heroSection) {
+        const heroContent = heroSection.querySelector('.hero-content-wrapper');
+        const heroBg = heroSection.querySelector('.hero-bg-layer');
+
+        function updateHeroParallax() {
+            const scrollY = window.scrollY;
+            const heroHeight = heroSection.offsetHeight || 600;
+            
+            if (scrollY <= heroHeight) {
+                const progress = scrollY / heroHeight;
+                
+                // Fade out content and translate down slightly for depth
+                if (heroContent) {
+                    heroContent.style.opacity = Math.max(0, 1 - progress * 1.5).toFixed(2);
+                    heroContent.style.transform = `translateY(${progress * 60}px)`;
+                }
+                
+                // Parallax zoom out on background layer
+                if (heroBg) {
+                    heroBg.style.transform = `scale(${1.02 - progress * 0.02})`;
+                }
+            }
+        }
+
+        window.addEventListener('scroll', updateHeroParallax, { passive: true });
+        
+        // Initial run
+        updateHeroParallax();
+    }
 });
