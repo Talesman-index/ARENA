@@ -2805,6 +2805,7 @@ a {
     .menu-right-links {
         border-left: none;
         padding-left: 0;
+        order: -1; /* Display links above brand details on mobile */
     }
     .nav-menu-desktop {
         display: none;
