@@ -387,18 +387,18 @@ a {
 
 .menu-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 42% 58%;
     gap: 80px;
     width: 100%;
     max-width: var(--container-max-width);
     padding: 100px 48px 60px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .menu-left-brand {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .menu-logo {
@@ -406,7 +406,7 @@ a {
     align-items: center;
     gap: 16px;
     font-size: 2.8rem;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
 }
 
 .menu-logo .logo-icon {
@@ -416,14 +416,83 @@ a {
 
 .menu-left-details h5 {
     color: var(--primary-color);
-    font-size: 1rem;
-    margin-bottom: 16px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
 }
 
-.menu-left-details p {
+.menu-tagline-desc {
     color: var(--text-muted-light);
+    font-size: 1.05rem;
+    line-height: 1.6;
     max-width: 380px;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
+}
+
+/* Contact block style */
+.menu-contact-box {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 36px;
+}
+
+.menu-contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.menu-contact-link:hover {
+    color: var(--primary-color);
+}
+
+.menu-contact-link i {
+    width: 16px;
+    height: 16px;
+    color: var(--primary-color);
+}
+
+/* Social links circle icons style */
+.menu-socials {
+    display: flex;
+    gap: 16px;
+}
+
+.menu-social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--text-light);
+    transition: all 0.3s ease;
+}
+
+.menu-social-icon:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #0F100F;
+    transform: translateY(-3px);
+}
+
+.menu-social-icon i {
+    width: 16px;
+    height: 16px;
+}
+
+/* Right column divider & list styles */
+.menu-right-links {
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    padding-left: 80px;
 }
 
 .menu-links-list {
@@ -437,15 +506,24 @@ a {
     overflow: hidden;
 }
 
+/* Focus fade effect: other links fade when hovering one */
+.menu-links-list:hover .menu-link-item:not(:hover) {
+    opacity: 0.3;
+    transform: scale(0.97);
+}
+
 .menu-link-item {
-    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    font-size: clamp(2.2rem, 4.5vw, 3.2rem);
     font-family: var(--font-heading);
     font-weight: 900;
     color: var(--text-light);
     display: block;
     line-height: 1.15;
+    text-decoration: none;
     transform: translateY(100%);
-    transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1),
+                opacity 0.3s ease,
+                color 0.3s ease;
 }
 
 .menu-panel.active .menu-link-item {
@@ -453,15 +531,23 @@ a {
 }
 
 .menu-links-list li:nth-child(1) .menu-link-item { transition-delay: 0.1s; }
-.menu-links-list li:nth-child(2) .menu-link-item { transition-delay: 0.18s; }
-.menu-links-list li:nth-child(3) .menu-link-item { transition-delay: 0.26s; }
-.menu-links-list li:nth-child(4) .menu-link-item { transition-delay: 0.34s; }
-.menu-links-list li:nth-child(5) .menu-link-item { transition-delay: 0.42s; }
-.menu-links-list li:nth-child(6) .menu-link-item { transition-delay: 0.50s; }
+.menu-links-list li:nth-child(2) .menu-link-item { transition-delay: 0.15s; }
+.menu-links-list li:nth-child(3) .menu-link-item { transition-delay: 0.2s; }
+.menu-links-list li:nth-child(4) .menu-link-item { transition-delay: 0.25s; }
+.menu-links-list li:nth-child(5) .menu-link-item { transition-delay: 0.3s; }
+.menu-links-list li:nth-child(6) .menu-link-item { transition-delay: 0.35s; }
 
 .menu-link-item:hover {
     color: var(--primary-color);
-    transform: translateX(15px);
+}
+
+.menu-link-num {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-family: var(--font-body);
+    font-weight: 500;
+    margin-right: 18px;
+    vertical-align: middle;
 }
 
 .hero-section {
@@ -2675,6 +2761,11 @@ a {
     .menu-container {
         grid-template-columns: 1fr;
         gap: 40px;
+        padding: 80px 24px 40px;
+    }
+    .menu-right-links {
+        border-left: none;
+        padding-left: 0;
     }
 
 }
