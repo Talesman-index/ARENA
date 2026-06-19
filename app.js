@@ -9,7 +9,7 @@ const setVH = () => {
 setVH();
 window.addEventListener('resize', setVH);
 
-document.addEventListener('DOMContentLoaded', () => {
+const initApp = () => {
     /* ==========================================================================
        PRELOADER PROGRESS & FADE OUT LOGIC
        ========================================================================== */
@@ -397,4 +397,10 @@ document.addEventListener('DOMContentLoaded', () => {
         // Initial run
         updateHeroParallax();
     }
-});
+};
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+} else {
+    initApp();
+}
