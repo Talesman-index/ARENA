@@ -99,6 +99,7 @@ html {
 
 body {
     overflow: visible;
+    line-height: 1.5;
 }
 
 .page-wrapper {
@@ -1210,7 +1211,7 @@ a {
 
 .about-pill-left {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 16px;
     flex: 1;
     min-width: 0; /* Allow shrinking */
@@ -1221,6 +1222,8 @@ a {
     font-weight: 700;
     color: var(--primary-dark);
     flex-shrink: 0;
+    line-height: 1.4;
+    padding-top: 1px;
 }
 
 .about-pill-label {
@@ -1228,7 +1231,7 @@ a {
     font-size: 1.15rem;
     font-weight: 700;
     color: var(--text-dark);
-    line-height: 1.4;
+    line-height: 1.4 !important;
 }
 
 .about-pill-arrow {
@@ -2026,6 +2029,7 @@ a {
     padding: 8px 14px;
     border-radius: 50px;
     backdrop-filter: blur(4px);
+    line-height: 1.4;
 }
 
 /* --- Quote block --- */
@@ -3133,5 +3137,13 @@ a {
     .footer-cta-btn {
         font-size: 0.85rem;
         word-break: break-all;
+    }
+    .testi-portrait-caption {
+        bottom: 12px;
+        left: 12px;
+        font-size: 0.75rem;
+        padding: 6px 12px;
+        border-radius: 12px;
+        max-width: calc(100% - 24px);
     }
 }
