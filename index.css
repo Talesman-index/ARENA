@@ -432,12 +432,9 @@ a {
     transform: translateX(15px);
 }
 
-/* ==========================================================================
-   HERO V1 SECTION
-   ========================================================================== */
 .hero-section {
     min-height: 100vh;
-    padding-top: 150px;
+    padding-top: 220px;
     padding-bottom: 180px;
     position: relative;
     display: flex;
