@@ -281,20 +281,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==========================================================================
-       METHODOLOGY TIMELINE STEP REVEAL (Progressive per-step)
+       METHODOLOGY TIMELINE STEP REVEAL (Staggered cascade)
        ========================================================================== */
+    const methodGrid = document.querySelector('.method-timeline-grid');
     const methodSteps = document.querySelectorAll('.method-timeline-step');
     
-    if (methodSteps.length > 0) {
+    if (methodGrid && methodSteps.length > 0) {
         const stepObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('reveal-visible');
+                    methodSteps.forEach((step, index) => {
+                        setTimeout(() => {
+                            step.classList.add('reveal-visible');
+                        }, index * 300);
+                    });
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.2, rootMargin: '0px 0px -60px 0px' });
+        }, { threshold: 0.15 });
 
-        methodSteps.forEach(step => stepObserver.observe(step));
+        stepObserver.observe(methodGrid);
     }
 });
