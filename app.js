@@ -10,6 +10,56 @@ setVH();
 window.addEventListener('resize', setVH);
 
 document.addEventListener('DOMContentLoaded', () => {
+    /* ==========================================================================
+       PRELOADER PROGRESS & FADE OUT LOGIC
+       ========================================================================== */
+    const preloader = document.getElementById('preloader');
+    const preloaderBar = document.getElementById('preloaderBar');
+
+    if (preloader && preloaderBar) {
+        document.body.style.overflow = 'hidden';
+
+        let progress = 0;
+        let isPageLoaded = document.readyState === 'complete';
+
+        const updateLoader = () => {
+            if (progress >= 100) {
+                clearInterval(loaderInterval);
+                preloaderBar.style.width = '100%';
+                setTimeout(() => {
+                    preloader.classList.add('fade-out');
+                    document.body.style.overflow = '';
+                    setTimeout(() => {
+                        preloader.remove();
+                    }, 800);
+                }, 250);
+                return;
+            }
+
+            if (isPageLoaded) {
+                progress += 5;
+            } else {
+                if (progress < 85) {
+                    progress += 1.5;
+                } else {
+                    progress += 0.1;
+                }
+            }
+            preloaderBar.style.width = `${Math.min(progress, 100).toFixed(1)}%`;
+        };
+
+        const loaderInterval = setInterval(updateLoader, 20);
+
+        window.addEventListener('load', () => {
+            isPageLoaded = true;
+        });
+
+        // Fail-safe: force hide loader after 3 seconds
+        setTimeout(() => {
+            isPageLoaded = true;
+        }, 3000);
+    }
+
     // Initialize Lucide icons
     if (window.lucide) {
         window.lucide.createIcons();
