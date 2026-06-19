@@ -2413,17 +2413,24 @@ a {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background-color: var(--bg-light);
+    background-color: rgba(15, 16, 15, 0.05);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
-    font-weight: 700;
+    transition: var(--transition-smooth);
+    color: var(--text-dark);
+}
+
+.faq-toggle-icon svg {
+    width: 16px;
+    height: 16px;
+    stroke-width: 3px;
     transition: var(--transition-smooth);
 }
 
 .faq-item.active .faq-toggle-icon {
     background-color: var(--primary-color);
+    color: var(--text-dark);
     transform: rotate(45deg);
 }
 
