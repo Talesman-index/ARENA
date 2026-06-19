@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategy Arena | Conseil en Transformation Digitale Bénin & Afrique de l'Ouest</title>
+    <meta name="description" content="Strategy Arena aide les PME et commerces d'Afrique de l'Ouest à automatiser leurs processus, structurer leurs opérations et piloter leur croissance par les données.">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="index.css">
+    
+    <!-- Lucide Icons for clean SVGs -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+    <header class="navbar-floating" id="navbar">
+        <div class="navbar-inner">
+            <a href="#" class="nav-logo">
+                STRATEGY ARENA
+            </a>
+            
+            <div class="nav-actions">
+                <!-- Circular Icon with bubble count -->
+                <a href="#contact" class="navbar-chat-circle" aria-label="WhatsApp Support">
+                    <i data-lucide="message-square"></i>
+                    <span class="navbar-chat-badge">0</span>
+                </a>
+                
+                <!-- Get Started pill button -->
+                <a href="#contact" class="btn-pill">Get Started</a>
+                
+                <!-- Menu pill button -->
+                <button class="menu-trigger" id="menuBtnOpen" aria-label="Ouvrir le menu">
+                    Menu
+                    <div class="menu-hamburger">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Full Screen Navigation Overlay Menu -->
+    <nav class="menu-panel" id="menuPanel">
+        <button class="menu-close-btn" id="menuBtnClose" aria-label="Fermer le menu">
+            Fermer
+            <div class="menu-close-icon-wrap">
+                <i data-lucide="x" style="color: white; width: 20px; height: 20px;"></i>
+            </div>
+        </button>
+        
+        <div class="menu-container">
+            <div class="menu-left-brand">
+                <div class="menu-brand-title">ARENA</div>
+                <div class="menu-left-details">
+                    <h5>Cabinet de conseil local</h5>
+                    <p>Déployer le digital, structurer les opérations et guider vos décisions par les données réelles du terrain africain.</p>
+                    <p class="menu-contact-email">strategyarena.co<br>strategyarenacontact@gmail.com</p>
+                </div>
+            </div>
+            
+            <div class="menu-right-links">
+                <ul class="menu-links-list">
+                    <li><a href="#hero" class="menu-link-item">Accueil</a></li>
+                    <li><a href="#about" class="menu-link-item">Qui sommes-nous</a></li>
+                    <li><a href="#services" class="menu-link-item">Nos services</a></li>
+                    <li><a href="#methodology" class="menu-link-item">Méthode Arena</a></li>
+                    <li><a href="#pricing" class="menu-link-item">Tarifs</a></li>
+                    <li><a href="#faq" class="menu-link-item">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ==========================================================================
+       HERO V1 SECTION
+       ========================================================================== -->
+    <section class="hero-section" id="hero">
+        <div class="hero-bg-layer" style="background-image: url('images/positive-black-man-is-sitting-business-people-are-2026-01-09-11-02-40-utc.jpg');"></div>
+        <div class="hero-overlay-layer"></div>
+        <div class="container hero-content-wrapper">
+            
+            <div class="hero-main">
+                <span class="hero-tag">01 — Conseil en Transformation Digitale</span>
+                <h1 class="hero-title">
+                    Bâtir votre croissance,<br>
+                    main dans la main
+                </h1>
+                <p class="hero-desc">Strategy Arena structure vos opérations, automatise vos processus et optimise vos outils pour une croissance digitale durable.</p>
+                <div class="hero-ctas">
+                    <a href="#contact" class="hero-primary-btn">Demander un diagnostic</a>
+                    <a href="#services" class="hero-secondary-btn">Nos services</a>
+                </div>
+            </div>
+            
+            <div class="hero-metrics-row">
+                <div class="hero-metric-item">
+                    <span class="hero-metric-num" id="hero-projects-count" data-target="321">321</span>
+                    <span class="hero-metric-label">Projets d'automatisation et CRM déployés.</span>
+                </div>
+                <div class="hero-metric-item">
+                    <span class="hero-metric-num">90j</span>
+                    <span class="hero-metric-label">Pour livrer vos systèmes clés en main.</span>
+                </div>
+                <div class="hero-metric-item">
+                    <span class="hero-metric-num">100%</span>
+                    <span class="hero-metric-label">Adapté aux réalités du terrain local.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+       ABOUT SECTION
+       ========================================================================== -->
+    <section class="section section-light" id="about">
+        <div class="container">
+            <div class="about-grid">
+                
+                <!-- Sandrio style icon column -->
+                <div class="about-icon-column">
+                    <svg class="about-intro-icon" viewBox="0 0 48 48" fill="currentColor">
+                        <path d="M39.0502 23.9995C41.0046 21.367 42.6212 18.7587 43.8071 16.2976C47.2996 9.04935 45.9762 5.47228 44.251 3.74708C42.5259 2.02309 38.9489 0.700835 31.7008 4.19225C29.2397 5.37818 26.6315 6.996 23.9991 8.94922C21.3667 6.9948 18.7585 5.37818 16.2974 4.19225C9.04931 0.699628 5.47232 2.02308 3.74716 3.74828C2.0232 5.47348 0.699774 9.05056 4.19232 16.2988C5.37822 18.7599 6.99601 21.3682 8.94918 24.0007C6.9948 26.6331 5.37822 29.2414 4.19232 31.7026C0.699774 38.9496 2.0232 42.5279 3.74836 44.2519C4.68091 45.1844 6.15393 46 8.45817 46C10.415 46 12.9689 45.4125 16.2986 43.8079C18.7597 42.622 21.3679 41.0042 24.0003 39.0509C26.6327 41.0054 29.2409 42.622 31.702 43.8079C35.0317 45.4125 37.5856 46 39.5424 46C41.8455 46 43.3197 45.1844 44.2522 44.2519C45.9774 42.5279 47.2996 38.9496 43.8083 31.7026C42.6224 29.2414 41.0046 26.6331 39.0514 24.0007L39.0502 23.9995ZM41.2507 6.74869C42.7358 8.23381 41.2169 13.6905 36.3153 20.5624C34.9931 19.0036 33.5695 17.4546 32.0579 15.9429C30.5463 14.4313 28.9972 13.0065 27.4386 11.6854C34.3102 6.78488 39.7668 5.26477 41.2507 6.74989V6.74869ZM33.666 23.9995C32.3064 25.6438 30.7731 27.3377 29.0563 29.0556C27.3396 30.7724 25.6446 32.3058 24.0003 33.6654C22.356 32.3058 20.6622 30.7724 18.9443 29.0556C17.2275 27.3389 15.6942 25.6438 14.3346 23.9995C15.6942 22.3551 17.2275 20.6613 18.9443 18.9433C20.661 17.2266 22.3548 15.6944 23.9979 14.3347C25.6434 15.6944 27.3372 17.2241 29.0551 18.9433C30.7719 20.6601 32.3052 22.3551 33.6648 23.9995H33.666ZM6.75111 6.74869C7.11303 6.38676 7.7102 6.20338 8.50522 6.20338C10.9759 6.20338 15.3648 7.98528 20.5584 11.6878C19.001 13.0089 17.4543 14.4313 15.9439 15.9417C14.4323 17.4534 13.0075 19.0024 11.6865 20.5611C6.78489 13.6893 5.26602 8.2326 6.75111 6.74748V6.74869ZM6.75111 41.2503C5.26602 39.7652 6.78489 34.3085 11.6865 27.4366C13.0087 28.9953 14.4323 30.5444 15.9439 32.056C17.4555 33.5677 19.0046 34.9925 20.5633 36.3135C13.6916 41.2141 8.23499 42.733 6.7499 41.2491L6.75111 41.2503ZM41.2519 41.2503C39.7668 42.7354 34.3102 41.2165 27.4386 36.3148C28.9972 34.9925 30.5463 33.5689 32.0579 32.0572C33.5695 30.5456 34.9943 28.9965 36.3153 27.4378C41.2169 34.3097 42.7358 39.7664 41.2507 41.2515L41.2519 41.2503Z"/>
+                    </svg>
+                </div>
+                
+                <div class="about-header-wrap">
+                    <h2 class="about-title scroll-fill-title">Créer des systèmes, pas des rapports.</h2>
+                    <p class="about-desc">
+                        Strategy Arena accompagne les <strong>PME d'Afrique de l'Ouest</strong> pour structurer leurs opérations, automatiser leurs processus et optimiser leur croissance digitale. Notre équipe intervient directement sur le terrain avec une méthode éprouvée.
+                    </p>
+                    <p class="about-desc">
+                        Nous concevons des solutions sur mesure adaptées à vos contraintes locales de connexion, de budget et de compétences.
+                    </p>
+                    <a href="#methodology" class="about-cta-btn">
+                        Notre Méthode
+                        <span class="about-cta-arrow">→</span>
+                    </a>
+                </div>
+                
+                <!-- About Pills Column -->
+                <div class="about-pills-column">
+                    <div class="about-pill-card">
+                        <div class="about-pill-left">
+                            <span class="about-pill-num">(01)</span>
+                            <span class="about-pill-label">Origines & Terrain</span>
+                        </div>
+                        <div class="about-pill-arrow">→</div>
+                    </div>
+                    <div class="about-pill-card">
+                        <div class="about-pill-left">
+                            <span class="about-pill-num">(02)</span>
+                            <span class="about-pill-label">Savoir-faire Technique</span>
+                        </div>
+                        <div class="about-pill-arrow">→</div>
+                    </div>
+                    <div class="about-pill-card">
+                        <div class="about-pill-left">
+                            <span class="about-pill-num">(03)</span>
+                            <span class="about-pill-label">Décision par la Data</span>
+                        </div>
+                        <div class="about-pill-arrow">→</div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+       NOS RÉALISATIONS SECTION
+       ========================================================================== -->
+    <section class="section section-light realisations-section" id="realisations">
+        <div class="realisations-sticky-wrapper">
+            <div class="container">
+
+                <!-- Split Header -->
+                <div class="realisations-header">
+                    <h2 class="realisations-title scroll-fill-title">Des résultats<br>concrets.</h2>
+                    <div class="realisations-header-right">
+                        <p class="realisations-desc">Chez Strategy Arena, nous co-construisons des systèmes qui fonctionnent vraiment — pour vos opérations, vos équipes, votre terrain.</p>
+                        <a href="#services" class="realisations-cta-btn">
+                            Nos services <span>↗</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Image Cards Track Container -->
+                <div class="realisations-track-container">
+                    <div class="realisations-track">
+
+                        <div class="realisation-card">
+                            <img src="images/young-black-man-collaborating-with-colleagues-in-m-2026-01-21-02-38-50-utc.jpg" alt="Projet automatisation opérations" class="realisation-img">
+                            <div class="realisation-overlay">
+                                <div class="realisation-info">
+                                    <h3 class="realisation-card-title">Automatisation des Opérations</h3>
+                                    <p class="realisation-card-sub">Bénin Distribution — Commerce & Retail</p>
+                                </div>
+                                <a href="#contact" class="realisation-arrow-btn" aria-label="Voir le projet">↗</a>
+                            </div>
+                        </div>
+
+                        <div class="realisation-card">
+                            <img src="images/black-woman-sitting-in-front-of-group-of-multi-eth-2026-03-24-06-00-42-utc.jpg" alt="Projet pilotage data" class="realisation-img">
+                            <div class="realisation-overlay">
+                                <div class="realisation-info">
+                                    <h3 class="realisation-card-title">Pilotage Data & Dashboard</h3>
+                                    <p class="realisation-card-sub">Sahel Foods — Agroalimentaire</p>
+                                </div>
+                                <a href="#contact" class="realisation-arrow-btn" aria-label="Voir le projet">↗</a>
+                            </div>
+                        </div>
+
+                        <div class="realisation-card">
+                            <img src="images/african-american-man-and-woman-sit-at-a-stylish-ho-2026-01-11-10-58-43-utc.jpg" alt="Projet architecture SI" class="realisation-img">
+                            <div class="realisation-overlay">
+                                <div class="realisation-info">
+                                    <h3 class="realisation-card-title">Architecture SI & APIs</h3>
+                                    <p class="realisation-card-sub">Atlantique Logistique — Transport & Transit</p>
+                                </div>
+                                <a href="#contact" class="realisation-arrow-btn" aria-label="Voir le projet">↗</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+       SERVICES SECTION
+       ========================================================================== -->
+    <section class="section section-light" id="services" style="border-top: 1px solid var(--border-color-light);">
+        <div class="container">
+            
+            <div class="services-header">
+                <h2 class="services-title scroll-fill-title">Des solutions adaptées pour chaque niveau.</h2>
+            </div>
+            
+            <div class="services-grid">
+                
+                <!-- Service 1: Diagnostic (Vibrant left block) -->
+                <div class="service-card">
+                    <div class="service-card-left">
+                        <!-- Precise asterisk custom SVG -->
+                        <svg class="service-icon-svg" viewBox="0 0 100 100">
+                            <line x1="50" y1="10" x2="50" y2="90" stroke="#0F1D18" stroke-width="6"/>
+                            <line x1="10" y1="50" x2="90" y2="50" stroke="#0F1D18" stroke-width="6"/>
+                            <line x1="22" y1="22" x2="78" y2="78" stroke="#0F1D18" stroke-width="6"/>
+                            <line x1="22" y1="78" x2="78" y2="22" stroke="#0F1D18" stroke-width="6"/>
+                        </svg>
+                    </div>
+                    <div class="service-card-right">
+                        <div class="service-card-header">
+                            <h3 class="service-title-text">Diagnostic & Audit</h3>
+                            <span class="service-num">(01)</span>
+                        </div>
+                        <p class="service-description">
+                            Cartographie de vos processus existants, audit de votre maturité digitale, identification des frictions opérationnelles et des opportunités immédiates d'automatisation.
+                        </p>
+                        <ul class="service-checklist">
+                            <li class="service-check-item">
+                                <i data-lucide="check" class="service-check-icon"></i>
+                                Audit digital complet
+                            </li>
+                            <li class="service-check-item">
+                                <i data-lucide="check" class="service-check-icon"></i>
+                                Cartographie des frictions
+                            </li>
+                            <li class="service-check-item">
+                                <i data-lucide="check" class="service-check-icon"></i>
+                                Plan d'action recommandé
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 2: Implémentation (Muted left block) -->
+                <div class="service-card">
+                    <div class="service-card-left muted">
+                        <!-- Precise waves custom SVG -->
+                        <svg class="service-icon-svg" viewBox="0 0 100 100">
+                            <path d="M10,35 Q25,20 40,35 T70,35 T100,35" stroke="#0F1D18" stroke-width="6" fill="none"/>
+                            <path d="M10,55 Q25,40 40,55 T70,55 T100,55" stroke="#0F1D18" stroke-width="6" fill="none"/>
+                            <path d="M10,75 Q25,60 40,75 T70,75 T100,75" stroke="#0F1D18" stroke-width="6" fill="none"/>
+                        </svg>
+                    </div>
+                    <div class="service-card-right">
+                        <div class="service-card-header">
+                            <h3 class="service-title-text">Implémentation & Dev</h3>
+                            <span class="service-num">(02)</span>
+                        </div>
+                        <p class="service-description">
+                            Développement web performant, mise en place d'outils de gestion adaptés (CRM, ERP légers, bases de données centralisées), automatisation de tâches répétitives et formation de vos équipes.
+                        </p>
+                        <ul class="service-checklist">
+                            <li class="service-check-item">
+                                <i data-lucide="check" class="service-check-icon"></i>
+                                Développement web & vitrine
+                            </li>
+                            <li class="service-check-item">
+                                <i data-lucide="check" class="service-check-icon"></i>
+                                Automatisation (CRM / Operations)
+                            </li>
+                            <li class="service-check-item">
+                                <i data-lucide="check" class="service-check-icon"></i>
+                                Formation active des équipes
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 3: Pilotage Data (Vibrant left block) -->
+                <div class="service-card">
+                    <div class="service-card-left">
+                        <!-- Geometric circular star custom SVG -->
+                        <svg class="service-icon-svg" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="35" stroke="#0F1D18" stroke-width="5" stroke-dasharray="10 6"/>
+                            <circle cx="50" cy="50" r="20" stroke="#0F1D18" stroke-width="5"/>
+                            <circle cx="50" cy="50" r="5" fill="#0F1D18"/>
+                        </svg>
+                    </div>
+                    <div class="service-card-right">
+                        <div class="service-card-header">
+                            <h3 class="service-title-text">Pilotage & Data Analytics</h3>
+                            <span class="service-num">(03)</span>
+                        </div>
+                        <p class="service-description">
+                            Accompagnement continu : structuration de vos données, mise en place de tableaux de bord en temps réel pour vos ventes et stocks, et aide à la décision stratégique basée sur des chiffres fiables.
+                        </p>
+                        <ul class="service-checklist">
+                            <li class="service-check-item">
+                                <i data-lucide="check" class="service-check-icon"></i>
+                                Tableaux de bord de gestion
+                            </li>
+                            <li class="service-check-item">
+                                <i data-lucide="check" class="service-check-icon"></i>
+                                Analyse de données de ventes
+                            </li>
+                            <li class="service-check-item">
+                                <i data-lucide="check" class="service-check-icon"></i>
+                                Accompagnement décisionnel
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+       CTA BANNER SECTION
+       ========================================================================== -->
+    <section class="cta-banner-section" style="background-image: url('images/office_workspace_plants.png');">
+        <div class="cta-banner-overlay"></div>
+        <div class="container cta-banner-container">
+            <h2 class="cta-banner-title">
+                BÂTIR VOTRE CROISSANCE,<br>MAIN DANS LA MAIN
+            </h2>
+            <a href="#contact" class="cta-banner-btn">
+                <span>Demander un diagnostic</span>
+                <span class="cta-banner-btn-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+       METHODOLOGY & SECTORS SECTION
+       ========================================================================== -->
+    <section class="section section-light" id="methodology" style="border-top: 1px solid var(--border-color-light);">
+        <div class="container">
+            
+            <div class="sectors-layout">
+                <div>
+                    <h2 class="sectors-headline scroll-fill-title">
+                        Une méthode robuste,<span>secteurs de prédilection.</span>
+                    </h2>
+                </div>
+                <div>
+                    <p class="sectors-desc">
+                        Nous n'accompagnons qu'un nombre restreint d'entreprises par trimestre. Cela nous permet d'étudier vos processus à la loupe et de garantir des systèmes d'information véritablement opérationnels.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Methodology Timeline Grid -->
+            <div class="method-timeline-grid">
+
+                <div class="method-timeline-step">
+                    <div class="method-step-num">01</div>
+                    <div class="method-step-connector"><span class="method-step-line"></span></div>
+                    <div class="method-step-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </div>
+                    <h4 class="method-step-title">Comprendre</h4>
+                    <p class="method-step-desc">Diagnostic terrain approfondi, entretiens avec vos équipes clés, et cartographie exhaustive de vos processus actuels.</p>
+                </div>
+
+                <div class="method-timeline-step">
+                    <div class="method-step-num">02</div>
+                    <div class="method-step-connector"><span class="method-step-line"></span></div>
+                    <div class="method-step-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                    </div>
+                    <h4 class="method-step-title">Concevoir</h4>
+                    <p class="method-step-desc">Définition de votre feuille de route digitale personnalisée, choix des technologies les plus robustes, et architecture des flux.</p>
+                </div>
+
+                <div class="method-timeline-step">
+                    <div class="method-step-num">03</div>
+                    <div class="method-step-connector"><span class="method-step-line"></span></div>
+                    <div class="method-step-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="15" x2="23" y2="15"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="15" x2="4" y2="15"/></svg>
+                    </div>
+                    <h4 class="method-step-title">Déployer</h4>
+                    <p class="method-step-desc">Développement de vos plateformes, intégration de vos systèmes d'information, et ateliers de formation intensifs.</p>
+                </div>
+
+                <div class="method-timeline-step">
+                    <div class="method-step-num">04</div>
+                    <div class="method-step-connector last"><span class="method-step-line"></span></div>
+                    <div class="method-step-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                    </div>
+                    <h4 class="method-step-title">Piloter</h4>
+                    <p class="method-step-desc">Suivi en temps réel des indicateurs opérationnels, ajustements agiles, et support continu pour soutenir la croissance.</p>
+                </div>
+
+            </div>
+            
+        </div>
+    </section>
+
+
+
+
+    <!-- ==========================================================================
+       METRICS & ATTENTION SECTION
+       ========================================================================== -->
+    <section class="section section-dark" id="metrics">
+        <div class="container">
+            
+            <div class="attention-grid">
+                
+                <div class="metric-card">
+                    <div class="metric-num-wrapper">
+                        <span class="metric-num" data-target="98">0</span>
+                        <span class="metric-unit">%</span>
+                    </div>
+                    <div class="metric-label">De satisfaction sur nos formations et accompagnements opérationnels.</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-num-wrapper">
+                        <span class="metric-num" data-target="15">0</span>
+                        <span class="metric-unit">H</span>
+                    </div>
+                    <div class="metric-label">Gagnées par semaine et par employé grâce aux automatisations.</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-num-wrapper">
+                        <span class="metric-num" data-target="30">0</span>
+                        <span class="metric-unit">%</span>
+                    </div>
+                    <div class="metric-label">De croissance moyenne constatée de la visibilité en ligne sous 90 jours.</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-num-wrapper">
+                        <span class="metric-num" data-target="3">0</span>
+                        <span class="metric-unit">M</span>
+                    </div>
+                    <div class="metric-label">Temps moyen pour livrer un outil de gestion clé en main fonctionnel.</div>
+                </div>
+                
+            </div>
+            
+            <h2 class="attention-bottom-headline scroll-fill-title">
+                Bâtir votre futur numérique,<br>
+                main dans la main.
+            </h2>
+            
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+       WORK MARQUEE TICKER (Continuous rolling ticker)
+       ========================================================================== -->
+    <div class="ticker-container">
+        <div class="ticker-wrap">
+            <div class="ticker-item">Diagnostic digital <span class="ticker-dot"></span></div>
+            <div class="ticker-item">Automatisation CRM <span class="ticker-dot"></span></div>
+            <div class="ticker-item">Développement Web <span class="ticker-dot"></span></div>
+            <div class="ticker-item">Tableau de bord Data <span class="ticker-dot"></span></div>
+            <div class="ticker-item">Diagnostic digital <span class="ticker-dot"></span></div>
+            <div class="ticker-item">Automatisation CRM <span class="ticker-dot"></span></div>
+            <div class="ticker-item">Développement Web <span class="ticker-dot"></span></div>
+            <div class="ticker-item">Tableau de bord Data <span class="ticker-dot"></span></div>
+        </div>
+    </div>
+
+
+    <!-- ==========================================================================
+       TESTIMONIALS SECTION — SANDRIO STYLE
+       ========================================================================== -->
+    <section class="section section-light testimonials-sandrio" id="testimonials" style="border-top: 1px solid var(--border-color-light);">
+        <div class="container">
+
+            <!-- Split Header -->
+            <div class="testi-header-split">
+                <h2 class="testi-title-big scroll-fill-title">Ce que disent<br>nos clients.</h2>
+                <div class="testi-header-right">
+                    <p class="testi-header-desc">Découvrez les retours de nos partenaires après leur transformation digitale avec Strategy Arena — de l'automatisation au pilotage par les données.</p>
+                    <a href="#contact" class="realisations-cta-btn">
+                        Démarrer un projet <span>↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Featured Testimonial -->
+            <div class="testi-featured">
+
+                <!-- Left: Large portrait image -->
+                <div class="testi-portrait-wrap">
+                    <img
+                        src="images/portrait-of-smiling-businessman-working-in-busy-mo-2026-03-10-04-50-52-utc.jpg"
+                        alt="Komi Agbessi — Bénin Distribution"
+                        class="testi-portrait-img"
+                    >
+                    <div class="testi-portrait-caption">Approuvé par nos clients africains</div>
+                </div>
+
+                <!-- Right: Quote block -->
+                <div class="testi-quote-wrap">
+                    <div class="testi-big-quotemark">"</div>
+                    <p class="testi-big-text">
+                        « Strategy Arena a transformé notre gestion de stock. Leurs automatisations nous ont fait gagner un temps précieux et éliminé les erreurs de saisie manuelle. Le ROI a été visible dès le premier mois. »
+                    </p>
+                    <div class="testi-author-row">
+                        <img
+                            src="images/portrait-of-smiling-young-businessman-working-in-b-2026-01-05-23-03-38-utc.jpg"
+                            alt="Komi Agbessi"
+                            class="testi-author-avatar"
+                        >
+                        <div class="testi-author-info">
+                            <div class="testi-author-name">Komi Agbessi</div>
+                            <div class="testi-author-role">Directeur des Opérations, Bénin Distribution</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+       PRICING TIER SECTION
+       ========================================================================== -->
+    <section class="section section-light" id="pricing" style="border-top: 1px solid var(--border-color-light);">
+        <div class="container">
+            
+            <div class="pricing-header">
+                <h2 class="pricing-title">Simple Pricing</h2>
+                <p class="pricing-subtitle">Nos tarifs sont conçus pour être transparents, flexibles et adaptés aux PME, garantissant des solutions digitales de haute qualité pour toutes les entreprises.</p>
+                
+                <!-- Toggle switch slider -->
+                <div class="pricing-toggle-wrap" id="pricingToggle">
+                    <span class="pricing-toggle-btn active" id="toggleMonthly">Mensuel</span>
+                    <span class="pricing-toggle-btn" id="toggleAnnually">Annuel</span>
+                    <div class="pricing-toggle-slider"></div>
+                </div>
+            </div>
+            
+            <div class="pricing-grid">
+                
+                <!-- Basic Card -->
+                <div class="pricing-card">
+                    <div class="pricing-card-top">
+                        <h4>Plan Basique</h4>
+                        <div class="pricing-card-price-row">
+                            <span class="pricing-card-price" id="price-basic" data-monthly="150k" data-annual="120k">150k</span>
+                            <span class="pricing-card-period">FCFA/Mois</span>
+                        </div>
+                        <p class="pricing-card-desc">Idéal pour auditer votre structure opérationnelle et identifier les points de friction.</p>
+                        
+                        <ul class="pricing-card-features">
+                            <li class="pricing-feature-item">
+                                <i data-lucide="check" class="pricing-feature-check"></i>
+                                <span>Diagnostic digital complet</span>
+                            </li>
+                            <li class="pricing-feature-item">
+                                <i data-lucide="check" class="pricing-feature-check"></i>
+                                <span>Cartographie des processus</span>
+                            </li>
+                            <li class="pricing-feature-item">
+                                <i data-lucide="check" class="pricing-feature-check"></i>
+                                <span>Feuille de route recommandée</span>
+                            </li>
+                            <li class="pricing-feature-item">
+                                <i data-lucide="check" class="pricing-feature-check"></i>
+                                <span>1 atelier de diagnostic</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#contact" class="pricing-card-btn">Démarrer l'audit</a>
+                </div>
+                
+                <!-- Premium Card (Popular/Vibrant accent outline) -->
+                <div class="pricing-card popular">
+                    <div class="pricing-card-popular-badge">Recommandé</div>
+                    <div class="pricing-card-top">
+                        <h4>Plan Premium</h4>
+                        <div class="pricing-card-price-row">
+                            <span class="pricing-card-price" id="price-premium" data-monthly="350k" data-annual="290k">350k</span>
+                            <span class="pricing-card-period">FCFA/Mois</span>
+                        </div>
+                        <p class="pricing-card-desc">Parfait pour intégrer de nouveaux outils CRM et automatiser des processus récurrents.</p>
+                        
+                        <ul class="pricing-card-features">
+                            <li class="pricing-feature-item">
+                                <i data-lucide="check" class="pricing-feature-check"></i>
+                                <span>Tout ce qui est inclus dans Diagnostic</span>
+                            </li>
+                            <li class="pricing-feature-item">
+                                <i data-lucide="check" class="pricing-feature-check"></i>
+                                <span>Configuration CRM & Base de données</span>
+                            </li>
+                            <li class="pricing-feature-item">
+                                <i data-lucide="check" class="pricing-feature-check"></i>
+                                <span>3 automatisations de flux de travail</span>
+                            </li>
+                            <li class="pricing-feature-item">
+                                <i data-lucide="check" class="pricing-feature-check"></i>
+                                <span>Ateliers de formation des équipes</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#contact" class="pricing-card-btn">Lancer l'implémentation</a>
+                </div>
+                
+                <!-- Ultimate Card -->
+                <div class="pricing-card">
+                    <div class="pricing-card-top">
+                        <h4>Plan Ultimate</h4>
+                        <div class="pricing-card-price-row">
+                            <span class="pricing-card-price" id="price-ultimate" data-monthly="600k" data-annual="490k">600k</span>
+                            <span class="pricing-card-period">FCFA/Mois</span>
+                        </div>
+                        <p class="pricing-card-desc">Pour les entreprises exigeant un suivi data complet et un pilotage stratégique continu.</p>
+                        
+                        <ul class="pricing-card-features">
+                            <li class="pricing-feature-item">
+                                <i data-lucide="check" class="pricing-feature-check"></i>
+                                <span>Diagnostic & Implémentation complète</span>
+                            </li>
+                            <li class="pricing-feature-item">
+                                <i data-lucide="check" class="pricing-feature-check"></i>
+                                <span>Dashboard de vente en temps réel</span>
+                            </li>
+                            <li class="pricing-feature-item">
+                                <i data-lucide="check" class="pricing-feature-check"></i>
+                                <span>Accompagnement décisionnel data</span>
+                            </li>
+                            <li class="pricing-feature-item">
+                                <i data-lucide="check" class="pricing-feature-check"></i>
+                                <span>Support hebdomadaire dédié</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#contact" class="pricing-card-btn">Piloter mes données</a>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+
+
+    <!-- ==========================================================================
+       FAQ SECTION (ACCORDION)
+       ========================================================================== -->
+    <section class="section section-light" id="faq" style="border-top: 1px solid var(--border-color-light);">
+        <div class="container">
+            
+            <div class="faq-grid">
+                <div>
+                    <h2 class="faq-title scroll-fill-title">Foire aux questions.</h2>
+                </div>
+                
+                <div class="faq-list">
+                    
+                    <div class="faq-item">
+                        <button class="faq-question-btn">
+                            <span class="faq-question-text">Pourquoi un accompagnement local au Bénin ?</span>
+                            <div class="faq-toggle-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Le contexte local comporte des spécificités uniques en matière d'infrastructures Internet, de canaux de vente (WhatsApp, points physiques), et de culture managériale. Nous concevons des systèmes adaptés à ces contraintes, évitant les solutions prêtes à l'emploi inapplicables sur le terrain.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question-btn">
+                            <span class="faq-question-text">Quels outils technologiques intégrez-vous ?</span>
+                            <div class="faq-toggle-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Nous intégrons des logiciels ergonomiques et économiques, adaptés à votre budget : CRM (HubSpot, Odoo Light), bases de données flexibles (Airtable, PostgreSQL), outils d'automatisation (Make, n8n, Zapier) et plateformes d'analyse de données.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question-btn">
+                            <span class="faq-question-text">Sous quel délai voit-on des résultats concrets ?</span>
+                            <div class="faq-toggle-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Grâce à notre méthodologie en sprints, les premiers outils d'automatisation et de gestion commerciale sont fonctionnels dans vos équipes entre 4 et 8 semaines après la phase de cadrage initial.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question-btn">
+                            <span class="faq-question-text">Formez-vous nos équipes après déploiement ?</span>
+                            <div class="faq-toggle-icon">+</div>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">
+                                Oui. La formation et l'autonomie de vos équipes font partie de nos engagements clés. Nous organisons des ateliers pratiques à Cotonou ou à distance, et mettons à disposition des guides d'utilisation simplifiés.
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+
+        </div>
+    </section>
+
+
+     <footer class="footer" id="contact">
+
+        <!-- CTA Block -->
+        <div class="footer-cta-block">
+            <div class="container">
+                <div class="footer-cta-inner">
+                    <div class="footer-cta-left">
+                        <h2 class="footer-cta-heading">Prêt à structurer<br>votre croissance ?</h2>
+                    </div>
+                    <div class="footer-cta-right">
+                        <p class="footer-cta-desc">Nous accompagnons un nombre restreint d'entreprises par trimestre. Contactez-nous avant que les places soient prises.</p>
+                        <a href="mailto:strategyarenacontact@gmail.com" class="footer-cta-btn">
+                            strategyarenacontact@gmail.com
+                            <span class="footer-cta-arrow">↗</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="footer-divider-line"></div>
+
+        <!-- Nav columns -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-nav-grid">
+
+                    <div class="footer-brand-col">
+                        <span class="footer-brand-name">Strategy Arena</span>
+                        <p class="footer-brand-tagline">Conseil en transformation digitale — Afrique de l'Ouest</p>
+                    </div>
+
+                    <div class="footer-nav-col">
+                        <h5 class="footer-col-title">Navigation</h5>
+                        <ul class="footer-links">
+                            <li><a href="#hero">Accueil</a></li>
+                            <li><a href="#about">Qui sommes-nous</a></li>
+                            <li><a href="#services">Nos services</a></li>
+                            <li><a href="#methodology">Méthode Arena</a></li>
+                            <li><a href="#realisations">Réalisations</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-nav-col">
+                        <h5 class="footer-col-title">Secteurs</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Commerce & Retail</a></li>
+                            <li><a href="#">Agroalimentaire</a></li>
+                            <li><a href="#">Finance & Assurance</a></li>
+                            <li><a href="#">Santé & ONG</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-nav-col">
+                        <h5 class="footer-col-title">Contact</h5>
+                        <div class="footer-contact-block">
+                            <a href="mailto:strategyarenacontact@gmail.com" class="footer-contact-item">
+                                strategyarenacontact@gmail.com
+                            </a>
+                            <a href="https://maps.google.com/?q=Tankpè, Abomey-Calavi, Bénin" target="_blank" rel="noopener" class="footer-contact-item">
+                                Tankpè, Calavi, Bénin
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Marquee -->
+        <div class="footer-marquee-wrapper" aria-hidden="true">
+            <div class="footer-marquee-track">
+                <span class="footer-marquee-item">STRATEGY</span>
+                <svg class="footer-marquee-flower" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M24 7.24811C25.4255 7.24811 26.7328 8.70697 27.7487 11.1281C28.477 10.6589 29.1908 10.2327 29.8868 9.84709C28.4757 5.05145 26.3638 2 24 2C21.6362 2 19.5805 4.96788 18.1694 9.65488C18.8749 10.0333 19.6008 10.4559 20.3409 10.9239C21.3438 8.62579 22.6152 7.24811 24 7.24811Z"/><path d="M11.2832 20.1901C10.8224 19.4655 10.4034 18.7551 10.0262 18.0627C5.12666 19.4726 2 21.6084 2 24.0009C2 26.3933 5.09802 28.5088 9.95813 29.9199C10.333 29.2239 10.7496 28.5112 11.2093 27.7817C8.73922 26.761 7.24693 25.4418 7.24693 24.0009C7.24693 22.5456 8.76905 21.2144 11.2821 20.1901H11.2832Z"/><path d="M24 40.752C22.5925 40.752 21.3008 39.3301 20.2896 36.9628C19.5542 37.4248 18.8343 37.8438 18.1335 38.2187C19.5447 42.9761 21.6482 46.0001 24 46.0001C26.3519 46.0001 28.5128 42.8961 29.9227 38.0265C29.2291 37.6444 28.5187 37.2206 27.7952 36.755C26.7733 39.2454 25.4481 40.752 24 40.752Z"/><path d="M38.3296 18.1679C37.944 18.8711 37.5154 19.5921 37.0426 20.3264C39.361 21.3316 40.7519 22.609 40.7519 24.001C40.7519 25.393 39.3897 26.6429 37.1143 27.6434C37.5858 28.3836 38.0132 29.1082 38.3976 29.815C43.0536 28.405 46 26.323 46 24.001C46 21.679 43.0238 19.5778 38.3296 18.1679Z"/><path d="M30.0456 17.3838C29.4654 17.1343 28.5987 17.2418 27.5696 17.6489C26.8271 14.2453 25.5067 11.9782 24.0012 11.9782C22.4958 11.9782 21.1647 14.2608 20.4245 17.6859C19.3942 17.2645 18.5215 17.1367 17.9234 17.3564L24.0012 22.3669L30.0468 17.3838H30.0456Z"/><path d="M17.3013 17.8573C16.9563 18.4291 17.0423 19.3531 17.4804 20.4694C14.1699 21.2179 11.9768 22.5192 11.9768 24.0008C11.9768 25.4823 14.2057 26.8051 17.5616 27.55C17.09 28.671 16.9563 29.6142 17.2333 30.2278L22.3668 24.0008L17.3026 17.8573H17.3013Z"/><path d="M17.7526 30.7842C18.3555 31.1078 19.3153 30.9908 20.4674 30.512C21.2159 33.8273 22.5184 36.0228 23.9999 36.0228C25.4815 36.0228 26.7744 33.844 27.5242 30.5502C28.6738 31.0123 29.6241 31.1054 30.2067 30.7496L23.9999 25.6328L17.7526 30.783V30.7842Z"/><path d="M30.424 20.4479C30.8371 19.3878 30.929 18.5043 30.6353 17.9325L25.6332 24.0007L30.6974 30.143C30.9266 29.533 30.7882 28.634 30.344 27.5703C33.7524 26.8277 36.0232 25.5074 36.0232 23.9995C36.0232 22.4917 33.7883 21.1916 30.424 20.4467V20.4479Z"/></svg>
+                <span class="footer-marquee-item">ARENA</span>
+                <svg class="footer-marquee-flower" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M24 7.24811C25.4255 7.24811 26.7328 8.70697 27.7487 11.1281C28.477 10.6589 29.1908 10.2327 29.8868 9.84709C28.4757 5.05145 26.3638 2 24 2C21.6362 2 19.5805 4.96788 18.1694 9.65488C18.8749 10.0333 19.6008 10.4559 20.3409 10.9239C21.3438 8.62579 22.6152 7.24811 24 7.24811Z"/><path d="M11.2832 20.1901C10.8224 19.4655 10.4034 18.7551 10.0262 18.0627C5.12666 19.4726 2 21.6084 2 24.0009C2 26.3933 5.09802 28.5088 9.95813 29.9199C10.333 29.2239 10.7496 28.5112 11.2093 27.7817C8.73922 26.761 7.24693 25.4418 7.24693 24.0009C7.24693 22.5456 8.76905 21.2144 11.2821 20.1901H11.2832Z"/><path d="M24 40.752C22.5925 40.752 21.3008 39.3301 20.2896 36.9628C19.5542 37.4248 18.8343 37.8438 18.1335 38.2187C19.5447 42.9761 21.6482 46.0001 24 46.0001C26.3519 46.0001 28.5128 42.8961 29.9227 38.0265C29.2291 37.6444 28.5187 37.2206 27.7952 36.755C26.7733 39.2454 25.4481 40.752 24 40.752Z"/><path d="M38.3296 18.1679C37.944 18.8711 37.5154 19.5921 37.0426 20.3264C39.361 21.3316 40.7519 22.609 40.7519 24.001C40.7519 25.393 39.3897 26.6429 37.1143 27.6434C37.5858 28.3836 38.0132 29.1082 38.3976 29.815C43.0536 28.405 46 26.323 46 24.001C46 21.679 43.0238 19.5778 38.3296 18.1679Z"/><path d="M30.0456 17.3838C29.4654 17.1343 28.5987 17.2418 27.5696 17.6489C26.8271 14.2453 25.5067 11.9782 24.0012 11.9782C22.4958 11.9782 21.1647 14.2608 20.4245 17.6859C19.3942 17.2645 18.5215 17.1367 17.9234 17.3564L24.0012 22.3669L30.0468 17.3838H30.0456Z"/><path d="M17.3013 17.8573C16.9563 18.4291 17.0423 19.3531 17.4804 20.4694C14.1699 21.2179 11.9768 22.5192 11.9768 24.0008C11.9768 25.4823 14.2057 26.8051 17.5616 27.55C17.09 28.671 16.9563 29.6142 17.2333 30.2278L22.3668 24.0008L17.3026 17.8573H17.3013Z"/><path d="M17.7526 30.7842C18.3555 31.1078 19.3153 30.9908 20.4674 30.512C21.2159 33.8273 22.5184 36.0228 23.9999 36.0228C25.4815 36.0228 26.7744 33.844 27.5242 30.5502C28.6738 31.0123 29.6241 31.1054 30.2067 30.7496L23.9999 25.6328L17.7526 30.783V30.7842Z"/><path d="M30.424 20.4479C30.8371 19.3878 30.929 18.5043 30.6353 17.9325L25.6332 24.0007L30.6974 30.143C30.9266 29.533 30.7882 28.634 30.344 27.5703C33.7524 26.8277 36.0232 25.5074 36.0232 23.9995C36.0232 22.4917 33.7883 21.1916 30.424 20.4467V20.4479Z"/></svg>
+                <span class="footer-marquee-item">STRATEGY</span>
+                <svg class="footer-marquee-flower" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M24 7.24811C25.4255 7.24811 26.7328 8.70697 27.7487 11.1281C28.477 10.6589 29.1908 10.2327 29.8868 9.84709C28.4757 5.05145 26.3638 2 24 2C21.6362 2 19.5805 4.96788 18.1694 9.65488C18.8749 10.0333 19.6008 10.4559 20.3409 10.9239C21.3438 8.62579 22.6152 7.24811 24 7.24811Z"/><path d="M11.2832 20.1901C10.8224 19.4655 10.4034 18.7551 10.0262 18.0627C5.12666 19.4726 2 21.6084 2 24.0009C2 26.3933 5.09802 28.5088 9.95813 29.9199C10.333 29.2239 10.7496 28.5112 11.2093 27.7817C8.73922 26.761 7.24693 25.4418 7.24693 24.0009C7.24693 22.5456 8.76905 21.2144 11.2821 20.1901H11.2832Z"/><path d="M24 40.752C22.5925 40.752 21.3008 39.3301 20.2896 36.9628C19.5542 37.4248 18.8343 37.8438 18.1335 38.2187C19.5447 42.9761 21.6482 46.0001 24 46.0001C26.3519 46.0001 28.5128 42.8961 29.9227 38.0265C29.2291 37.6444 28.5187 37.2206 27.7952 36.755C26.7733 39.2454 25.4481 40.752 24 40.752Z"/><path d="M38.3296 18.1679C37.944 18.8711 37.5154 19.5921 37.0426 20.3264C39.361 21.3316 40.7519 22.609 40.7519 24.001C40.7519 25.393 39.3897 26.6429 37.1143 27.6434C37.5858 28.3836 38.0132 29.1082 38.3976 29.815C43.0536 28.405 46 26.323 46 24.001C46 21.679 43.0238 19.5778 38.3296 18.1679Z"/><path d="M30.0456 17.3838C29.4654 17.1343 28.5987 17.2418 27.5696 17.6489C26.8271 14.2453 25.5067 11.9782 24.0012 11.9782C22.4958 11.9782 21.1647 14.2608 20.4245 17.6859C19.3942 17.2645 18.5215 17.1367 17.9234 17.3564L24.0012 22.3669L30.0468 17.3838H30.0456Z"/><path d="M17.3013 17.8573C16.9563 18.4291 17.0423 19.3531 17.4804 20.4694C14.1699 21.2179 11.9768 22.5192 11.9768 24.0008C11.9768 25.4823 14.2057 26.8051 17.5616 27.55C17.09 28.671 16.9563 29.6142 17.2333 30.2278L22.3668 24.0008L17.3026 17.8573H17.3013Z"/><path d="M17.7526 30.7842C18.3555 31.1078 19.3153 30.9908 20.4674 30.512C21.2159 33.8273 22.5184 36.0228 23.9999 36.0228C25.4815 36.0228 26.7744 33.844 27.5242 30.5502C28.6738 31.0123 29.6241 31.1054 30.2067 30.7496L23.9999 25.6328L17.7526 30.783V30.7842Z"/><path d="M30.424 20.4479C30.8371 19.3878 30.929 18.5043 30.6353 17.9325L25.6332 24.0007L30.6974 30.143C30.9266 29.533 30.7882 28.634 30.344 27.5703C33.7524 26.8277 36.0232 25.5074 36.0232 23.9995C36.0232 22.4917 33.7883 21.1916 30.424 20.4467V20.4479Z"/></svg>
+                <span class="footer-marquee-item">ARENA</span>
+                <svg class="footer-marquee-flower" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M24 7.24811C25.4255 7.24811 26.7328 8.70697 27.7487 11.1281C28.477 10.6589 29.1908 10.2327 29.8868 9.84709C28.4757 5.05145 26.3638 2 24 2C21.6362 2 19.5805 4.96788 18.1694 9.65488C18.8749 10.0333 19.6008 10.4559 20.3409 10.9239C21.3438 8.62579 22.6152 7.24811 24 7.24811Z"/><path d="M11.2832 20.1901C10.8224 19.4655 10.4034 18.7551 10.0262 18.0627C5.12666 19.4726 2 21.6084 2 24.0009C2 26.3933 5.09802 28.5088 9.95813 29.9199C10.333 29.2239 10.7496 28.5112 11.2093 27.7817C8.73922 26.761 7.24693 25.4418 7.24693 24.0009C7.24693 22.5456 8.76905 21.2144 11.2821 20.1901H11.2832Z"/><path d="M24 40.752C22.5925 40.752 21.3008 39.3301 20.2896 36.9628C19.5542 37.4248 18.8343 37.8438 18.1335 38.2187C19.5447 42.9761 21.6482 46.0001 24 46.0001C26.3519 46.0001 28.5128 42.8961 29.9227 38.0265C29.2291 37.6444 28.5187 37.2206 27.7952 36.755C26.7733 39.2454 25.4481 40.752 24 40.752Z"/><path d="M38.3296 18.1679C37.944 18.8711 37.5154 19.5921 37.0426 20.3264C39.361 21.3316 40.7519 22.609 40.7519 24.001C40.7519 25.393 39.3897 26.6429 37.1143 27.6434C37.5858 28.3836 38.0132 29.1082 38.3976 29.815C43.0536 28.405 46 26.323 46 24.001C46 21.679 43.0238 19.5778 38.3296 18.1679Z"/><path d="M30.0456 17.3838C29.4654 17.1343 28.5987 17.2418 27.5696 17.6489C26.8271 14.2453 25.5067 11.9782 24.0012 11.9782C22.4958 11.9782 21.1647 14.2608 20.4245 17.6859C19.3942 17.2645 18.5215 17.1367 17.9234 17.3564L24.0012 22.3669L30.0468 17.3838H30.0456Z"/><path d="M17.3013 17.8573C16.9563 18.4291 17.0423 19.3531 17.4804 20.4694C14.1699 21.2179 11.9768 22.5192 11.9768 24.0008C11.9768 25.4823 14.2057 26.8051 17.5616 27.55C17.09 28.671 16.9563 29.6142 17.2333 30.2278L22.3668 24.0008L17.3026 17.8573H17.3013Z"/><path d="M17.7526 30.7842C18.3555 31.1078 19.3153 30.9908 20.4674 30.512C21.2159 33.8273 22.5184 36.0228 23.9999 36.0228C25.4815 36.0228 26.7744 33.844 27.5242 30.5502C28.6738 31.0123 29.6241 31.1054 30.2067 30.7496L23.9999 25.6328L17.7526 30.783V30.7842Z"/><path d="M30.424 20.4479C30.8371 19.3878 30.929 18.5043 30.6353 17.9325L25.6332 24.0007L30.6974 30.143C30.9266 29.533 30.7882 28.634 30.344 27.5703C33.7524 26.8277 36.0232 25.5074 36.0232 23.9995C36.0232 22.4917 33.7883 21.1916 30.424 20.4467V20.4479Z"/></svg>
+            </div>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-inner">
+                    <span>© 2026 Strategy Arena. Tous droits réservés.</span>
+                    <span class="footer-bottom-email">strategyarenacontact@gmail.com</span>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- JS Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
