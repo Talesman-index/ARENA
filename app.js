@@ -1,3 +1,14 @@
+/* ==========================================================================
+   TRUE VIEWPORT HEIGHT FIX (--vh custom property)
+   Solves the 100vh bug on mobile where browser bars affect the value.
+   ========================================================================== */
+const setVH = () => {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+};
+setVH();
+window.addEventListener('resize', setVH);
+
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize Lucide icons
     if (window.lucide) {
