@@ -95,12 +95,14 @@ const initApp = () => {
         document.body.style.overflow = '';
     }
 
-    menuBtnOpen.addEventListener('click', openMenu);
-    menuBtnClose.addEventListener('click', closeMenu);
+    if (menuBtnOpen && menuBtnClose && menuPanel) {
+        menuBtnOpen.addEventListener('click', openMenu);
+        menuBtnClose.addEventListener('click', closeMenu);
 
-    menuLinks.forEach(link => {
-        link.addEventListener('click', closeMenu);
-    });
+        menuLinks.forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+    }
 
     /* ==========================================================================
        STATISTICS COUNTER ANIMATION (INTERSECTION OBSERVER)
@@ -193,7 +195,9 @@ const initApp = () => {
         }, 150);
     }
 
-    pricingToggle.addEventListener('click', switchBilling);
+    if (pricingToggle) {
+        pricingToggle.addEventListener('click', switchBilling);
+    }
 
     /* ==========================================================================
        FAQ ACCORDION INTERACTIVITY
