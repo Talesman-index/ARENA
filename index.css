@@ -103,7 +103,7 @@ body {
 }
 
 .page-wrapper {
-    overflow-x: hidden;
+    overflow: visible;
 }
 
 /* Typography elements */
@@ -844,7 +844,7 @@ a {
 
 @media (min-width: 769px) {
     .realisations-section {
-        height: 180vh;
+        height: 130vh;
     }
     
     .realisations-sticky-wrapper {
@@ -855,7 +855,7 @@ a {
         flex-direction: column;
         justify-content: center;
         overflow: hidden;
-        padding: 80px 0;
+        padding: 40px 0 0 0;
     }
     
     .realisations-track-container {
@@ -886,8 +886,16 @@ a {
 
 @media (max-width: 768px) {
     .realisations-section {
-        padding: 80px 0;
+        padding: 60px 0 0 0 !important;
         height: auto !important;
+    }
+    
+    #services {
+        padding-top: 0 !important;
+    }
+    
+    .realisations-sticky-wrapper {
+        padding: 0;
     }
     
     .realisations-sticky-wrapper .container {
@@ -1231,7 +1239,8 @@ a {
     font-size: 1.15rem;
     font-weight: 700;
     color: var(--text-dark);
-    line-height: 1.4 !important;
+    line-height: 1.5 !important;
+    padding: 4px 0;
 }
 
 .about-pill-arrow {
@@ -1254,6 +1263,10 @@ a {
 /* ==========================================================================
    SERVICES SECTION (SERVICES-V2)
    ========================================================================== */
+#services {
+    padding-top: 0 !important;
+}
+
 .services-header {
     margin-bottom: 64px;
 }
@@ -1293,6 +1306,12 @@ a {
 @media (min-width: 1024px) {
     .services-grid {
         gap: 40px;
+    }
+    
+    .services-grid::after {
+        content: "";
+        display: block;
+        height: 450px;
     }
     
     .service-card {
@@ -2092,7 +2111,7 @@ a {
     line-height: 1.2;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .testi-header-split {
         display: flex;
         flex-direction: column;
@@ -2965,8 +2984,11 @@ a {
         box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04) !important;
     }
     .service-card-left {
-        padding: 60px;
-        min-height: 200px;
+        padding: 40px 24px;
+        min-height: 160px;
+    }
+    .service-card-right {
+        padding: 32px 24px;
     }
     .sectors-layout {
         grid-template-columns: 1fr;
@@ -3142,8 +3164,11 @@ a {
         padding: 60px 0 50px;
     }
     .footer-cta-btn {
-        font-size: 0.85rem;
-        word-break: break-all;
+        font-size: clamp(0.8rem, 4vw, 1.1rem);
+        word-break: break-word;
+    }
+    .faq-question-btn {
+        padding: 20px 16px;
     }
     .testi-portrait-caption {
         bottom: 12px;
