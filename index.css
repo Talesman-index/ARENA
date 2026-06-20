@@ -944,6 +944,26 @@ a {
         overflow: hidden;
         cursor: pointer;
     }
+
+    .realisation-overlay {
+        padding: 20px;
+    }
+
+    .realisation-info {
+        gap: 4px;
+    }
+
+    .realisation-info p {
+        display: none;
+    }
+
+    .realisation-card-title {
+        font-size: 1.15rem;
+    }
+
+    .realisation-card-sub {
+        font-size: 0.75rem;
+    }
 }
 
 .realisation-img {
@@ -976,20 +996,36 @@ a {
 .realisation-info {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .realisation-card-title {
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-size: 1.4rem;
+    font-weight: 900;
     color: #fff;
     line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin: 0;
 }
 
 .realisation-card-sub {
-    font-size: 0.875rem;
-    color: rgba(255,255,255,0.65);
-    font-weight: 400;
+    color: var(--primary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+.realisation-info p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    line-height: 1.45;
+    margin: 0;
+    font-family: var(--font-body);
+    font-weight: 300;
 }
 
 .realisation-arrow-btn {
