@@ -1113,6 +1113,13 @@ a {
     flex-shrink: 0;
 }
 
+/* Logo visibility adjustments on light/white surfaces */
+.logo-on-light,
+.section-light .about-intro-icon {
+    filter: invert(1) hue-rotate(180deg);
+    transition: filter 0.3s ease;
+}
+
 @keyframes logoSpin {
     from {
         transform: rotate(0deg);
