@@ -9,6 +9,9 @@ export default defineConfig({
         beninDistribution: resolve(__dirname, 'cases/benin-distribution.html'),
         sahelFoods: resolve(__dirname, 'cases/sahel-foods.html'),
         atlantiqueLogistique: resolve(__dirname, 'cases/atlantique-logistique.html'),
+        commentDigitaliserPmeBenin: resolve(__dirname, 'articles/comment-digitaliser-pme-benin.html'),
+        whatsappBusinessRetailCotonou: resolve(__dirname, 'articles/whatsapp-business-retail-cotonou.html'),
+        importanceAuditOperationnel: resolve(__dirname, 'articles/importance-audit-operationnel.html'),
       }
     }
   }
