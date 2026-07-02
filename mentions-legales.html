@@ -140,11 +140,13 @@
 
         .hero-title {
             font-family: 'Anton', sans-serif;
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-size: clamp(2rem, 6vw, 4rem);
             font-weight: 900;
             line-height: 1.05;
             letter-spacing: -0.01em;
             text-transform: uppercase;
+            word-break: break-word;
+            text-wrap: balance;
         }
 
         .hero-right {
@@ -155,17 +157,26 @@
             max-width: 480px;
         }
 
+        @media (max-width: 1024px) {
+            .hero-container {
+                gap: 32px;
+            }
+        }
+
         @media (max-width: 768px) {
             .navbar {
                 padding: 20px 24px;
             }
             .hero-banner {
-                padding: 48px 24px;
+                padding: 56px 24px;
             }
             .hero-container {
                 grid-template-columns: 1fr;
-                gap: 24px;
+                gap: 20px;
                 align-items: flex-start;
+            }
+            .content-wrapper {
+                padding: 56px 20px;
             }
         }
 
@@ -176,9 +187,31 @@
             padding: 80px 24px;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 16px 16px;
+            }
+            .navbar-brand img {
+                height: 22px;
+            }
+            .navbar-back {
+                font-size: 0.8rem;
+            }
+            .hero-banner {
+                padding: 40px 16px;
+            }
+            .hero-title {
+                font-size: clamp(1.8rem, 8vw, 2.5rem);
+            }
             .content-wrapper {
-                padding: 48px 24px;
+                padding: 40px 16px;
+            }
+            .checklist-item {
+                gap: 12px;
+            }
+            h2 {
+                font-size: 1.4rem;
+                margin-top: 40px;
             }
         }
 
