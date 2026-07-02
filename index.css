@@ -405,9 +405,10 @@ a {
 }
 
 .menu-close-btn {
-    position: absolute;
+    position: fixed;
     top: 36px;
     right: 48px;
+    z-index: 1510;
     background: transparent;
     border: none;
     color: var(--text-light);
@@ -418,6 +419,10 @@ a {
     align-items: center;
     gap: 12px;
     cursor: pointer;
+}
+
+.menu-logo-img {
+    height: 56px;
 }
 
 .menu-close-icon-wrap {
@@ -2938,6 +2943,8 @@ a {
 .footer-bottom-links {
     display: flex;
     gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .footer-bottom-links a {
@@ -3107,7 +3114,10 @@ a {
     .nav-menu-desktop {
         display: none;
     }
-
+    .menu-panel {
+        align-items: flex-start;
+        overflow-y: auto;
+    }
 }
 
 @media (max-width: 768px) {
@@ -3154,6 +3164,27 @@ a {
         height: 16px;
         font-size: 0.65rem;
     }
+    .footer-bottom-inner {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .footer-bottom-links {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+    .menu-close-text {
+        display: none;
+    }
+    .menu-close-btn {
+        top: 24px;
+        right: 24px;
+        gap: 0;
+    }
+    .menu-logo-img {
+        height: 36px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -3199,11 +3230,7 @@ a {
     .footer-nav-grid {
         grid-template-columns: 1fr;
     }
-    .footer-bottom-inner {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
+
     .footer-cta-inner {
         flex-direction: column;
         align-items: flex-start;
