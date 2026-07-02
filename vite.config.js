@@ -12,6 +12,10 @@ export default defineConfig({
         commentDigitaliserPmeBenin: resolve(__dirname, 'articles/comment-digitaliser-pme-benin.html'),
         whatsappBusinessRetailCotonou: resolve(__dirname, 'articles/whatsapp-business-retail-cotonou.html'),
         importanceAuditOperationnel: resolve(__dirname, 'articles/importance-audit-operationnel.html'),
+        optimisationLogistiqueCotonou: resolve(__dirname, 'articles/optimisation-logistique-cotonou.html'),
+        digitalisationLogistiqueCoteDivoire: resolve(__dirname, 'articles/digitalisation-logistique-cote-divoire.html'),
+        politiqueDeConfidentialite: resolve(__dirname, 'politique-de-confidentialite.html'),
+        mentionsLegales: resolve(__dirname, 'mentions-legales.html'),
       }
     }
   }

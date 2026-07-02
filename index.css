@@ -2000,6 +2000,7 @@ a {
     margin-right: 48px;
     display: flex;
     align-items: center;
+    letter-spacing: 0.05em !important;
 }
 
 .ticker-dot {
@@ -2891,7 +2892,7 @@ a {
     font-size: clamp(5rem, 10vw, 9.5rem);
     font-weight: 900;
     color: var(--primary-color);
-    letter-spacing: -0.03em;
+    letter-spacing: 0.06em !important;
     line-height: 1.25;
     text-transform: uppercase;
     padding: 0.15em 10px;

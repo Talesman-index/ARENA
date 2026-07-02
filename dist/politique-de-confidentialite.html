@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité | Strategy Arena</title>
+    <meta name="description" content="Politique de confidentialité de Strategy Arena — Comment nous collectons, utilisons et protégeons vos données personnelles.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+        /* Font Declarations */
+
+        @font-face {
+            font-family: 'Whyte Inktrap';
+            src: url('/assets/WhyteInktrap-Bold-K7ZwQSVs.woff2') format('woff2'),
+                 url('/assets/WhyteInktrap-Bold-BLZpWh2A.woff') format('woff'),
+                 url('/assets/WhyteInktrap-Bold-BKFm1CkO.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Whyte Inktrap';
+            src: url('/assets/WhyteInktrap-Medium-TLFD13XH.woff2') format('woff2'),
+                 url('/assets/WhyteInktrap-Medium-DWWa64NS.woff') format('woff'),
+                 url('/assets/WhyteInktrap-Medium-5G-DHsjB.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Whyte Inktrap';
+            src: url('/assets/WhyteInktrap-Regular-C3wzRdZ1.woff2') format('woff2'),
+                 url('/assets/WhyteInktrap-Regular-rMiVnjmE.woff') format('woff'),
+                 url('/assets/WhyteInktrap-Regular-BFbcFUoY.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Whyte Inktrap';
+            src: url('/assets/WhyteInktrap-Black-CAdOm8Kh.woff2') format('woff2'),
+                 url('/assets/WhyteInktrap-Black-ow4Qt2_a.woff') format('woff'),
+                 url('/assets/WhyteInktrap-Black-DKgoG6aM.ttf') format('truetype');
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        :root {
+            --primary: #F4E723;          /* Canary Yellow */
+            --primary-hover: #dbce16;
+            --bg-banner: #080808;        /* Pitch Black */
+            --bg-main: #FAFAFA;          /* Crisp Off-White */
+            --text-main: #0F100F;        /* Deep Dark Ink */
+            --text-muted: #555856;       /* Muted Dark Text */
+            --border-color: rgba(15, 16, 15, 0.08); /* Strict Border Contrast */
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Whyte Inktrap', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-weight: 300;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.8;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ── NAVBAR ── */
+
+        .navbar {
+            background-color: var(--bg-banner);
+            padding: 24px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .navbar-brand img {
+            height: 28px;
+            display: block;
+        }
+
+        .navbar-back {
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.25s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .navbar-back:hover {
+            color: var(--primary);
+            transform: translateX(-2px);
+        }
+
+        /* ── HERO BANNER ── */
+
+        .hero-banner {
+            background-color: var(--bg-banner);
+            color: #ffffff;
+            padding: 80px 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .hero-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 48px;
+            align-items: flex-end;
+        }
+
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-date {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: var(--primary);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .hero-title {
+            font-family: 'Anton', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -0.01em;
+            text-transform: uppercase;
+        }
+
+        .hero-right {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 300;
+            max-width: 480px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 20px 24px;
+            }
+            .hero-banner {
+                padding: 48px 24px;
+            }
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                align-items: flex-start;
+            }
+        }
+
+        /* ── CONTENT ── */
+
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                padding: 48px 24px;
+            }
+        }
+
+        h2 {
+            font-family: 'Anton', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--text-main);
+            margin-top: 56px;
+            margin-bottom: 20px;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        /* Links */
+
+        a {
+            color: var(--text-main);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            text-decoration-color: var(--primary);
+            text-decoration-thickness: 2px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--primary-hover);
+            text-decoration-color: var(--primary-hover);
+        }
+
+        .navbar-brand a {
+            text-decoration: none;
+        }
+
+        /* Checklist */
+
+        .checklist {
+            list-style: none;
+            margin: 24px 0;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+            color: var(--text-muted);
+        }
+
+        .check-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background-color: var(--bg-banner);
+            color: var(--primary);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .check-icon svg {
+            width: 10px;
+            height: 10px;
+        }
+
+        /* Separator */
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: var(--border-color);
+            margin: 48px 0;
+        }
+
+        /* ── FOOTER ── */
+
+        .page-footer {
+            border-top: 1px solid var(--border-color);
+            padding: 56px 24px;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
+
+        .page-footer-text {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .page-footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+
+        .page-footer-links a:hover {
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        /* Animations */
+
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .delay-1 { animation-delay: 0.1s; }
+
+        .delay-2 { animation-delay: 0.2s; }
+
+        .delay-3 { animation-delay: 0.3s; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="navbar-brand">
+            <a href="/">
+                <img src="/Logoss.svg" alt="Strategy Arena">
+            </a>
+        </div>
+        <a href="/" class="navbar-back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 1px;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            Retour à l'accueil
+        </a>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <div class="hero-container">
+            <div class="hero-left animate-fade-in delay-1">
+                <span class="hero-date">Dernière mise à jour : 2 juillet 2026</span>
+                <h1 class="hero-title">Politique de<br>Confidentialité</h1>
+            </div>
+            <div class="hero-right animate-fade-in delay-2">
+                <p style="color: rgba(255, 255, 255, 0.95); margin-bottom: 0;">Cette politique décrit comment Strategy Arena collecte, utilise et protège vos données personnelles conformément aux exigences du RGPD et aux meilleures pratiques de protection de la vie privée.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="content-wrapper animate-fade-in delay-3">
+
+        <section>
+            <h2>Introduction</h2>
+            <p>Strategy Arena s’engage à ce que la collecte et le traitement de vos données soient conformes au Règlement Général sur la Protection des Données (RGPD) et aux réglementations locales en vigueur. Nous accordons une importance primordiale à la transparence et à la sécurité de vos informations personnelles.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Responsable du traitement</h2>
+            <p>Le traitement des données personnelles collectées sur le site est sous la responsabilité de l'éditeur :</p>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Entité :</strong> Strategy Arena</span>
+                </li>
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Siège social :</strong> Cotonou, Bénin</span>
+                </li>
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Email :</strong> <a href="mailto:strategyarenacontact@gmail.com">strategyarenacontact@gmail.com</a></span>
+                </li>
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Contact RGPD / DPO :</strong> <a href="mailto:strategyarenacontact@gmail.com">strategyarenacontact@gmail.com</a></span>
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Données collectées</h2>
+            <p>Nous collectons et traitons les données d'identification et de navigation que vous nous fournissez volontairement ou qui sont générées lors de votre visite :</p>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Formulaires de contact & devis :</strong> Nom, prénom, adresse email, numéro de téléphone (WhatsApp), entreprise, détails de votre demande.</span>
+                </li>
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Données de transaction :</strong> Historique de vos abonnements ou prestations de conseil achetées (les informations de carte bancaire sont traitées de manière sécurisée directement par nos processeurs de paiement).</span>
+                </li>
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Métadonnées & navigation :</strong> Adresse IP, type de navigateur, pages visitées, temps de consultation, système d'exploitation.</span>
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Finalités de la collecte</h2>
+            <p>Vos données sont traitées pour répondre aux besoins opérationnels et légaux suivants :</p>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span>Gestion de la relation client, fourniture de services de conseil et de supports stratégiques.</span>
+                </li>
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span>Envoi de newsletters, études de cas et communications promotionnelles (sous réserve de votre accord préalable).</span>
+                </li>
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span>Optimisation et sécurisation de la navigation sur le site.</span>
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Base légale du traitement</h2>
+            <p>Conformément à l'article 6 du RGPD, le traitement de vos données repose sur les bases juridiques suivantes :</p>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Exécution contractuelle :</strong> Pour répondre aux demandes de devis et fournir nos services de conseil.</span>
+                </li>
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Consentement libre :</strong> Pour le dépôt de cookies non fonctionnels et l'inscription à nos actualités.</span>
+                </li>
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Intérêt légitime :</strong> Pour surveiller les tentatives de fraude, bloquer les attaques informatiques et améliorer l'ergonomie globale de notre site.</span>
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Cookies et technologies similaires</h2>
+            <p>Nous utilisons des cookies techniques nécessaires au fonctionnement du site. Nous utilisons également des traceurs analytiques optionnels dont vous pouvez refuser le dépôt à tout moment via le panneau de configuration ou en paramétrant les préférences de votre navigateur.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Services tiers utilisés</h2>
+            <p>Pour assurer la disponibilité et les performances de notre plateforme, nous partageons certaines données avec des sous-traitants fiables, rigoureusement sélectionnés pour leur conformité avec les réglementations de protection des données :</p>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Google Analytics :</strong> Outil d'analyse statistique de la fréquentation du site (les adresses IP sont anonymisées avant transmission).</span>
+                </li>
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Cloudflare :</strong> Sécurisation du trafic, blocage des attaques malveillantes et distribution de contenu mondial.</span>
+                </li>
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Resend :</strong> Service d'envoi et de routage sécurisé de nos emails transactionnels et administratifs.</span>
+                </li>
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Stripe :</strong> Gestionnaire de paiements en ligne hautement sécurisé (PCI-DSS) assurant les transactions.</span>
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Durée de conservation des données</h2>
+            <p>Nous veillons à ne conserver vos données que pour des durées proportionnelles et adaptées :</p>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Données de prospection commerciale :</strong> Conservées pendant 3 ans à partir de votre dernier contact actif avec notre cabinet.</span>
+                </li>
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Données contractuelles :</strong> Conservées en base active pendant toute la relation commerciale, puis archivées pendant 5 ans pour répondre aux obligations légales.</span>
+                </li>
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Cookies analytiques et techniques :</strong> Durée de vie maximale de 13 mois.</span>
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Sécurité des données</h2>
+            <p>Nous appliquons des mesures de sécurité techniques et structurelles rigoureuses (chiffrement SSL/TLS de l’ensemble du trafic, restrictions d'accès administrateur strictes, sauvegardes chiffrées régulières) pour contrer la destruction accidentelle, la perte ou l’altération de vos données.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Transfert international des données</h2>
+            <p>Les données que nous traitons sont hébergées au sein de l’Union Européenne ou dans des pays disposant d’un niveau de protection équivalent certifié. Pour les transferts vers les États-Unis (notamment via nos sous-traitants Stripe ou Google), nous nous assurons qu'ils adhèrent aux clauses contractuelles types de la Commission Européenne pour encadrer ces transferts.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Droits des utilisateurs</h2>
+            <p>Vous disposez de l'ensemble des prérogatives reconnues par le RGPD et les lois locales :</p>
+            <ul class="checklist">
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Droit d'accès et d'information :</strong> Vous pouvez demander le détail des informations collectées à votre sujet.</span>
+                </li>
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Droit de rectification :</strong> Vous pouvez mettre à jour ou corriger des données erronées.</span>
+                </li>
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Droit à l'effacement (« oubli ») :</strong> Vous pouvez demander la suppression définitive de vos données personnelles.</span>
+                </li>
+                <li class="checklist-item">
+                    <span class="check-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </span>
+                    <span><strong>Droit à la limitation et opposition :</strong> Vous pouvez restreindre le traitement de vos données ou vous y opposer.</span>
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>Procédure pour exercer vos droits</h2>
+            <p>Pour faire valoir l'un de ces droits, il vous suffit de nous adresser une demande par email à l’adresse <a href="mailto:strategyarenacontact@gmail.com">strategyarenacontact@gmail.com</a>. Afin de garantir la confidentialité et la protection de vos données, nous pourrons vous demander une preuve d'identité valide avant de traiter votre demande. Nous y répondrons sous 30 jours.</p>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>FAQ RGPD & Protection des données</h2>
+            
+            <h3 style="font-family: 'Anton', sans-serif; font-size: 1.25rem; font-weight: 900; margin-top: 24px; margin-bottom: 12px; text-transform: uppercase;">Comment garantissez-vous la sécurité de mes paiements sur le site ?</h3>
+            <p>Strategy Arena ne stocke aucune coordonnée bancaire. Toutes les transactions de paiement sont entièrement déléguées et traitées par notre prestataire Stripe, leader mondial certifié PCI-DSS Level 1.</p>
+            
+            <h3 style="font-family: 'Anton', sans-serif; font-size: 1.25rem; font-weight: 900; margin-top: 24px; margin-bottom: 12px; text-transform: uppercase;">Mes données sont-elles partagées ou vendues à des fins publicitaires ?</h3>
+            <p>Non, nous ne vendons ni ne louons jamais vos données personnelles à des tiers. Les partages d'informations s'effectuent exclusivement avec nos sous-traitants techniques dans le cadre strict de l'exécution de nos services.</p>
+            
+            <h3 style="font-family: 'Anton', sans-serif; font-size: 1.25rem; font-weight: 900; margin-top: 24px; margin-bottom: 12px; text-transform: uppercase;">Puis-je retirer mon consentement à recevoir vos newsletters ?</h3>
+            <p>Oui, absolument. Vous pouvez vous désinscrire de toutes nos listes de diffusion à tout moment en cliquant sur le lien de désinscription situé en bas de chaque email reçu ou en nous envoyant un simple message.</p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+        <p class="page-footer-text">© 2026 Strategy Arena. Tous droits réservés.</p>
+        <div class="page-footer-links">
+            <a href="/">Accueil</a>
+            <a href="/mentions-legales.html">Mentions légales</a>
+            <a href="/politique-de-confidentialite.html">Politique de confidentialité</a>
+        </div>
+    </footer>
+
+</body>
+</html>
