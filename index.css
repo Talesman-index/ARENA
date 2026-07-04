@@ -3243,19 +3243,19 @@ a {
     }
     
     .menu-links-list {
-        width: 100%;
+        width: fit-content;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 12px;
         padding: 0;
-        margin: 0;
+        margin: 0 auto;
     }
     
     .menu-link-item {
         font-size: 1.8rem !important;
-        justify-content: center;
-        text-align: center;
+        justify-content: flex-start;
+        text-align: left;
     }
     
     .menu-link-num {
@@ -3304,19 +3304,19 @@ a {
     }
     
     .menu-contact-box {
-        width: 100%;
+        width: fit-content;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 10px;
-        margin-bottom: 16px;
+        margin: 0 auto 16px;
     }
     
     .menu-contact-link {
         font-size: 0.85rem !important;
         gap: 8px;
-        justify-content: center;
-        text-align: center;
+        justify-content: flex-start;
+        text-align: left;
     }
     
     .menu-socials {
