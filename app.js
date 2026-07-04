@@ -597,8 +597,8 @@ const initApp = () => {
             if (txt.includes('contact') || txt.includes('rendez') || txt.includes('rdv') || txt.includes('whatsapp') || txt.includes('téléphone') || txt.includes('email') || txt.includes('adresse') || txt.includes('écrire') || txt.includes('basé')) {
                 return `Pour échanger sur vos problématiques ou planifier un diagnostic gratuit, voici comment nous contacter :<br><br>
                         • <strong>Email</strong> : <a href="mailto:strategyarenacontact@gmail.com">strategyarenacontact@gmail.com</a><br>
-                        • <strong>Téléphone</strong> : <a href="tel:+22901407899">+229 01 40 78 99 21</a><br>
-                        • <strong>WhatsApp</strong> : <a href="https://wa.me/22901407899" target="_blank">Discuter directement</a><br><br>
+                        • <strong>Téléphone</strong> : <a href="tel:+2290140789921">+229 01 40 78 99 21</a><br>
+                        • <strong>WhatsApp</strong> : <a href="https://wa.me/22940789921" target="_blank">Discuter directement</a><br><br>
                         Notre cabinet est basé à Cotonou, Bénin, et nous intervenons sur toute la région.`;
             }
             

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://strategyarena.com/sitemap.xml

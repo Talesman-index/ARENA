@@ -12,6 +12,7 @@
          url('whyte-inktrap/WhyteInktrap-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -21,6 +22,7 @@
          url('whyte-inktrap/WhyteInktrap-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -30,6 +32,7 @@
          url('whyte-inktrap/WhyteInktrap-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -39,6 +42,7 @@
          url('whyte-inktrap/WhyteInktrap-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -48,6 +52,7 @@
          url('whyte-inktrap/WhyteInktrap-Heavy.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
+    font-display: swap;
 }
 
 /* Theme Variables */

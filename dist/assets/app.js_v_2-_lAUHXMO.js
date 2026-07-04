@@ -87,8 +87,8 @@ const G=()=>{const g=window.innerHeight*.01;document.documentElement.style.setPr
                         4. <strong>Piloter (Étape 04)</strong> : Suivi des indicateurs clés et ajustements réguliers.<br><br>
                         Nous refusons de prescrire une solution sans une immersion terrain préalable.`:t.includes("contact")||t.includes("rendez")||t.includes("rdv")||t.includes("whatsapp")||t.includes("téléphone")||t.includes("email")||t.includes("adresse")||t.includes("écrire")||t.includes("basé")?`Pour échanger sur vos problématiques ou planifier un diagnostic gratuit, voici comment nous contacter :<br><br>
                         • <strong>Email</strong> : <a href="mailto:strategyarenacontact@gmail.com">strategyarenacontact@gmail.com</a><br>
-                        • <strong>Téléphone</strong> : <a href="tel:+22901407899">+229 01 40 78 99 21</a><br>
-                        • <strong>WhatsApp</strong> : <a href="https://wa.me/22901407899" target="_blank">Discuter directement</a><br><br>
+                        • <strong>Téléphone</strong> : <a href="tel:+2290140789921">+229 01 40 78 99 21</a><br>
+                        • <strong>WhatsApp</strong> : <a href="https://wa.me/22940789921" target="_blank">Discuter directement</a><br><br>
                         Notre cabinet est basé à Cotonou, Bénin, et nous intervenons sur toute la région.`:t.includes("bonjour")||t.includes("salut")||t.includes("hello")||t.includes("bonsoir")||t.includes("hey")?"Bonjour ! C'est un plaisir de vous accueillir sur Strategy Arena. Comment puis-je vous aider dans votre réflexion opérationnelle aujourd'hui ?":t.includes("merci")||t.includes("parfait")||t.includes("super")||t.includes("cool")?"Avec plaisir ! Si vous avez d'autres interrogations ou souhaitez que nous passions aux choses concrètes, n'hésitez pas.":`Je n'ai pas tous les détails pour cette demande, mais je peux vous guider vers :<br><br>
                     • Nos <strong>services</strong> (niveaux d'accompagnement)<br>
                     • Nos <strong>études de cas</strong> clients réels<br>
