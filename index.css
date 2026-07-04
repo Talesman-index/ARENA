@@ -3210,17 +3210,57 @@ a {
     .menu-logo-img {
         height: 36px;
     }
-    .menu-left-details,
-    .menu-socials {
+    .menu-container {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 24px;
+        padding: 80px 24px 40px;
+    }
+    
+    .menu-logo {
         display: none !important;
     }
-    .menu-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 60px 24px 40px;
+    
+    .menu-left-details {
+        margin-top: 0;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
-    .menu-logo {
-        margin-bottom: 0 !important;
+    
+    .menu-left-details h5,
+    .menu-tagline-desc {
+        display: none !important;
+    }
+    
+    .menu-contact-box {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 16px;
+    }
+    
+    .menu-contact-link {
+        font-size: 0.85rem !important;
+        gap: 8px;
+    }
+    
+    .menu-socials {
+        display: flex;
+        gap: 12px;
+        margin-top: 12px;
+    }
+    
+    .menu-links-list {
+        gap: 10px;
+    }
+    
+    .menu-link-item {
+        font-size: 1.65rem !important;
+    }
+    
+    .menu-link-num {
+        font-size: 0.9rem !important;
+        margin-right: 12px;
     }
 }
 
