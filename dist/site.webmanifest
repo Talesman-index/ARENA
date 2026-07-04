@@ -1,0 +1,16 @@
+{
+  "name": "Strategy Arena",
+  "short_name": "Strategy Arena",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#F4E723",
+  "description": "Cabinet de Conseil en Stratégie & Organisation pour les PME en Afrique de l'Ouest.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

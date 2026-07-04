@@ -1369,7 +1369,7 @@ a {
     .services-grid::after {
         content: "";
         display: block;
-        height: 450px;
+        height: 540px;
     }
     
     .service-card {
@@ -1391,6 +1391,11 @@ a {
     .service-card:nth-child(3) {
         top: 180px;
         z-index: 3;
+    }
+
+    .service-card:nth-child(4) {
+        top: 210px;
+        z-index: 4;
     }
 }
 
@@ -1420,6 +1425,20 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.service-card-body-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 576px) {
+    .service-card-body-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
 }
 
 .service-card-header {
@@ -1459,7 +1478,7 @@ a {
 
 .service-check-item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 12px;
     font-size: 1.05rem;
     font-weight: 700;
@@ -1470,7 +1489,7 @@ a {
     color: var(--primary-dark);
     font-size: 1.2rem;
     flex-shrink: 0;
-    margin-top: 3px; /* Align with first line of text */
+    margin-top: 0;
 }
 
 /* ==========================================================================
@@ -2322,7 +2341,7 @@ a {
     align-items: center;
 }
 
-.pricing-card-top h4 {
+.pricing-card-top h3 {
     font-family: var(--font-body);
     font-size: 1.25rem;
     font-weight: 700;
@@ -2562,6 +2581,7 @@ a {
     #testimonials,
     #pricing,
     #faq,
+    #articles,
     .footer {
         position: relative;
         z-index: 2;
@@ -3871,6 +3891,13 @@ html:has(body.case-page) {
     }
 }
 
+@media (max-width: 768px) {
+    .articles-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+}
+
 /* ==========================================================================
    ARENA AI ASSISTANT CHAT WIDGET
    ========================================================================== */
@@ -4192,7 +4219,7 @@ html:has(body.case-page) {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin-top: 10px;
+    margin-top: auto;
     width: 100%;
 }
 
@@ -4247,16 +4274,16 @@ html:has(body.case-page) {
 
 .arena-chat-input {
     flex: 1;
-    height: 42px;
+    height: 46px;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 14px;
-    padding: 10px 16px;
+    padding: 0 16px;
     color: #fff;
-    font-size: 0.88rem;
-    line-height: 1.4;
+    font-size: 0.9rem;
+    line-height: normal;
     outline: none;
-    font-family: var(--font-body);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     transition: border-color 0.2s;
     box-sizing: border-box;
 }
@@ -4270,9 +4297,9 @@ html:has(body.case-page) {
 }
 
 .arena-chat-send {
-    width: 42px;
-    height: 42px;
-    border-radius: 12px;
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
     background: var(--primary-color);
     border: none;
     cursor: pointer;
@@ -4311,16 +4338,40 @@ html:has(body.case-page) {
         top: 0;
         left: 0;
         width: 100vw;
-        height: 100vh;
-        max-height: 100vh;
+        height: 100dvh;
+        max-height: 100dvh;
         border-radius: 0;
         border: none;
         z-index: 10002;
     }
     
+    .arena-chat-suggestions {
+        margin-top: 16px;
+    }
+    
     .arena-chat-trigger.active {
         display: none; /* Hide button when open to clear UI space on mobile */
     }
+}
+
+/* Align case studies and articles cards horizontally in service subpages */
+.case-container .about-pill-card {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.case-container .about-pill-card > div {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.case-container .about-pill-card .about-pill-arrow {
+    align-self: center !important;
+    flex-shrink: 0;
 }
 
 

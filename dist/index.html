@@ -23,8 +23,13 @@
     <meta property="twitter:description" content="Strategy Arena audite vos opérations, identifie vos frictions, et recommande les outils, process ou technologies adaptés à votre réalité terrain.">
     <meta property="twitter:image" content="https://strategyarena.com/images/link_preview.png">
 
-    <!-- Favicon -->
+    <!-- Favicon & PWA Manifest -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Font Preloads (Core Web Vitals LCP optimization) -->
+    <link rel="preload" href="/assets/WhyteInktrap-Regular-C3wzRdZ1.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/WhyteInktrap-Bold-K7ZwQSVs.woff2" as="font" type="font/woff2" crossorigin>
 
     
     <!-- Lucide Icons for clean SVGs -->
@@ -55,9 +60,9 @@
       ]
     }
     </script>
-  <script type="module" crossorigin src="/assets/main-CKR20gzl.js"></script>
+  <script type="module" crossorigin src="/assets/main-CrYS5vc2.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-B5Qt9EMX.js">
-  <link rel="stylesheet" crossorigin href="/assets/index-DtkmtUnz.css">
+  <link rel="stylesheet" crossorigin href="/assets/index-BRRFcwbK.css">
 </head>
 <body>
 
@@ -91,7 +96,7 @@
                 <a href="#services" class="nav-link-desktop">Nos services</a>
                 <a href="#methodology" class="nav-link-desktop">Méthode Arena</a>
                 <a href="#pricing" class="nav-link-desktop">Tarifs</a>
-                <a href="#articles" class="nav-link-desktop">Articles</a>
+                <a href="#articles" class="nav-link-desktop">Blog</a>
                 <a href="#faq" class="nav-link-desktop">FAQ</a>
             </nav>
             
@@ -164,15 +169,30 @@
                 </div>
             </div>
             
-            <div class="menu-right-links">
+            <div class="menu-right-links" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px;">
                 <ul class="menu-links-list">
                     <li><a href="#about" class="menu-link-item"><span class="menu-link-num">01.</span>Qui sommes-nous</a></li>
                     <li><a href="#services" class="menu-link-item"><span class="menu-link-num">02.</span>Nos services</a></li>
                     <li><a href="#methodology" class="menu-link-item"><span class="menu-link-num">03.</span>Méthode Arena</a></li>
                     <li><a href="#pricing" class="menu-link-item"><span class="menu-link-num">04.</span>Tarifs</a></li>
-                    <li><a href="#articles" class="menu-link-item"><span class="menu-link-num">05.</span>Articles</a></li>
+                    <li><a href="#articles" class="menu-link-item"><span class="menu-link-num">05.</span>Blog</a></li>
                     <li><a href="#faq" class="menu-link-item"><span class="menu-link-num">06.</span>FAQ</a></li>
                 </ul>
+                <div class="menu-services-silo" style="display: flex; flex-direction: column; gap: 12px; padding-top: 10px;">
+                    <span style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--primary-color); letter-spacing: 0.05em; display: block;">Nos expertises PME</span>
+                    <ul style="list-style: none; padding-left: 0; display: flex; flex-direction: column; gap: 8px;">
+                        <li><a href="services/planification-strategique.html" style="font-size: 0.95rem; color: #ffffffb3; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='#ffffffb3'">Planification stratégique</a></li>
+                        <li><a href="services/gestion-organisation.html" style="font-size: 0.95rem; color: #ffffffb3; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='#ffffffb3'">Gestion d'organisation</a></li>
+                        <li><a href="services/gestion-changement.html" style="font-size: 0.95rem; color: #ffffffb3; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='#ffffffb3'">Gestion du changement</a></li>
+                        <li><a href="services/architecture-systemes.html" style="font-size: 0.95rem; color: #ffffffb3; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='#ffffffb3'">Architecture IT</a></li>
+                        <li><a href="services/audit-operationnel.html" style="font-size: 0.95rem; color: #ffffffb3; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='#ffffffb3'">Audit opérationnel</a></li>
+                        <li><a href="services/digitalisation.html" style="font-size: 0.95rem; color: #ffffffb3; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='#ffffffb3'">Digitalisation</a></li>
+                        <li><a href="services/automatisation.html" style="font-size: 0.95rem; color: #ffffffb3; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='#ffffffb3'">Automatisation</a></li>
+                        <li><a href="services/erp.html" style="font-size: 0.95rem; color: #ffffffb3; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='#ffffffb3'">Intégration ERP</a></li>
+                        <li><a href="services/crm.html" style="font-size: 0.95rem; color: #ffffffb3; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='#ffffffb3'">Intégration CRM</a></li>
+                        <li><a href="services/supply-chain.html" style="font-size: 0.95rem; color: #ffffffb3; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='#ffffffb3'">Supply Chain</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -359,7 +379,7 @@
             
             <div class="services-grid">
                 
-                <!-- Service 1: Diagnostic (Vibrant left block) -->
+                <!-- Card 1: Diagnostiquer votre entreprise -->
                 <div class="service-card">
                     <div class="service-card-left">
                         <!-- Precise asterisk custom SVG -->
@@ -371,31 +391,60 @@
                         </svg>
                     </div>
                     <div class="service-card-right">
-                        <div class="service-card-header">
-                            <h3 class="service-title-text">NIVEAU 1 : Diagnostic & Audit</h3>
-                            <span class="service-num">(01)</span>
+                        <div>
+                            <div class="service-card-header">
+                                <h3 class="service-title-text">Diagnostiquer votre entreprise</h3>
+                                <span class="service-num">(01)</span>
+                            </div>
+                            <p class="service-description" style="font-size: 1.15rem; font-weight: 400; color: var(--text-dark); margin-bottom: 24px;">
+                                <strong>Objectif :</strong> Comprendre ce qui freine réellement votre croissance.
+                            </p>
+                            
+                            <div class="service-card-body-grid">
+                                <div>
+                                    <h4 style="font-family: var(--font-body); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted-dark); margin-bottom: 12px; letter-spacing: 0.05em;">Services Inclus :</h4>
+                                    <ul class="service-checklist">
+                                        <li class="service-check-item">
+                                            <i data-lucide="check" class="service-check-icon"></i>
+                                            <a href="services/audit-operationnel.html" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">Audit opérationnel</a>
+                                        </li>
+                                        <li class="service-check-item">
+                                            <i data-lucide="check" class="service-check-icon"></i>
+                                            <a href="services/audit-operationnel.html" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">Diagnostic des processus</a>
+                                        </li>
+                                        <li class="service-check-item">
+                                            <i data-lucide="check" class="service-check-icon"></i>
+                                            <a href="services/gestion-organisation.html" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">Analyse organisationnelle</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 style="font-family: var(--font-body); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted-dark); margin-bottom: 12px; letter-spacing: 0.05em;">Livrables :</h4>
+                                    <ul class="service-checklist">
+                                        <li class="service-check-item" style="color: var(--text-muted-dark);">
+                                            <i data-lucide="file-text" class="service-check-icon" style="color: var(--text-muted-dark);"></i>
+                                            Diagnostic complet
+                                        </li>
+                                        <li class="service-check-item" style="color: var(--text-muted-dark);">
+                                            <i data-lucide="file-text" class="service-check-icon" style="color: var(--text-muted-dark);"></i>
+                                            Cartographie des processus
+                                        </li>
+                                        <li class="service-check-item" style="color: var(--text-muted-dark);">
+                                            <i data-lucide="file-text" class="service-check-icon" style="color: var(--text-muted-dark);"></i>
+                                            Recommandations prioritaires
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <p class="service-description">
-                            Cartographie de vos processus existants, identification des frictions opérationnelles réelles, analyse de votre maturité organisationnelle et digitale.
-                        </p>
-                        <ul class="service-checklist">
-                            <li class="service-check-item">
-                                <i data-lucide="check" class="service-check-icon"></i>
-                                Audit terrain complet
-                            </li>
-                            <li class="service-check-item">
-                                <i data-lucide="check" class="service-check-icon"></i>
-                                Cartographie des frictions
-                            </li>
-                            <li class="service-check-item">
-                                <i data-lucide="check" class="service-check-icon"></i>
-                                Recommandations priorisées (pas uniquement digitales)
-                            </li>
-                        </ul>
+
+                        <a href="services/audit-operationnel.html" class="btn-pill" style="align-self: flex-start; background: var(--text-dark); color: #fff; border: 1px solid var(--text-dark); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 32px; transition: all 0.3s;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='var(--text-dark)'; this.style.borderColor='var(--primary-color)'" onmouseout="this.style.background='var(--text-dark)'; this.style.color='#fff'; this.style.borderColor='var(--text-dark)'">
+                            Découvrir le diagnostic
+                        </a>
                     </div>
                 </div>
-                
-                <!-- Service 2: Implémentation (Muted left block) -->
+
+                <!-- Card 2: Structurer votre organisation -->
                 <div class="service-card">
                     <div class="service-card-left muted">
                         <!-- Precise waves custom SVG -->
@@ -406,31 +455,64 @@
                         </svg>
                     </div>
                     <div class="service-card-right">
-                        <div class="service-card-header">
-                            <h3 class="service-title-text">NIVEAU 2 : Prescription & Mise en œuvre</h3>
-                            <span class="service-num">(02)</span>
+                        <div>
+                            <div class="service-card-header">
+                                <h3 class="service-title-text">Structurer votre organisation</h3>
+                                <span class="service-num">(02)</span>
+                            </div>
+                            <p class="service-description" style="font-size: 1.15rem; font-weight: 400; color: var(--text-dark); margin-bottom: 24px;">
+                                <strong>Objectif :</strong> Créer une organisation capable de soutenir votre croissance.
+                            </p>
+                            
+                            <div class="service-card-body-grid">
+                                <div>
+                                    <h4 style="font-family: var(--font-body); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted-dark); margin-bottom: 12px; letter-spacing: 0.05em;">Services Inclus :</h4>
+                                    <ul class="service-checklist">
+                                        <li class="service-check-item">
+                                            <i data-lucide="check" class="service-check-icon"></i>
+                                            <a href="services/planification-strategique.html" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">Planification stratégique</a>
+                                        </li>
+                                        <li class="service-check-item">
+                                            <i data-lucide="check" class="service-check-icon"></i>
+                                            <a href="services/gestion-organisation.html" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">Gestion d'organisation</a>
+                                        </li>
+                                        <li class="service-check-item">
+                                            <i data-lucide="check" class="service-check-icon"></i>
+                                            <a href="services/gestion-organisation.html" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">Gouvernance & Rôles</a>
+                                        </li>
+                                        <li class="service-check-item">
+                                            <i data-lucide="check" class="service-check-icon"></i>
+                                            <a href="services/planification-strategique.html" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">Pilotage de la performance</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 style="font-family: var(--font-body); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted-dark); margin-bottom: 12px; letter-spacing: 0.05em;">Livrables :</h4>
+                                    <ul class="service-checklist">
+                                        <li class="service-check-item" style="color: var(--text-muted-dark);">
+                                            <i data-lucide="file-text" class="service-check-icon" style="color: var(--text-muted-dark);"></i>
+                                            Feuille de route stratégique
+                                        </li>
+                                        <li class="service-check-item" style="color: var(--text-muted-dark);">
+                                            <i data-lucide="file-text" class="service-check-icon" style="color: var(--text-muted-dark);"></i>
+                                            Organisation cible
+                                        </li>
+                                        <li class="service-check-item" style="color: var(--text-muted-dark);">
+                                            <i data-lucide="file-text" class="service-check-icon" style="color: var(--text-muted-dark);"></i>
+                                            Indicateurs de performance
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <p class="service-description">
-                            Selon le diagnostic : optimisation de process existants, réorganisation d'équipe, ou intégration d'outils adaptés (CRM, automatisation, développement sur mesure) quand le digital est la réponse la plus pertinente.
-                        </p>
-                        <ul class="service-checklist">
-                            <li class="service-check-item">
-                                <i data-lucide="check" class="service-check-icon"></i>
-                                Plan d'action sur mesure
-                            </li>
-                            <li class="service-check-item">
-                                <i data-lucide="check" class="service-check-icon"></i>
-                                Mise en œuvre organisationnelle et/ou technique
-                            </li>
-                            <li class="service-check-item">
-                                <i data-lucide="check" class="service-check-icon"></i>
-                                Formation des équipes aux nouveaux process/outils
-                            </li>
-                        </ul>
+
+                        <a href="services/gestion-organisation.html" class="btn-pill" style="align-self: flex-start; background: var(--text-dark); color: #fff; border: 1px solid var(--text-dark); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 32px; transition: all 0.3s;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='var(--text-dark)'; this.style.borderColor='var(--primary-color)'" onmouseout="this.style.background='var(--text-dark)'; this.style.color='#fff'; this.style.borderColor='var(--text-dark)'">
+                            Découvrir notre approche
+                        </a>
                     </div>
                 </div>
-                
-                <!-- Service 3: Pilotage Data (Vibrant left block) -->
+
+                <!-- Card 3: Transformer vos opérations -->
                 <div class="service-card">
                     <div class="service-card-left">
                         <!-- Geometric circular star custom SVG -->
@@ -441,27 +523,132 @@
                         </svg>
                     </div>
                     <div class="service-card-right">
-                        <div class="service-card-header">
-                            <h3 class="service-title-text">NIVEAU 3 : Pilotage & Amélioration continue</h3>
-                            <span class="service-num">(03)</span>
+                        <div>
+                            <div class="service-card-header">
+                                <h3 class="service-title-text">Transformer vos opérations</h3>
+                                <span class="service-num">(03)</span>
+                            </div>
+                            <p class="service-description" style="font-size: 1.15rem; font-weight: 400; color: var(--text-dark); margin-bottom: 24px;">
+                                <strong>Objectif :</strong> Faire évoluer vos méthodes de travail avant d'investir dans la technologie.
+                            </p>
+                            
+                            <div class="service-card-body-grid">
+                                <div>
+                                    <h4 style="font-family: var(--font-body); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted-dark); margin-bottom: 12px; letter-spacing: 0.05em;">Services Inclus :</h4>
+                                    <ul class="service-checklist">
+                                        <li class="service-check-item">
+                                            <i data-lucide="check" class="service-check-icon"></i>
+                                            <a href="services/gestion-changement.html" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">Gestion du changement</a>
+                                        </li>
+                                        <li class="service-check-item">
+                                            <i data-lucide="check" class="service-check-icon"></i>
+                                            <a href="services/architecture-systemes.html" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">Architecture des systèmes</a>
+                                        </li>
+                                        <li class="service-check-item">
+                                            <i data-lucide="check" class="service-check-icon"></i>
+                                            <a href="services/erp.html" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">Intégration ERP</a> &amp; <a href="services/crm.html" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">CRM</a>
+                                        </li>
+                                        <li class="service-check-item">
+                                            <i data-lucide="check" class="service-check-icon"></i>
+                                            <a href="services/automatisation.html" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">Automatisation des flux</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 style="font-family: var(--font-body); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted-dark); margin-bottom: 12px; letter-spacing: 0.05em;">Livrables :</h4>
+                                    <ul class="service-checklist">
+                                        <li class="service-check-item" style="color: var(--text-muted-dark);">
+                                            <i data-lucide="file-text" class="service-check-icon" style="color: var(--text-muted-dark);"></i>
+                                            Architecture IT cible
+                                        </li>
+                                        <li class="service-check-item" style="color: var(--text-muted-dark);">
+                                            <i data-lucide="file-text" class="service-check-icon" style="color: var(--text-muted-dark);"></i>
+                                            Plan de transformation digitale
+                                        </li>
+                                        <li class="service-check-item" style="color: var(--text-muted-dark);">
+                                            <i data-lucide="file-text" class="service-check-icon" style="color: var(--text-muted-dark);"></i>
+                                            Cahier des charges &amp; besoins
+                                        </li>
+                                        <li class="service-check-item" style="color: var(--text-muted-dark);">
+                                            <i data-lucide="file-text" class="service-check-icon" style="color: var(--text-muted-dark);"></i>
+                                            Conduite du changement
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <p class="service-description">
-                            Accompagnement dans la durée : suivi des indicateurs pertinents pour votre activité, ajustements réguliers et aide à la décision basée sur des données fiables, qu'elles soient qualitatives ou quantitatives.
-                        </p>
-                        <ul class="service-checklist">
-                            <li class="service-check-item">
-                                <i data-lucide="check" class="service-check-icon"></i>
-                                Suivi d'indicateurs clés
-                            </li>
-                            <li class="service-check-item">
-                                <i data-lucide="check" class="service-check-icon"></i>
-                                Ajustements itératifs
-                            </li>
-                            <li class="service-check-item">
-                                <i data-lucide="check" class="service-check-icon"></i>
-                                Accompagnement décisionnel continu
-                            </li>
-                        </ul>
+
+                        <a href="services/digitalisation.html" class="btn-pill" style="align-self: flex-start; background: var(--text-dark); color: #fff; border: 1px solid var(--text-dark); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 32px; transition: all 0.3s;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='var(--text-dark)'; this.style.borderColor='var(--primary-color)'" onmouseout="this.style.background='var(--text-dark)'; this.style.color='#fff'; this.style.borderColor='var(--text-dark)'">
+                            Découvrir la transformation
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 4: Optimiser votre croissance -->
+                <div class="service-card">
+                    <div class="service-card-left muted">
+                        <!-- Precise concentric squares custom SVG -->
+                        <svg class="service-icon-svg" viewBox="0 0 100 100">
+                            <rect x="20" y="20" width="60" height="60" stroke="#0F1D18" stroke-width="5" fill="none" />
+                            <rect x="35" y="35" width="30" height="30" stroke="#0F1D18" stroke-width="5" fill="none" />
+                            <circle cx="50" cy="50" r="6" fill="#0F1D18" />
+                        </svg>
+                    </div>
+                    <div class="service-card-right">
+                        <div>
+                            <div class="service-card-header">
+                                <h3 class="service-title-text">Optimiser votre croissance</h3>
+                                <span class="service-num">(04)</span>
+                            </div>
+                            <p class="service-description" style="font-size: 1.15rem; font-weight: 400; color: var(--text-dark); margin-bottom: 24px;">
+                                <strong>Objectif :</strong> Améliorer durablement vos performances opérationnelles.
+                            </p>
+                            
+                            <div class="service-card-body-grid">
+                                <div>
+                                    <h4 style="font-family: var(--font-body); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted-dark); margin-bottom: 12px; letter-spacing: 0.05em;">Services Inclus :</h4>
+                                    <ul class="service-checklist">
+                                        <li class="service-check-item">
+                                            <i data-lucide="check" class="service-check-icon"></i>
+                                            <a href="services/supply-chain.html" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">Optimisation Supply Chain</a>
+                                        </li>
+                                        <li class="service-check-item">
+                                            <i data-lucide="check" class="service-check-icon"></i>
+                                            <a href="services/audit-operationnel.html" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">Amélioration continue</a>
+                                        </li>
+                                        <li class="service-check-item">
+                                            <i data-lucide="check" class="service-check-icon"></i>
+                                            <a href="services/planification-strategique.html" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">Définition des KPI</a>
+                                        </li>
+                                        <li class="service-check-item">
+                                            <i data-lucide="check" class="service-check-icon"></i>
+                                            <a href="services/planification-strategique.html" style="color: inherit; text-decoration: underline; text-underline-offset: 2px;">Accompagnement stratégique</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 style="font-family: var(--font-body); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted-dark); margin-bottom: 12px; letter-spacing: 0.05em;">Livrables :</h4>
+                                    <ul class="service-checklist">
+                                        <li class="service-check-item" style="color: var(--text-muted-dark);">
+                                            <i data-lucide="file-text" class="service-check-icon" style="color: var(--text-muted-dark);"></i>
+                                            Tableaux de bord d'activité
+                                        </li>
+                                        <li class="service-check-item" style="color: var(--text-muted-dark);">
+                                            <i data-lucide="file-text" class="service-check-icon" style="color: var(--text-muted-dark);"></i>
+                                            Plans d'amélioration continue
+                                        </li>
+                                        <li class="service-check-item" style="color: var(--text-muted-dark);">
+                                            <i data-lucide="file-text" class="service-check-icon" style="color: var(--text-muted-dark);"></i>
+                                            Suivi de performance opérationnelle
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="services/planification-strategique.html" class="btn-pill" style="align-self: flex-start; background: var(--text-dark); color: #fff; border: 1px solid var(--text-dark); font-weight: 500; text-decoration: none; padding: 12px 28px; border-radius: 32px; transition: all 0.3s;" onmouseover="this.style.background='var(--primary-color)'; this.style.color='var(--text-dark)'; this.style.borderColor='var(--primary-color)'" onmouseout="this.style.background='var(--text-dark)'; this.style.color='#fff'; this.style.borderColor='var(--text-dark)'">
+                            Optimiser mon entreprise
+                        </a>
                     </div>
                 </div>
                 
@@ -799,7 +986,7 @@
                 <!-- Basic Card -->
                 <div class="pricing-card">
                     <div class="pricing-card-top">
-                        <h4>Plan Diagnostic</h4>
+                        <h3>Plan Diagnostic</h3>
                         <div class="pricing-card-price-row">
                             <span class="pricing-card-price" id="price-basic" data-monthly="150k" data-annual="120k">150k</span>
                             <span class="pricing-card-period">FCFA</span>
@@ -833,7 +1020,7 @@
                 <div class="pricing-card popular">
                     <div class="pricing-card-popular-badge">Recommandé</div>
                     <div class="pricing-card-top">
-                        <h4>Plan Prescription</h4>
+                        <h3>Plan Prescription</h3>
                         <div class="pricing-card-price-row">
                             <span class="pricing-card-price" id="price-premium" data-monthly="350k" data-annual="290k">350k</span>
                             <span class="pricing-card-period">FCFA</span>
@@ -866,7 +1053,7 @@
                 <!-- Ultimate Card -->
                 <div class="pricing-card">
                     <div class="pricing-card-top">
-                        <h4>Plan Pilotage</h4>
+                        <h3>Plan Pilotage</h3>
                         <div class="pricing-card-price-row">
                             <span class="pricing-card-price" id="price-ultimate" data-monthly="600k" data-annual="490k">600k</span>
                             <span class="pricing-card-period">FCFA</span>
@@ -1114,33 +1301,33 @@
                     </div>
 
                     <div class="footer-nav-col">
-                        <h5 class="footer-col-title">Navigation</h5>
+                        <h3 class="footer-col-title">Navigation</h3>
                         <ul class="footer-links">
                             <li><a href="#hero">Accueil</a></li>
                             <li><a href="#about">Qui sommes-nous</a></li>
                             <li><a href="#services">Nos services</a></li>
                             <li><a href="#methodology">Méthode Arena</a></li>
-                            <li><a href="#articles">Articles</a></li>
+                            <li><a href="#articles">Blog</a></li>
                             <li><a href="#realisations">Réalisations</a></li>
                         </ul>
                     </div>
 
                     <div class="footer-nav-col">
-                        <h5 class="footer-col-title">Secteurs</h5>
+                        <h3 class="footer-col-title">Expertises</h3>
                         <ul class="footer-links">
-                            <li><a href="#">Commerce & Retail</a></li>
-                            <li><a href="#">Agroalimentaire</a></li>
-                            <li><a href="#">Finance & Assurance</a></li>
-                            <li><a href="#">Santé & ONG</a></li>
-                            <li><a href="#">Planification stratégique</a></li>
-                            <li><a href="#">Gestion d'organisation</a></li>
-                            <li><a href="#">Gestion du changement</a></li>
-                            <li><a href="#">Architecture des systèmes</a></li>
+                            <li><a href="services/audit-operationnel.html">Audit Opérationnel</a></li>
+                            <li><a href="services/planification-strategique.html">Planification stratégique</a></li>
+                            <li><a href="services/gestion-organisation.html">Gestion d'organisation</a></li>
+                            <li><a href="services/gestion-changement.html">Gestion du changement</a></li>
+                            <li><a href="services/architecture-systemes.html">Architecture des systèmes</a></li>
+                            <li><a href="services/digitalisation.html">Digitalisation</a></li>
+                            <li><a href="services/automatisation.html">Automatisation</a></li>
+                            <li><a href="services/supply-chain.html">Supply Chain</a></li>
                         </ul>
                     </div>
 
                     <div class="footer-nav-col">
-                        <h5 class="footer-col-title">Contact</h5>
+                        <h3 class="footer-col-title">Contact</h3>
                         <div class="footer-contact-block">
                             <a href="mailto:strategyarenacontact@gmail.com" class="footer-contact-item">
                                 strategyarenacontact@gmail.com
