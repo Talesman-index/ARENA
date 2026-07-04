@@ -381,6 +381,7 @@ const initApp = () => {
             const heroHeight = heroSection.offsetHeight || 600;
             
             if (scrollY <= heroHeight) {
+                heroSection.style.visibility = 'visible';
                 const progress = scrollY / heroHeight;
                 
                 // Fade out content and translate down slightly for depth
@@ -393,6 +394,8 @@ const initApp = () => {
                 if (heroBg) {
                     heroBg.style.transform = `scale(${1.02 - progress * 0.02})`;
                 }
+            } else {
+                heroSection.style.visibility = 'hidden';
             }
         }
 
