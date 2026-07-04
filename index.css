@@ -3213,18 +3213,72 @@ a {
     .menu-container {
         display: flex;
         flex-direction: column-reverse;
-        gap: 24px;
-        padding: 80px 24px 40px;
+        gap: 32px;
+        padding: 110px 24px 40px;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .menu-logo {
-        display: none !important;
+        position: absolute !important;
+        top: 26px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        margin: 0 !important;
+        display: block !important;
+        z-index: 10001 !important;
+    }
+    
+    .menu-logo-img {
+        height: 28px !important;
+    }
+    
+    .menu-right-links {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .menu-links-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .menu-link-item {
+        font-size: 1.8rem !important;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .menu-link-num {
+        font-size: 0.95rem !important;
+        margin-right: 12px;
+    }
+    
+    .menu-left-brand {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .menu-left-details {
+        width: 100%;
         margin-top: 0;
-        padding-top: 20px;
+        padding-top: 24px;
         border-top: 1px solid rgba(255, 255, 255, 0.08);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
     
     .menu-left-details h5 {
@@ -3236,6 +3290,7 @@ a {
         letter-spacing: 0.05em;
         margin-bottom: 6px;
         display: block !important;
+        text-align: center;
     }
     
     .menu-tagline-desc {
@@ -3244,11 +3299,15 @@ a {
         line-height: 1.4;
         margin-bottom: 16px;
         display: block !important;
+        text-align: center;
+        max-width: 280px;
     }
     
     .menu-contact-box {
+        width: 100%;
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 10px;
         margin-bottom: 16px;
     }
@@ -3256,25 +3315,16 @@ a {
     .menu-contact-link {
         font-size: 0.85rem !important;
         gap: 8px;
+        justify-content: center;
+        text-align: center;
     }
     
     .menu-socials {
+        width: 100%;
         display: flex;
-        gap: 12px;
+        justify-content: center;
+        gap: 16px;
         margin-top: 12px;
-    }
-    
-    .menu-links-list {
-        gap: 10px;
-    }
-    
-    .menu-link-item {
-        font-size: 1.65rem !important;
-    }
-    
-    .menu-link-num {
-        font-size: 0.9rem !important;
-        margin-right: 12px;
     }
 }
 
