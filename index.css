@@ -3210,6 +3210,18 @@ a {
     .menu-logo-img {
         height: 36px;
     }
+    .menu-left-details,
+    .menu-socials {
+        display: none !important;
+    }
+    .menu-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 60px 24px 40px;
+    }
+    .menu-logo {
+        margin-bottom: 0 !important;
+    }
 }
 
 @media (max-width: 576px) {
