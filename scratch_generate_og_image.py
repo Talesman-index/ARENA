@@ -40,66 +40,37 @@ def main():
     img = Image.alpha_composite(og_img.convert("RGBA"), overlay)
     draw = ImageDraw.Draw(img)
 
-    # 4. Draw Logo Icon (programmatic rendering of the circular arrow favicon)
-    logo_size = 140
-    cx, cy = 600, 115
-    scale = logo_size / 100.0
-
-    yellow_color = (244, 231, 35, 255) # #F4E723
     white_color = (255, 255, 255, 255)
+    yellow_color = (244, 231, 35, 255) # #F4E723
 
-    # Draw spokes
-    spoke_angles = [0, 30, 60, 90, 120, 150, 180, 210, 240, 270]
-    for angle in spoke_angles:
-        p1 = rotate_point(50, 50, 68, 50, angle)
-        p2 = rotate_point(50, 50, 88, 50, angle)
-        p1_scaled = (cx + (p1[0] - 50) * scale, cy + (p1[1] - 50) * scale)
-        p2_scaled = (cx + (p2[0] - 50) * scale, cy + (p2[1] - 50) * scale)
-        draw_round_line(draw, p1_scaled, p2_scaled, 8 * scale, yellow_color)
+    # 4. Paste the official Logo (view_logo.png)
+    logo_path = os.path.join(base_dir, "view_logo.png")
+    if os.path.exists(logo_path):
+        logo_img = Image.open(logo_path).convert("RGBA")
+        logo_w, logo_h = logo_img.size
+        # Scale the logo up for high-resolution visual quality
+        scale = 2.5
+        new_w = int(logo_w * scale)
+        new_h = int(logo_h * scale)
+        logo_resized = logo_img.resize((new_w, new_h), Image.Resampling.LANCZOS)
+        
+        # Paste centered horizontally, Y = 150
+        logo_x = 600 - new_w // 2
+        logo_y = 150
+        img.paste(logo_resized, (logo_x, logo_y), logo_resized)
+    else:
+        print("Warning: view_logo.png not found, skipping logo rendering.")
 
-    # Draw arrow line
-    ap1 = rotate_point(50, 50, 56, 50, -45)
-    ap2 = rotate_point(50, 50, 84, 50, -45)
-    ap1_scaled = (cx + (ap1[0] - 50) * scale, cy + (ap1[1] - 50) * scale)
-    ap2_scaled = (cx + (ap2[0] - 50) * scale, cy + (ap2[1] - 50) * scale)
-    draw_round_line(draw, ap1_scaled, ap2_scaled, 8 * scale, white_color)
-
-    # Draw arrow head
-    hp1 = rotate_point(50, 50, 72, 38, -45)
-    hp2 = rotate_point(50, 50, 86, 50, -45)
-    hp3 = rotate_point(50, 50, 72, 62, -45)
-    
-    hp1_scaled = (cx + (hp1[0] - 50) * scale, cy + (hp1[1] - 50) * scale)
-    hp2_scaled = (cx + (hp2[0] - 50) * scale, cy + (hp2[1] - 50) * scale)
-    hp3_scaled = (cx + (hp3[0] - 50) * scale, cy + (hp3[1] - 50) * scale)
-    
-    draw_round_line(draw, hp1_scaled, hp2_scaled, 8 * scale, white_color)
-    draw_round_line(draw, hp2_scaled, hp3_scaled, 8 * scale, white_color)
-
-    # 5. Draw Title, Tagline and Website info
+    # 5. Draw Tagline and Website info
     try:
-        title_font = ImageFont.truetype(font_path_bold, 60)
         tagline_font = ImageFont.truetype(font_path_medium, 24)
         info_font = ImageFont.truetype(font_path_medium, 20)
         url_font = ImageFont.truetype(font_path_bold, 20)
     except IOError:
         print("Font not found, using default font.")
-        title_font = ImageFont.load_default()
         tagline_font = ImageFont.load_default()
         info_font = ImageFont.load_default()
         url_font = ImageFont.load_default()
-
-    # Title
-    text_strategy = "STRATEGY "
-    text_arena = "ARENA"
-    strategy_w = draw.textlength(text_strategy, font=title_font)
-    arena_w = draw.textlength(text_arena, font=title_font)
-    total_title_w = strategy_w + arena_w
-    
-    title_y = 215
-    start_x = 600 - (total_title_w / 2)
-    draw.text((start_x, title_y), text_strategy, fill=white_color, font=title_font)
-    draw.text((start_x + strategy_w, title_y), text_arena, fill=yellow_color, font=title_font)
 
     # Tagline / Sentence (Centered and wrapped)
     line1 = "La croissance d'une entreprise ne doit rien au hasard :"
