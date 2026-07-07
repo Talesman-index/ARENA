@@ -4635,6 +4635,7 @@ html:has(body.case-page) {
 
 .contact-submit-btn:hover {
     background-color: #ffffff;
+    color: var(--primary-dark) !important;
     transform: translateY(-2px);
 }
 
