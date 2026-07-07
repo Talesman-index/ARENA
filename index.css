@@ -4558,6 +4558,9 @@ html:has(body.case-page) {
     color: rgba(255, 255, 255, 0.6);
     text-transform: uppercase;
     letter-spacing: 0.08em;
+    min-height: 2.2em;
+    display: flex;
+    align-items: flex-end;
 }
 
 .form-group input,
