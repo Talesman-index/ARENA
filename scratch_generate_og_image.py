@@ -19,8 +19,9 @@ def draw_round_line(draw, p1, p2, width, color):
 def main():
     # 1. Base paths
     base_dir = "/Users/shalomtalesman/Downloads/ARENA"
-    bg_image_path = os.path.join(base_dir, "images", "young-black-man-collaborating-with-colleagues-in-m-2026-01-21-02-38-50-utc.jpg")
-    font_path = os.path.join(base_dir, "whyte-inktrap", "WhyteInktrap-Bold.ttf")
+    bg_image_path = os.path.join(base_dir, "images", "black-woman-sitting-in-front-of-group-of-multi-eth-2026-03-24-06-00-42-utc.jpg")
+    font_path_bold = os.path.join(base_dir, "whyte-inktrap", "WhyteInktrap-Bold.ttf")
+    font_path_medium = os.path.join(base_dir, "whyte-inktrap", "WhyteInktrap-Medium.ttf")
     output_path = os.path.join(base_dir, "images", "link_preview.png")
     public_output_dir = os.path.join(base_dir, "public", "images")
     public_output_path = os.path.join(public_output_dir, "link_preview.png")
@@ -35,17 +36,15 @@ def main():
 
     # 3. Create dark translucent overlay
     # Deep slate dark green overlay matching Strategy Arena brand tone
-    overlay = Image.new("RGBA", (1200, 630), (8, 15, 12, 210)) # 82% opacity
+    overlay = Image.new("RGBA", (1200, 630), (8, 15, 12, 215)) # 84% opacity for better text contrast
     img = Image.alpha_composite(og_img.convert("RGBA"), overlay)
     draw = ImageDraw.Draw(img)
 
-    # 4. Draw Logo Icon
-    # We want a 180x180 icon centered at X=600, Y=180
-    logo_size = 180
-    cx, cy = 600, 180
-    scale = logo_size / 100.0  # Scale from 100x100 SVG coordinates
+    # 4. Draw Logo Icon (programmatic rendering of the circular arrow favicon)
+    logo_size = 140
+    cx, cy = 600, 115
+    scale = logo_size / 100.0
 
-    # Colors
     yellow_color = (244, 231, 35, 255) # #F4E723
     white_color = (255, 255, 255, 255)
 
@@ -54,7 +53,6 @@ def main():
     for angle in spoke_angles:
         p1 = rotate_point(50, 50, 68, 50, angle)
         p2 = rotate_point(50, 50, 88, 50, angle)
-        # Scale and shift to cx, cy
         p1_scaled = (cx + (p1[0] - 50) * scale, cy + (p1[1] - 50) * scale)
         p2_scaled = (cx + (p2[0] - 50) * scale, cy + (p2[1] - 50) * scale)
         draw_round_line(draw, p1_scaled, p2_scaled, 8 * scale, yellow_color)
@@ -78,51 +76,54 @@ def main():
     draw_round_line(draw, hp1_scaled, hp2_scaled, 8 * scale, white_color)
     draw_round_line(draw, hp2_scaled, hp3_scaled, 8 * scale, white_color)
 
-    # 5. Draw Title and Subtitle Text
+    # 5. Draw Title, Tagline and Website info
     try:
-        # Load fonts
-        title_font = ImageFont.truetype(font_path, 68)
-        tagline_font = ImageFont.truetype(font_path, 24)
-        url_font = ImageFont.truetype(font_path, 20)
+        title_font = ImageFont.truetype(font_path_bold, 60)
+        tagline_font = ImageFont.truetype(font_path_medium, 24)
+        info_font = ImageFont.truetype(font_path_medium, 20)
+        url_font = ImageFont.truetype(font_path_bold, 20)
     except IOError:
         print("Font not found, using default font.")
         title_font = ImageFont.load_default()
         tagline_font = ImageFont.load_default()
+        info_font = ImageFont.load_default()
         url_font = ImageFont.load_default()
 
-    # Text parts
+    # Title
     text_strategy = "STRATEGY "
     text_arena = "ARENA"
-    
-    # Calculate widths
     strategy_w = draw.textlength(text_strategy, font=title_font)
     arena_w = draw.textlength(text_arena, font=title_font)
     total_title_w = strategy_w + arena_w
     
-    # Draw centered Title at Y = 340
-    title_y = 340
+    title_y = 215
     start_x = 600 - (total_title_w / 2)
     draw.text((start_x, title_y), text_strategy, fill=white_color, font=title_font)
     draw.text((start_x + strategy_w, title_y), text_arena, fill=yellow_color, font=title_font)
 
-    # Draw tagline at Y = 440
-    tagline = "CONSEIL EN TRANSFORMATION DIGITALE"
-    tagline_w = draw.textlength(tagline, font=tagline_font)
-    draw.text((600 - tagline_w / 2, 440), tagline, fill=white_color, font=tagline_font)
+    # Tagline / Sentence (Centered and wrapped)
+    line1 = "La croissance d'une entreprise ne doit rien au hasard :"
+    line2 = "elle résulte d'une planification structurée et de décisions stratégiques factuelles."
+    
+    line1_w = draw.textlength(line1, font=tagline_font)
+    line2_w = draw.textlength(line2, font=tagline_font)
+    
+    draw.text((600 - line1_w / 2, 310), line1, fill=white_color, font=tagline_font)
+    draw.text((600 - line2_w / 2, 355), line2, fill=white_color, font=tagline_font)
 
-    # Draw regions at Y = 480
-    regions = "BÉNIN & AFRIQUE DE L'OUEST"
-    regions_w = draw.textlength(regions, font=tagline_font)
-    draw.text((600 - regions_w / 2, 485), regions, fill=(165, 168, 166, 255), font=tagline_font)
-
-    # Draw yellow line decorator at Y = 535
+    # Subtle yellow separator line
     line_w = 120
-    draw.line([(600 - line_w / 2, 535), (600 + line_w / 2, 535)], fill=yellow_color, width=4)
+    draw.line([(600 - line_w / 2, 435), (600 + line_w / 2, 435)], fill=yellow_color, width=4)
 
-    # Draw Website URL at Y = 560
+    # Contact details & Location info
+    contact_info = "contact@strategie-arena.com  •  WhatsApp : +229 01 40 78 99 21  •  Cotonou, Bénin"
+    contact_info_w = draw.textlength(contact_info, font=info_font)
+    draw.text((600 - contact_info_w / 2, 470), contact_info, fill=(165, 168, 166, 255), font=info_font)
+
+    # Website URL at the bottom
     url = "strategie-arena.com"
     url_w = draw.textlength(url, font=url_font)
-    draw.text((600 - url_w / 2, 560), url, fill=white_color, font=url_font)
+    draw.text((600 - url_w / 2, 520), url, fill=white_color, font=url_font)
 
     # 6. Save final image
     img.convert("RGB").save(output_path, "PNG")
