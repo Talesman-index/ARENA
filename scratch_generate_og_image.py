@@ -120,7 +120,7 @@ def main():
     draw.line([(600 - line_w / 2, 535), (600 + line_w / 2, 535)], fill=yellow_color, width=4)
 
     # Draw Website URL at Y = 560
-    url = "strategyarena.com"
+    url = "strategie-arena.com"
     url_w = draw.textlength(url, font=url_font)
     draw.text((600 - url_w / 2, 560), url, fill=white_color, font=url_font)
 

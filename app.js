@@ -409,7 +409,7 @@ const initApp = () => {
        ARENA AI ASSISTANT CHAT WIDGET DYNAMIC INJECTION
        ========================================================================== */
     const injectAssistant = () => {
-        const prefix = window.location.pathname.includes('/cases/') || window.location.pathname.includes('/articles/') ? '../' : '';
+        const prefix = window.location.pathname.includes('/cases/') || window.location.pathname.includes('/articles/') || window.location.pathname.includes('/services/') ? '../' : '';
         
         const chatWidgetHTML = `
             <div id="arena-chat-widget">
@@ -599,7 +599,7 @@ const initApp = () => {
             
             if (txt.includes('contact') || txt.includes('rendez') || txt.includes('rdv') || txt.includes('whatsapp') || txt.includes('téléphone') || txt.includes('email') || txt.includes('adresse') || txt.includes('écrire') || txt.includes('basé')) {
                 return `Pour échanger sur vos problématiques ou planifier un diagnostic gratuit, voici comment nous contacter :<br><br>
-                        • <strong>Email</strong> : <a href="mailto:strategyarenacontact@gmail.com">strategyarenacontact@gmail.com</a><br>
+                        • <strong>Email</strong> : <a href="mailto:contact@strategie-arena.com">contact@strategie-arena.com</a><br>
                         • <strong>Téléphone</strong> : <a href="tel:+2290140789921">+229 01 40 78 99 21</a><br>
                         • <strong>WhatsApp</strong> : <a href="https://wa.me/22940789921" target="_blank">Discuter directement</a><br><br>
                         Notre cabinet est basé à Cotonou, Bénin, et nous intervenons sur toute la région.`;
@@ -659,6 +659,63 @@ const initApp = () => {
     };
 
     injectAssistant();
+
+    /* ==========================================================================
+       COOKIE CONSENT BANNER (RGPD)
+       ========================================================================== */
+    const injectCookieBanner = () => {
+        // If response already recorded, do not show banner
+        if (localStorage.getItem('arena-cookie-consent')) return;
+
+        // Path prefix configuration for subdirectories
+        const path = window.location.pathname;
+        const prefix = path.includes('/cases/') || path.includes('/articles/') || path.includes('/services/') ? '../' : '';
+
+        const bannerHTML = `
+            <div id="arena-cookie-banner" class="arena-cookie-banner">
+                <div class="arena-cookie-text">
+                    🍪 <strong>Cookies & Confidentialité</strong><br>
+                    Nous utilisons des cookies pour mesurer l'audience et analyser le trafic de notre site. Vous pouvez consulter notre <a href="${prefix}politique-de-confidentialite.html">politique de confidentialité</a>.
+                </div>
+                <div class="arena-cookie-actions">
+                    <button class="arena-cookie-btn decline" id="cookieDeclineBtn">Refuser</button>
+                    <button class="arena-cookie-btn accept" id="cookieAcceptBtn">Accepter</button>
+                </div>
+            </div>
+        `;
+
+        document.body.insertAdjacentHTML('beforeend', bannerHTML);
+
+        const banner = document.getElementById('arena-cookie-banner');
+        const acceptBtn = document.getElementById('cookieAcceptBtn');
+        const declineBtn = document.getElementById('cookieDeclineBtn');
+
+        if (!banner || !acceptBtn || !declineBtn) return;
+
+        // Delay display slightly to feel premium
+        setTimeout(() => {
+            banner.classList.add('show');
+        }, 1500);
+
+        const hideBanner = () => {
+            banner.classList.remove('show');
+            setTimeout(() => {
+                banner.remove();
+            }, 600);
+        };
+
+        acceptBtn.addEventListener('click', () => {
+            localStorage.setItem('arena-cookie-consent', 'accepted');
+            hideBanner();
+        });
+
+        declineBtn.addEventListener('click', () => {
+            localStorage.setItem('arena-cookie-consent', 'declined');
+            hideBanner();
+        });
+    };
+
+    injectCookieBanner();
 };
 
 if (document.readyState === 'loading') {

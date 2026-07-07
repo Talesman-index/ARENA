@@ -89,4 +89,4 @@ Collecte de données difficile, reporting manuel, besoin de systèmes centralis�
 
 ---
 
-*Strategy Arena · strategyarena.co · strategyarenacontact@gmail.com · Tankpè, Calavi*
+*Strategy Arena · strategyarena.co · contact@strategie-arena.com · Tankpè, Calavi*

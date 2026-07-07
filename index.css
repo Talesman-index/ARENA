@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 /* ==========================================================================
    STRATEGY ARENA - DESIGN SYSTEM & GLOBAL STYLES (SANDRIO V2 STYLE)
@@ -80,7 +80,7 @@
     --container-max-width: 1320px;
     
     /* Typography Scales */
-    --font-heading: 'Anton', sans-serif;
+    --font-heading: 'Bebas Neue', sans-serif;
     --font-body: 'Whyte Inktrap', sans-serif; /* Use Whyte Inktrap uniformly for premium editorial identity */
     
     /* Transition standard */
@@ -495,12 +495,13 @@ a {
 }
 
 .menu-contact-link {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 12px;
     color: var(--text-light);
     text-decoration: none;
     font-size: 0.95rem;
+    line-height: 1.2;
     transition: color 0.3s ease;
 }
 
@@ -508,10 +509,13 @@ a {
     color: var(--primary-color);
 }
 
-.menu-contact-link i {
+.menu-contact-link svg, .menu-contact-link i {
     width: 16px;
     height: 16px;
+    flex-shrink: 0;
     color: var(--primary-color);
+    position: relative;
+    top: 0.5px;
 }
 
 /* Social links circle icons style */
@@ -1482,7 +1486,8 @@ a {
     gap: 12px;
     font-size: 1.05rem;
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.5;
+    padding: 2px 0;
 }
 
 .service-check-icon {
@@ -3315,8 +3320,16 @@ a {
     .menu-contact-link {
         font-size: 0.85rem !important;
         gap: 8px;
+        display: flex !important;
+        align-items: center !important;
         justify-content: flex-start;
         text-align: left;
+    }
+    
+    .menu-contact-link svg, .menu-contact-link i {
+        width: 14px;
+        height: 14px;
+        top: 0.5px;
     }
     
     .menu-socials {
@@ -4488,6 +4501,266 @@ html:has(body.case-page) {
 .case-container .about-pill-card .about-pill-arrow {
     align-self: center !important;
     flex-shrink: 0;
+}
+
+/* ==========================================================================
+   CONTACT PAGE STYLING
+   ========================================================================== */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: start;
+    margin-top: 20px;
+}
+
+.contact-info-col {
+    position: sticky;
+    top: 180px;
+}
+
+.contact-form-card {
+    background: #0F100F;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 48px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.form-row-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+    .form-row-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.form-row-grid .form-group {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.form-group input,
+.form-group select {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    padding: 16px 20px;
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    width: 100%;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-sizing: border-box;
+    line-height: 1.4;
+}
+
+.form-group textarea {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    padding: 16px 20px;
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    width: 100%;
+    min-height: 120px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+.form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 14px;
+    padding-right: 48px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.form-group select option {
+    background-color: #0F100F;
+    color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.06);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(244, 231, 35, 0.15);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.contact-submit-btn {
+    background-color: var(--primary-color);
+    color: #0F100F;
+    font-weight: 700;
+    border-radius: 32px;
+    padding: 16px 32px;
+    transition: all 0.3s ease;
+}
+
+.contact-submit-btn:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.contact-submit-btn:disabled {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: rgba(255, 255, 255, 0.3) !important;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 56px;
+    }
+    
+    .contact-info-col {
+        position: static;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-form-card {
+        padding: 32px 24px;
+    }
+    
+    .form-row-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+/* ==========================================================================
+   COOKIE CONSENT BANNER STYLES (RGPD)
+   ========================================================================== */
+.arena-cookie-banner {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translate(-50%, 100px);
+    width: calc(100% - 48px);
+    max-width: 600px;
+    background: rgba(15, 16, 15, 0.95);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 20px 24px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+}
+
+.arena-cookie-banner.show {
+    transform: translate(-50%, 0);
+    opacity: 1;
+}
+
+.arena-cookie-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: var(--font-body);
+}
+
+.arena-cookie-text a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.arena-cookie-text a:hover {
+    color: #ffffff;
+}
+
+.arena-cookie-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.arena-cookie-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arena-cookie-btn.accept {
+    background: var(--primary-color);
+    border: none;
+    color: #0F100F;
+}
+
+.arena-cookie-btn.accept:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(244, 231, 35, 0.2);
+}
+
+.arena-cookie-btn.decline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.arena-cookie-btn.decline:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+}
+
+@media (min-width: 640px) {
+    .arena-cookie-banner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .arena-cookie-text {
+        max-width: 380px;
+    }
 }
 
 

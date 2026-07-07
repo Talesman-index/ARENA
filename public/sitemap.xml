@@ -1,116 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://strategyarena.com/</loc>
-    <lastmod>2026-07-04</lastmod>
+    <loc>https://strategie-arena.com/</loc>
+    <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://strategyarena.com/cases/benin-distribution.html</loc>
+    <loc>https://strategie-arena.com/contact.html</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://strategie-arena.com/cases/benin-distribution.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://strategyarena.com/cases/sahel-foods.html</loc>
+    <loc>https://strategie-arena.com/cases/sahel-foods.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://strategyarena.com/cases/atlantique-logistique.html</loc>
+    <loc>https://strategie-arena.com/cases/atlantique-logistique.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://strategyarena.com/articles/comment-digitaliser-pme-benin.html</loc>
+    <loc>https://strategie-arena.com/articles/comment-digitaliser-pme-benin.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://strategyarena.com/articles/whatsapp-business-retail-cotonou.html</loc>
+    <loc>https://strategie-arena.com/articles/whatsapp-business-retail-cotonou.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://strategyarena.com/articles/importance-audit-operationnel.html</loc>
+    <loc>https://strategie-arena.com/articles/importance-audit-operationnel.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://strategyarena.com/articles/optimisation-logistique-cotonou.html</loc>
+    <loc>https://strategie-arena.com/articles/optimisation-logistique-cotonou.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://strategyarena.com/articles/digitalisation-logistique-cote-divoire.html</loc>
+    <loc>https://strategie-arena.com/articles/digitalisation-logistique-cote-divoire.html</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://strategyarena.com/services/planification-strategique.html</loc>
-    <lastmod>2026-07-04</lastmod>
+    <loc>https://strategie-arena.com/services/diagnostiquer.html</loc>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://strategyarena.com/services/gestion-organisation.html</loc>
-    <lastmod>2026-07-04</lastmod>
+    <loc>https://strategie-arena.com/services/structurer.html</loc>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://strategyarena.com/services/gestion-changement.html</loc>
-    <lastmod>2026-07-04</lastmod>
+    <loc>https://strategie-arena.com/services/transformer.html</loc>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://strategyarena.com/services/architecture-systemes.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://strategyarena.com/services/audit-operationnel.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://strategyarena.com/services/digitalisation.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://strategyarena.com/services/automatisation.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://strategyarena.com/services/erp.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://strategyarena.com/services/crm.html</loc>
-    <lastmod>2026-07-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://strategyarena.com/services/supply-chain.html</loc>
-    <lastmod>2026-07-04</lastmod>
+    <loc>https://strategie-arena.com/services/supply-chain-et-croissance.html</loc>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
