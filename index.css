@@ -2299,6 +2299,64 @@ a {
     transform: translateX(100%);
 }
 
+.pricing-toggle-discount {
+    background-color: var(--text-dark);
+    color: var(--primary-color);
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 6px;
+    margin-left: 6px;
+    vertical-align: middle;
+    display: inline-block;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.pricing-discount-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: height 0.25s ease, opacity 0.25s ease, margin-bottom 0.25s ease;
+    margin-bottom: 0;
+}
+
+.pricing-discount-row.active {
+    height: 24px;
+    opacity: 1;
+    margin-bottom: 12px;
+}
+
+.pricing-original-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: line-through;
+    color: rgba(15, 16, 15, 0.4);
+    font-family: var(--font-body);
+}
+
+.pricing-card.popular .pricing-original-price {
+    color: rgba(15, 16, 15, 0.5);
+}
+
+.pricing-discount-tag {
+    font-size: 0.8rem;
+    font-weight: 700;
+    background-color: rgba(15, 16, 15, 0.08);
+    color: var(--text-dark);
+    padding: 2px 8px;
+    border-radius: 50px;
+}
+
+.pricing-card.popular .pricing-discount-tag {
+    background-color: #FFFFFF;
+    color: var(--text-dark);
+}
+
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -2367,6 +2425,7 @@ a {
     font-weight: 900;
     color: var(--text-dark);
     line-height: 1;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .pricing-card-period {
@@ -2374,6 +2433,20 @@ a {
     font-weight: 500;
     color: rgba(0, 0, 0, 0.6);
     margin-left: 4px;
+}
+
+.pricing-card-billing-detail {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.45);
+    margin-top: -12px;
+    margin-bottom: 24px;
+    min-height: 1.2rem;
+    transition: opacity 0.2s ease;
+}
+
+.pricing-card.popular .pricing-card-billing-detail {
+    color: rgba(0, 0, 0, 0.65);
 }
 
 .pricing-card.popular .pricing-card-price,

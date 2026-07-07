@@ -1010,7 +1010,7 @@
                 <!-- Toggle switch slider -->
                 <div class="pricing-toggle-wrap" id="pricingToggle">
                     <span class="pricing-toggle-btn active" id="toggleMonthly">Mensuel</span>
-                    <span class="pricing-toggle-btn" id="toggleAnnually">Annuel</span>
+                    <span class="pricing-toggle-btn" id="toggleAnnually">Annuel <span class="pricing-toggle-discount">-20%</span></span>
                     <div class="pricing-toggle-slider"></div>
                 </div>
             </div>
@@ -1021,10 +1021,15 @@
                 <div class="pricing-card">
                     <div class="pricing-card-top">
                         <h3>Plan Diagnostic</h3>
+                        <div class="pricing-discount-row" id="discount-row-basic">
+                            <span class="pricing-original-price">150k</span>
+                            <span class="pricing-discount-tag">-20%</span>
+                        </div>
                         <div class="pricing-card-price-row">
                             <span class="pricing-card-price" id="price-basic" data-monthly="150k" data-annual="120k">150k</span>
-                            <span class="pricing-card-period">FCFA</span>
+                            <span class="pricing-card-period">FCFA / mois</span>
                         </div>
+                        <div class="pricing-card-billing-detail" id="billing-detail-basic" data-monthly="Facturé mensuellement" data-annual="1 440 000 FCFA / an (facturé annuellement)">Facturé mensuellement</div>
                         <p class="pricing-card-desc">Pour comprendre où se trouvent vraiment vos frictions avant d'investir dans une solution quelconque.</p>
                         
                         <ul class="pricing-card-features">
@@ -1055,10 +1060,15 @@
                     <div class="pricing-card-popular-badge">Recommandé</div>
                     <div class="pricing-card-top">
                         <h3>Plan Prescription</h3>
+                        <div class="pricing-discount-row" id="discount-row-premium">
+                            <span class="pricing-original-price">350k</span>
+                            <span class="pricing-discount-tag">-17%</span>
+                        </div>
                         <div class="pricing-card-price-row">
                             <span class="pricing-card-price" id="price-premium" data-monthly="350k" data-annual="290k">350k</span>
-                            <span class="pricing-card-period">FCFA</span>
+                            <span class="pricing-card-period">FCFA / mois</span>
                         </div>
+                        <div class="pricing-card-billing-detail" id="billing-detail-premium" data-monthly="Facturé mensuellement" data-annual="3 480 000 FCFA / an (facturé annuellement)">Facturé mensuellement</div>
                         <p class="pricing-card-desc">Pour passer du diagnostic à la mise en œuvre concrète, qu'elle soit organisationnelle ou technologique.</p>
                         
                         <ul class="pricing-card-features">
@@ -1088,10 +1098,15 @@
                 <div class="pricing-card">
                     <div class="pricing-card-top">
                         <h3>Plan Pilotage</h3>
+                        <div class="pricing-discount-row" id="discount-row-ultimate">
+                            <span class="pricing-original-price">600k</span>
+                            <span class="pricing-discount-tag">-18%</span>
+                        </div>
                         <div class="pricing-card-price-row">
                             <span class="pricing-card-price" id="price-ultimate" data-monthly="600k" data-annual="490k">600k</span>
-                            <span class="pricing-card-period">FCFA</span>
+                            <span class="pricing-card-period">FCFA / mois</span>
                         </div>
+                        <div class="pricing-card-billing-detail" id="billing-detail-ultimate" data-monthly="Facturé mensuellement" data-annual="5 880 000 FCFA / an (facturé annuellement)">Facturé mensuellement</div>
                         <p class="pricing-card-desc">Pour un accompagnement continu dans la durée, avec suivi des résultats et ajustements réguliers.</p>
                         
                         <ul class="pricing-card-features">
