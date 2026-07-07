@@ -63,9 +63,9 @@ def main():
 
     # 5. Draw Tagline and Website info
     try:
-        tagline_font = ImageFont.truetype(font_path_medium, 24)
-        info_font = ImageFont.truetype(font_path_medium, 20)
-        url_font = ImageFont.truetype(font_path_bold, 20)
+        tagline_font = ImageFont.truetype(font_path_medium, 36)
+        info_font = ImageFont.truetype(font_path_medium, 22)
+        url_font = ImageFont.truetype(font_path_bold, 28)
     except IOError:
         print("Font not found, using default font.")
         tagline_font = ImageFont.load_default()
@@ -73,28 +73,28 @@ def main():
         url_font = ImageFont.load_default()
 
     # Tagline / Sentence (Centered and wrapped)
-    line1 = "La croissance d'une entreprise ne doit rien au hasard :"
-    line2 = "elle résulte d'une planification structurée et de décisions stratégiques factuelles."
+    line1 = "La croissance d'une entreprise"
+    line2 = "ne doit rien au hasard."
     
     line1_w = draw.textlength(line1, font=tagline_font)
     line2_w = draw.textlength(line2, font=tagline_font)
     
-    draw.text((600 - line1_w / 2, 310), line1, fill=white_color, font=tagline_font)
-    draw.text((600 - line2_w / 2, 355), line2, fill=white_color, font=tagline_font)
+    draw.text((600 - line1_w / 2, 285), line1, fill=white_color, font=tagline_font)
+    draw.text((600 - line2_w / 2, 335), line2, fill=white_color, font=tagline_font)
 
     # Subtle yellow separator line
     line_w = 120
-    draw.line([(600 - line_w / 2, 435), (600 + line_w / 2, 435)], fill=yellow_color, width=4)
+    draw.line([(600 - line_w / 2, 420), (600 + line_w / 2, 420)], fill=yellow_color, width=4)
 
     # Contact details & Location info
-    contact_info = "contact@strategie-arena.com  •  WhatsApp : +229 01 40 78 99 21  •  Cotonou, Bénin"
+    contact_info = "Cabinet de conseil  •  Cotonou, Bénin"
     contact_info_w = draw.textlength(contact_info, font=info_font)
-    draw.text((600 - contact_info_w / 2, 470), contact_info, fill=(165, 168, 166, 255), font=info_font)
+    draw.text((600 - contact_info_w / 2, 455), contact_info, fill=(165, 168, 166, 255), font=info_font)
 
     # Website URL at the bottom
     url = "strategie-arena.com"
     url_w = draw.textlength(url, font=url_font)
-    draw.text((600 - url_w / 2, 520), url, fill=white_color, font=url_font)
+    draw.text((600 - url_w / 2, 510), url, fill=white_color, font=url_font)
 
     # 6. Save final image
     img.convert("RGB").save(output_path, "PNG")
