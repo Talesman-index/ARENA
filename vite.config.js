@@ -22,6 +22,8 @@ export default defineConfig({
         structurer: resolve(__dirname, 'services/structurer.html'),
         transformer: resolve(__dirname, 'services/transformer.html'),
         supplyChainEtCroissance: resolve(__dirname, 'services/supply-chain-et-croissance.html'),
+        aPropos: resolve(__dirname, 'a-propos.html'),
+
       }
     }
   }
