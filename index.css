@@ -2252,27 +2252,29 @@ a {
     margin: 0 auto 20px auto;
 }
 
-/* Billing Toggle Capsule (like Webflow) */
+/* Billing Toggle Capsule (Mini/Card layout style) */
 .pricing-toggle-wrap {
-    background-color: #F3F4F6;
-    padding: 6px;
+    background-color: rgba(15, 16, 15, 0.05);
+    padding: 4px;
     border-radius: 50px;
     display: inline-flex;
     position: relative;
     cursor: pointer;
     user-select: none;
     border: none;
+    margin: 8px auto 24px auto;
+    width: fit-content;
 }
 
 .pricing-toggle-btn {
-    padding: 10px 24px;
+    padding: 8px 20px;
     border-radius: 50px;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
     z-index: 2;
     transition: color 0.3s ease;
-    color: #9CA3AF;
+    color: rgba(15, 16, 15, 0.4);
 }
 
 .pricing-toggle-btn.active {
@@ -2280,15 +2282,15 @@ a {
 }
 
 .pricing-toggle-btn:not(.active) {
-    color: #9CA3AF;
+    color: rgba(15, 16, 15, 0.4);
 }
 
 .pricing-toggle-slider {
     position: absolute;
-    top: 6px;
-    left: 6px;
-    width: calc(50% - 6px);
-    height: calc(100% - 12px);
+    top: 4px;
+    left: 4px;
+    width: calc(50% - 4px);
+    height: calc(100% - 8px);
     background-color: var(--primary-color);
     border-radius: 50px;
     z-index: 1;
@@ -2364,9 +2366,9 @@ a {
 }
 
 .pricing-card {
-    background-color: #F8F9FA;
-    border: none;
-    border-radius: 20px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color-light);
+    border-radius: var(--border-radius);
     padding: 48px 36px;
     display: flex;
     flex-direction: column;
@@ -2379,6 +2381,7 @@ a {
 
 .pricing-card.popular {
     background-color: var(--primary-color); /* Canary Yellow */
+    border: 1px solid var(--primary-color);
     color: var(--text-dark);
     position: relative;
 }
@@ -2395,6 +2398,25 @@ a {
     font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+.pricing-card-type {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted-dark);
+    background-color: rgba(15, 16, 15, 0.05);
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.pricing-card.popular .pricing-card-type {
+    color: var(--text-dark);
+    background-color: rgba(15, 16, 15, 0.1);
 }
 
 .pricing-card-top {
@@ -2431,14 +2453,14 @@ a {
 .pricing-card-period {
     font-size: 0.95rem;
     font-weight: 500;
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(15, 16, 15, 0.65);
     margin-left: 4px;
 }
 
 .pricing-card-billing-detail {
     font-size: 0.85rem;
     font-weight: 500;
-    color: rgba(0, 0, 0, 0.45);
+    color: rgba(15, 16, 15, 0.5);
     margin-top: -12px;
     margin-bottom: 24px;
     min-height: 1.2rem;
@@ -2446,7 +2468,7 @@ a {
 }
 
 .pricing-card.popular .pricing-card-billing-detail {
-    color: rgba(0, 0, 0, 0.65);
+    color: rgba(15, 16, 15, 0.75);
 }
 
 .pricing-card.popular .pricing-card-price,
@@ -2455,7 +2477,7 @@ a {
 }
 
 .pricing-card-desc {
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--text-muted-dark);
     font-size: 0.95rem;
     line-height: 1.5;
     margin-bottom: 32px;
@@ -2463,7 +2485,7 @@ a {
 }
 
 .pricing-card.popular .pricing-card-desc {
-    color: rgba(0, 0, 0, 0.75);
+    color: rgba(15, 16, 15, 0.85);
 }
 
 .pricing-card-features {
@@ -2471,7 +2493,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    border-top: 1px solid rgba(15, 16, 15, 0.08);
     padding-top: 32px;
     margin-bottom: 40px;
     align-self: stretch;
@@ -2479,7 +2501,7 @@ a {
 }
 
 .pricing-card.popular .pricing-card-features {
-    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    border-top: 1px solid rgba(15, 16, 15, 0.12);
 }
 
 .pricing-feature-item {
@@ -2493,7 +2515,7 @@ a {
 }
 
 .pricing-feature-check {
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(15, 16, 15, 0.5);
     font-size: 1.1rem;
     margin-top: 2px;
     flex-shrink: 0;

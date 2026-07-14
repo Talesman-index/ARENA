@@ -23,13 +23,13 @@
     <meta property="twitter:description" content="Strategy Arena audite vos opérations, identifie vos frictions, et recommande les outils, process ou technologies adaptés à votre réalité terrain.">
     <meta property="twitter:image" content="https://strategie-arena.com/images/link_preview.png">
 
-    <!-- Favicon & PWA Manifest -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon-180x180.png">
+        <!-- Favicon & PWA Manifest -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png">
     <link rel="manifest" href="/site.webmanifest">
 
     <!-- Font Preloads (Core Web Vitals LCP optimization) -->
@@ -294,6 +294,9 @@
                     </p>
                     <p class="about-desc">
                         Notre méthode s'appuie sur le Design Thinking : nous ne partons jamais d'une solution toute faite, nous partons de votre réalité terrain.
+                    </p>
+                    <p class="about-desc" style="font-weight: 500; color: var(--text-dark); border-left: 3px solid var(--primary-color); padding-left: 16px; margin: 24px 0;">
+                        L'arène, c'est le marché : un espace où chaque entreprise se bat pour survivre, pendant que d'autres cherchent à l'absorber ou la dépasser. Strategy Arena n'observe pas depuis les gradins : nous entrons dans l'arène avec vous, pour que votre entreprise en sorte plus forte, pas plus fragile.
                     </p>
                     <a href="#methodology" class="about-cta-btn">
                         Notre méthode
@@ -1010,14 +1013,7 @@
             
             <div class="pricing-header">
                 <h2 class="pricing-title">Tarifs transparents</h2>
-                <p class="pricing-subtitle">Nos tarifs sont conçus pour être transparents, flexibles et adaptés aux PME, garantissant des solutions stratégiques et opérationnelles adaptées à chaque entreprise.</p>
-                
-                <!-- Toggle switch slider -->
-                <div class="pricing-toggle-wrap" id="pricingToggle">
-                    <span class="pricing-toggle-btn active" id="toggleMonthly">Mensuel</span>
-                    <span class="pricing-toggle-btn" id="toggleAnnually">Annuel <span class="pricing-toggle-discount">-20%</span></span>
-                    <div class="pricing-toggle-slider"></div>
-                </div>
+                <p class="pricing-subtitle">Des forfaits de mission clairs pour le cadrage et le déploiement, complétés par un accompagnement continu sur mesure.</p>
             </div>
             
             <div class="pricing-grid">
@@ -1025,16 +1021,13 @@
                 <!-- Basic Card -->
                 <div class="pricing-card">
                     <div class="pricing-card-top">
+                        <span class="pricing-card-type">Mission unique</span>
                         <h3>Plan Diagnostic</h3>
-                        <div class="pricing-discount-row" id="discount-row-basic">
-                            <span class="pricing-original-price">150k</span>
-                            <span class="pricing-discount-tag">-20%</span>
-                        </div>
                         <div class="pricing-card-price-row">
-                            <span class="pricing-card-price" id="price-basic" data-monthly="150k" data-annual="120k">150k</span>
-                            <span class="pricing-card-period">FCFA / mois</span>
+                            <span class="pricing-card-price">150k</span>
+                            <span class="pricing-card-period">FCFA (forfait unique)</span>
                         </div>
-                        <div class="pricing-card-billing-detail" id="billing-detail-basic" data-monthly="Facturé mensuellement" data-annual="1 440 000 FCFA / an (facturé annuellement)">Facturé mensuellement</div>
+                        <div class="pricing-card-billing-detail">Livré en 2-3 semaines</div>
                         <p class="pricing-card-desc">Pour comprendre où se trouvent vraiment vos frictions avant d'investir dans une solution quelconque.</p>
                         
                         <ul class="pricing-card-features">
@@ -1064,16 +1057,13 @@
                 <div class="pricing-card popular">
                     <div class="pricing-card-popular-badge">Recommandé</div>
                     <div class="pricing-card-top">
+                        <span class="pricing-card-type">Mission unique</span>
                         <h3>Plan Prescription</h3>
-                        <div class="pricing-discount-row" id="discount-row-premium">
-                            <span class="pricing-original-price">350k</span>
-                            <span class="pricing-discount-tag">-17%</span>
-                        </div>
                         <div class="pricing-card-price-row">
-                            <span class="pricing-card-price" id="price-premium" data-monthly="350k" data-annual="290k">350k</span>
-                            <span class="pricing-card-period">FCFA / mois</span>
+                            <span class="pricing-card-price">350k</span>
+                            <span class="pricing-card-period">FCFA (forfait unique)</span>
                         </div>
-                        <div class="pricing-card-billing-detail" id="billing-detail-premium" data-monthly="Facturé mensuellement" data-annual="3 480 000 FCFA / an (facturé annuellement)">Facturé mensuellement</div>
+                        <div class="pricing-card-billing-detail">Diagnostic + mise en œuvre (4-8 semaines)</div>
                         <p class="pricing-card-desc">Pour passer du diagnostic à la mise en œuvre concrète, qu'elle soit organisationnelle ou technologique.</p>
                         
                         <ul class="pricing-card-features">
@@ -1102,16 +1092,25 @@
                 <!-- Ultimate Card -->
                 <div class="pricing-card">
                     <div class="pricing-card-top">
+                        <span class="pricing-card-type">Accompagnement continu</span>
                         <h3>Plan Pilotage</h3>
+                        
+                        <!-- Toggle switch slider inside card -->
+                        <div class="pricing-toggle-wrap" id="pricingToggle">
+                            <span class="pricing-toggle-btn active" id="toggleMonthly">Mensuel</span>
+                            <span class="pricing-toggle-btn" id="toggleAnnually">Annuel <span class="pricing-toggle-discount">-20%</span></span>
+                            <div class="pricing-toggle-slider"></div>
+                        </div>
+
                         <div class="pricing-discount-row" id="discount-row-ultimate">
                             <span class="pricing-original-price">600k</span>
-                            <span class="pricing-discount-tag">-18%</span>
+                            <span class="pricing-discount-tag">-20%</span>
                         </div>
                         <div class="pricing-card-price-row">
-                            <span class="pricing-card-price" id="price-ultimate" data-monthly="600k" data-annual="490k">600k</span>
+                            <span class="pricing-card-price" id="price-ultimate" data-monthly="600k" data-annual="480k">600k</span>
                             <span class="pricing-card-period">FCFA / mois</span>
                         </div>
-                        <div class="pricing-card-billing-detail" id="billing-detail-ultimate" data-monthly="Facturé mensuellement" data-annual="5 880 000 FCFA / an (facturé annuellement)">Facturé mensuellement</div>
+                        <div class="pricing-card-billing-detail" id="billing-detail-ultimate" data-monthly="Facturé mensuellement" data-annual="5 760 000 FCFA / an (facturé annuellement)">Facturé mensuellement</div>
                         <p class="pricing-card-desc">Pour un accompagnement continu dans la durée, avec suivi des résultats et ajustements réguliers.</p>
                         
                         <ul class="pricing-card-features">
@@ -1175,7 +1174,7 @@
                         </button>
                         <div class="faq-answer">
                             <div class="faq-answer-inner">
-                                Non. Notre diagnostic peut révéler qu'un changement de process, une réorganisation d'équipe ou une formation suffit à résoudre la friction identifiée. Le digital n'est qu'une option parmi les réponses possibles, et nous le recommandons uniquement quand c'est la solution la plus pertinente et la plus durable.<br><br>Quand un outil technologique est effectivement la bonne réponse, nous nous appuyons sur des solutions ergonomiques et économiques : CRM légers, bases de données flexibles, outils d'automatisation simples.
+                                La majorité de nos interventions incluent un volet digital léger, mais toujours après diagnostic, jamais imposé par défaut. Notre méthode reste applicable à des chantiers 100% organisationnels.<br><br>Quand un outil technologique est effectivement la bonne réponse, nous nous appuyons sur des solutions ergonomiques et économiques : CRM légers, bases de données flexibles, outils d'automatisation simples.
                             </div>
                         </div>
                     </div>

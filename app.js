@@ -159,16 +159,8 @@ const initApp = () => {
     const toggleMonthly = document.getElementById('toggleMonthly');
     const toggleAnnually = document.getElementById('toggleAnnually');
     
-    const priceBasic = document.getElementById('price-basic');
-    const pricePremium = document.getElementById('price-premium');
     const priceUltimate = document.getElementById('price-ultimate');
-
-    const billingBasic = document.getElementById('billing-detail-basic');
-    const billingPremium = document.getElementById('billing-detail-premium');
     const billingUltimate = document.getElementById('billing-detail-ultimate');
-
-    const discountBasic = document.getElementById('discount-row-basic');
-    const discountPremium = document.getElementById('discount-row-premium');
     const discountUltimate = document.getElementById('discount-row-ultimate');
 
     function switchBilling() {
@@ -178,32 +170,18 @@ const initApp = () => {
             toggleMonthly.classList.remove('active');
             toggleAnnually.classList.add('active');
             
-            updatePrice(priceBasic, priceBasic.getAttribute('data-annual'));
-            updatePrice(pricePremium, pricePremium.getAttribute('data-annual'));
             updatePrice(priceUltimate, priceUltimate.getAttribute('data-annual'));
-
-            updateBillingDetail(billingBasic, billingBasic.getAttribute('data-annual'));
-            updateBillingDetail(billingPremium, billingPremium.getAttribute('data-annual'));
             updateBillingDetail(billingUltimate, billingUltimate.getAttribute('data-annual'));
-
-            discountBasic.classList.add('active');
-            discountPremium.classList.add('active');
-            discountUltimate.classList.add('active');
+            
+            if (discountUltimate) discountUltimate.classList.add('active');
         } else {
             toggleAnnually.classList.remove('active');
             toggleMonthly.classList.add('active');
             
-            updatePrice(priceBasic, priceBasic.getAttribute('data-monthly'));
-            updatePrice(pricePremium, pricePremium.getAttribute('data-monthly'));
             updatePrice(priceUltimate, priceUltimate.getAttribute('data-monthly'));
-
-            updateBillingDetail(billingBasic, billingBasic.getAttribute('data-monthly'));
-            updateBillingDetail(billingPremium, billingPremium.getAttribute('data-monthly'));
             updateBillingDetail(billingUltimate, billingUltimate.getAttribute('data-monthly'));
-
-            discountBasic.classList.remove('active');
-            discountPremium.classList.remove('active');
-            discountUltimate.classList.remove('active');
+            
+            if (discountUltimate) discountUltimate.classList.remove('active');
         }
     }
 
