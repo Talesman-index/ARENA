@@ -7,5 +7,8 @@ node_modules/
 agent/
 whyte-inktrap.zip
 dist/
+scratch_*
+view_*.png
+
 
 

@@ -58,3 +58,28 @@
     RewriteRule ^(.*?)/?$ $1.html [NC,L]
 </IfModule>
 
+# 5. Security Headers (CSP, Anti-Iframe, Referrer-Policy, Nosniff, HSTS)
+<IfModule mod_headers.c>
+    # Content Security Policy
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'self';"
+
+    # Anti-Iframe Clickjacking Protection
+    Header set X-Frame-Options "SAMEORIGIN"
+
+    # Referrer Policy
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Prevent MIME type sniffing
+    Header set X-Content-Type-Options "nosniff"
+
+    # Browser XSS Protection
+    Header set X-XSS-Protection "1; mode=block"
+
+    # Feature & Permissions Policy
+    Header set Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+
+    # HTTP Strict Transport Security (HSTS)
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+</IfModule>
+
+

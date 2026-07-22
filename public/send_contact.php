@@ -1,5 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <?php
+// Set Security Headers
+header("Content-Type: application/json; charset=UTF-8");
+header("X-Frame-Options: SAMEORIGIN");
+header("X-Content-Type-Options: nosniff");
+header("Referrer-Policy: strict-origin-when-cross-origin");
+header("Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'self';");
+
 // Ensure it's a POST request
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     header("HTTP/1.1 405 Method Not Allowed");
@@ -7,8 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     exit;
 }
 
-// Set JSON headers
-header("Content-Type: application/json; charset=UTF-8");
 
 // Get POST parameters
 $name = isset($_POST['name']) ? strip_tags(trim($_POST['name'])) : '';
