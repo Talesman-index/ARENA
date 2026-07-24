@@ -23,6 +23,8 @@ export default defineConfig({
         transformer: resolve(__dirname, 'services/transformer.html'),
         supplyChainEtCroissance: resolve(__dirname, 'services/supply-chain-et-croissance.html'),
         aPropos: resolve(__dirname, 'a-propos.html'),
+        devisBestWinner: resolve(__dirname, 'devis-best-winner.html'),
+
 
       }
     }
