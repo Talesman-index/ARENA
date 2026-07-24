@@ -338,16 +338,20 @@
             backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 100px;
-            padding: 8px 16px;
+            padding: 8px 12px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             z-index: 999;
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5);
+            max-width: calc(100vw - 32px);
+            box-sizing: border-box;
         }
 
         .btn-act {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
             padding: 10px 20px;
             border-radius: 100px;
@@ -357,6 +361,8 @@
             cursor: pointer;
             transition: all 0.2s ease;
             border: none;
+            white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .btn-act-primary {
@@ -378,6 +384,27 @@
 
         .btn-act-ghost:hover {
             background: rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 600px) {
+            .action-bar {
+                bottom: 16px;
+                padding: 6px 8px;
+                gap: 6px;
+                width: calc(100vw - 24px);
+                max-width: 400px;
+            }
+
+            .btn-act {
+                padding: 10px 14px;
+                font-size: 12px;
+                flex: 1;
+            }
+
+            .btn-act i {
+                width: 15px;
+                height: 15px;
+            }
         }
 
         /* Toast Notice */
