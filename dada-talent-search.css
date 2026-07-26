@@ -1325,7 +1325,7 @@ section[id] {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 10px 0;
+    padding: 12px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -1335,18 +1335,29 @@ section[id] {
 
 .dada-academy-detail-item i, .dada-academy-detail-item svg {
     color: var(--sa-yellow);
+    width: 18px;
+    height: 18px;
     flex-shrink: 0;
+    display: block;
+    margin-top: -1px;
 }
 
 .dada-academy-detail-item strong {
     color: #FFFFFF;
     font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
 }
 
 .dada-academy-detail-item span {
     color: rgba(255, 255, 255, 0.75);
     font-size: 0.9rem;
     margin-left: auto;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
 }
 
 /* Vision Highlight Box */
