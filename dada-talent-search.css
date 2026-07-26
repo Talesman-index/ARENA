@@ -462,43 +462,78 @@ body.dada-page {
     border-radius: var(--radius-pill);
 }
 
-/* STEPS GRID (4 CARDS) */
-.dada-steps-grid {
+/* SLEEK PRO PROCESS GRID & CARDS */
+.dada-steps-grid-pro {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 24px;
+    margin-top: 40px;
 }
 
-.dada-step-card {
-    background: var(--bg-main);
+.dada-pro-step-card {
+    background: #FFFFFF;
     border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
-    padding: 24px 20px;
+    border-radius: 16px;
+    padding: 32px 24px;
+    box-shadow: 0 4px 16px rgba(17, 17, 17, 0.03);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-.dada-step-num {
-    display: inline-block;
+.dada-pro-step-card:hover {
+    transform: translateY(-4px);
+    border-color: #111111;
+    box-shadow: 0 12px 30px rgba(17, 17, 17, 0.08);
+}
+
+.dada-pro-step-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dada-pro-step-idx {
+    font-family: var(--font-heading), 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--dada-orange);
+    letter-spacing: 0.04em;
+}
+
+.dada-pro-step-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--bg-main);
+    color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.dada-pro-step-card:hover .dada-pro-step-icon {
+    background: var(--sa-yellow);
+    border-color: #111111;
+}
+
+.dada-pro-step-card h4 {
     font-size: 1.1rem;
     font-weight: 800;
     color: #111111;
-    background-color: var(--sa-yellow);
-    padding: 4px 10px;
-    border-radius: 6px;
-    margin-bottom: 12px;
+    margin: 0 0 10px 0;
+    letter-spacing: -0.01em;
 }
 
-.dada-step-card h4 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #111111;
-    margin: 0 0 6px 0;
-}
-
-.dada-step-card p {
-    font-size: 0.875rem;
+.dada-pro-step-card p {
+    font-size: 0.9rem;
     color: var(--text-muted);
+    line-height: 1.6;
     margin: 0;
-    line-height: 1.5;
 }
 
 .dada-disclaimer-text {
@@ -506,7 +541,7 @@ body.dada-page {
     color: var(--text-muted);
     text-align: center;
     font-style: italic;
-    margin-top: 32px;
+    margin-top: 36px;
 }
 
 /* CALLOUT CARD FOR APPLICATION FORM */
