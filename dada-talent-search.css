@@ -1193,13 +1193,14 @@ section[id] {
 }
 
 .dada-prize-title {
-    font-family: 'Whyte Inktrap', 'WhyteInktrap-Bold', var(--font-body), sans-serif;
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-family: var(--font-heading), 'Bebas Neue', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 400;
     color: #111111;
-    line-height: 1.35;
+    line-height: 1.15;
     margin: 0 0 12px 0;
-    letter-spacing: -0.01em;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
 }
 
 .dada-prize-desc {
