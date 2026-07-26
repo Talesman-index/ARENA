@@ -107,7 +107,7 @@ body.dada-page {
 
 /* FUN & VIBRANT HERO SECTION (DADA ORANGE CARD + TILTED GRAPHIC PHOTO FRAME) */
 .dada-fun-hero {
-    padding-top: 120px;
+    padding-top: 160px !important;
     padding-bottom: 70px;
     background-color: var(--bg-main);
 }
@@ -121,8 +121,8 @@ body.dada-page {
 
 /* LEFT COLUMN: VIBRANT DADA ORANGE CARD */
 .dada-fun-brand-card {
-    background-color: var(--dada-orange);
-    color: #FFFFFF;
+    background-color: #EB5A1C !important;
+    color: #FFFFFF !important;
     border-radius: 28px;
     padding: 54px 44px;
     box-shadow: 0 16px 40px rgba(235, 90, 28, 0.28);
@@ -137,7 +137,7 @@ body.dada-page {
     display: inline-block;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(8px);
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     font-size: 0.8rem;
     font-weight: 800;
     letter-spacing: 0.06em;
@@ -154,13 +154,13 @@ body.dada-page {
     line-height: 1.02;
     letter-spacing: 0.01em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     margin: 0 0 20px 0;
 }
 
 .dada-fun-subtitle {
     font-size: 1.05rem;
-    color: rgba(255, 255, 255, 0.92);
+    color: rgba(255, 255, 255, 0.94) !important;
     line-height: 1.6;
     margin: 0 0 32px 0;
     max-width: 480px;
@@ -177,8 +177,8 @@ body.dada-page {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background-color: var(--sa-yellow);
-    color: #111111;
+    background-color: var(--sa-yellow) !important;
+    color: #111111 !important;
     font-size: 0.95rem;
     font-weight: 800;
     padding: 14px 28px;
@@ -189,7 +189,7 @@ body.dada-page {
 }
 
 .dada-fun-btn-yellow:hover {
-    background-color: var(--sa-yellow-hover);
+    background-color: var(--sa-yellow-hover) !important;
     transform: translateY(-2px);
 }
 
@@ -198,8 +198,8 @@ body.dada-page {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background-color: rgba(255, 255, 255, 0.15);
-    color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.18) !important;
+    color: #FFFFFF !important;
     font-size: 0.95rem;
     font-weight: 700;
     padding: 14px 24px;
@@ -210,7 +210,7 @@ body.dada-page {
 }
 
 .dada-fun-btn-white:hover {
-    background-color: rgba(255, 255, 255, 0.28);
+    background-color: rgba(255, 255, 255, 0.3) !important;
 }
 
 /* RIGHT COLUMN: TILTED GRAPHIC PHOTO FRAME & BACKDROP */
@@ -228,7 +228,7 @@ body.dada-page {
     height: 94%;
     background-color: var(--sa-yellow);
     border-radius: 28px;
-    transform: rotate(-4deg);
+    transform: rotate(-3deg);
     z-index: 1;
     box-shadow: 0 10px 30px rgba(245, 231, 34, 0.4);
 }
@@ -238,12 +238,13 @@ body.dada-page {
     z-index: 2;
     width: 100%;
     max-width: 440px;
-    height: 480px;
+    height: 460px !important;
+    max-height: 460px !important;
     border-radius: 24px;
-    overflow: hidden;
+    overflow: hidden !important;
     border: 4px solid #111111;
     box-shadow: 0 20px 40px rgba(17, 17, 17, 0.2);
-    transform: rotate(2deg);
+    transform: rotate(1.5deg);
     background-color: #FFFFFF;
     transition: transform 0.4s ease;
 }
@@ -253,10 +254,11 @@ body.dada-page {
 }
 
 .dada-fun-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
 }
 
 /* FLOATING CREATOR INFO BADGE */
