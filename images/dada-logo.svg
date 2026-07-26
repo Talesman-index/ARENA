@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 110" width="280" height="110" fill="none">
+  <!-- DADA Text -->
+  <g fill="#F25C2B">
+    <!-- D 1 -->
+    <path d="M 10 10 H 35 C 55 10, 68 25, 68 45 C 68 65, 55 80, 35 80 H 10 V 10 Z M 26 23 V 67 H 34 C 47 67, 52 57, 52 45 C 52 33, 47 23, 34 23 H 26 Z" />
+    
+    <!-- A 1 -->
+    <path d="M 72 80 L 98 10 H 114 L 140 80 H 124 L 118 63 H 94 L 88 80 H 72 Z M 99 49 H 113 L 106 28 Z" />
+    
+    <!-- D 2 -->
+    <path d="M 144 10 H 169 C 189 10, 202 25, 202 45 C 202 65, 189 80, 169 80 H 144 V 10 Z M 160 23 V 67 H 168 C 181 67, 186 57, 186 45 C 186 33, 181 23, 168 23 H 160 Z" />
+    
+    <!-- A 2 -->
+    <path d="M 206 80 L 232 10 H 248 L 274 80 H 258 L 252 63 H 228 L 222 80 H 206 Z M 233 49 H 247 L 240 28 Z" />
+  </g>
+  
+  <!-- MANAGEMENT Subtitle -->
+  <text x="140" y="102" text-anchor="middle" font-family="'Inter', 'Helvetica', sans-serif" font-weight="800" font-size="16" letter-spacing="7" fill="#F25C2B">MANAGEMENT</text>
+</svg>
