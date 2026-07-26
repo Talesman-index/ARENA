@@ -37,17 +37,21 @@ body.dada-page {
     box-sizing: border-box;
 }
 
-/* NAVBAR DUAL LOGO WRAP & DYNAMIC SCROLL ADAPTATION */
+/* NAVBAR DUAL LOGO WRAP & DYNAMIC WHITE HEADER ADAPTATION */
 .dada-page .navbar-floating {
-    padding: 20px 24px !important;
-    transition: padding 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 16px 24px !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    box-shadow: 0 4px 20px rgba(17, 17, 17, 0.06) !important;
+    border-bottom: 1px solid rgba(226, 223, 215, 0.8) !important;
+    transition: padding 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .dada-page .navbar-floating.navbar-scrolled {
-    padding: 14px 24px !important;
-    background-color: rgba(8, 8, 8, 0.94) !important;
-    backdrop-filter: blur(12px) !important;
-    -webkit-backdrop-filter: blur(12px) !important;
+    padding: 12px 24px !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    box-shadow: 0 10px 30px rgba(17, 17, 17, 0.1) !important;
 }
 
 .dual-logo-wrap {
@@ -56,60 +60,101 @@ body.dada-page {
     gap: 12px;
 }
 
-.dual-logo-divider {
-    color: #111111;
+.dada-page .dual-logo-divider {
+    color: #111111 !important;
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 700;
+    opacity: 0.7;
     transition: color 0.3s ease;
 }
 
-.dada-page .nav-logo img {
+.dada-page .nav-logo img[src*="strategy-arena-logo-dark"] {
+    filter: none !important;
     transition: filter 0.3s ease;
 }
 
 .dada-page .nav-link-desktop {
-    color: #111111;
-    font-weight: 700;
-    transition: color 0.3s ease;
+    color: #111111 !important;
+    font-weight: 700 !important;
+    opacity: 0.9;
+    text-shadow: none !important;
+    transition: color 0.3s ease, opacity 0.3s ease;
 }
 
+.dada-page .nav-link-desktop:hover {
+    color: var(--dada-orange) !important;
+    opacity: 1;
+}
+
+/* MENU HAMBURGER ADAPTÉ AU NOUVEAU DESIGN DADA */
 .dada-page .menu-trigger {
-    color: #111111;
-    background: #FFFFFF;
-    border: 1px solid var(--border-color);
-    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    color: #111111 !important;
+    background: #F8F7F3 !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 50px !important;
+    padding: 6px 6px 6px 18px !important;
+    font-weight: 700 !important;
+    font-size: 0.92rem !important;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-/* WHEN NAVBAR IS SCROLLED DOWN (BACKGROUND BECOMES DARK) */
-.dada-page .navbar-floating.navbar-scrolled .dual-logo-divider {
+.dada-page .menu-trigger:hover {
+    background: #111111 !important;
     color: #FFFFFF !important;
+    border-color: #111111 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(17, 17, 17, 0.15);
 }
 
-.dada-page .navbar-floating.navbar-scrolled .nav-link-desktop {
-    color: rgba(255, 255, 255, 0.85) !important;
+.dada-page .menu-trigger .menu-hamburger {
+    background-color: #111111 !important;
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important;
+    transition: background-color 0.25s ease !important;
 }
 
-.dada-page .navbar-floating.navbar-scrolled .nav-link-desktop:hover {
-    color: #FFFFFF !important;
+.dada-page .menu-trigger .menu-hamburger span {
+    background-color: #FFFFFF !important;
+    width: 12px !important;
+    height: 2px !important;
+    transition: background-color 0.25s ease !important;
 }
 
-/* Invert dark Strategy ARENA logo text to white when header is dark */
-.dada-page .navbar-floating.navbar-scrolled .nav-logo img[src*="strategy-arena-logo-dark"] {
-    filter: brightness(0) invert(1) !important;
+.dada-page .menu-trigger:hover .menu-hamburger {
+    background-color: var(--sa-yellow) !important;
 }
 
-.dada-page .navbar-floating.navbar-scrolled .menu-trigger {
-    color: #FFFFFF !important;
-    background: rgba(255, 255, 255, 0.12) !important;
-    border-color: rgba(255, 255, 255, 0.2) !important;
+.dada-page .menu-trigger:hover .menu-hamburger span {
+    background-color: #111111 !important;
 }
 
 
-/* FUN & VIBRANT HERO SECTION (DADA ORANGE CARD + TILTED GRAPHIC PHOTO FRAME) */
+/* FUN & VIBRANT HERO SECTION (DARK IMAGE BACKGROUND WITH OVERLAY LAYER) */
 .dada-fun-hero {
+    position: relative;
     padding-top: 160px !important;
-    padding-bottom: 70px;
-    background-color: var(--bg-main);
+    padding-bottom: 90px;
+    background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.8)), url('/images/dada/smiling-friends-gather-together-for-a-group-photo-2026-01-09-10-53-31-utc.jpg') center/cover no-repeat;
+    overflow: hidden;
+}
+
+.dada-fun-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 30%, rgba(235, 90, 28, 0.25) 0%, transparent 60%),
+                radial-gradient(circle at 80% 70%, rgba(245, 231, 34, 0.2) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.dada-fun-hero .dada-container {
+    position: relative;
+    z-index: 1;
 }
 
 .dada-fun-hero-grid {
