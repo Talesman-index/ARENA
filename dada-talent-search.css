@@ -1026,3 +1026,310 @@ section[id] {
     }
 }
 
+/* ==========================================================================
+   DADA CONTENT CREATOR CHALLENGE 2026 — EXTRA STYLES
+   ========================================================================== */
+
+/* Key Dates & Highlights Bar */
+.dada-challenge-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: -30px;
+    position: relative;
+    z-index: 10;
+}
+
+.dada-stat-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 24px 20px;
+    box-shadow: 0 10px 25px rgba(17, 17, 17, 0.05);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.dada-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 35px rgba(17, 17, 17, 0.08);
+}
+
+.dada-stat-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #F8F7F3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--dada-orange);
+}
+
+.dada-stat-content h4 {
+    font-family: var(--font-heading), 'Bebas Neue', sans-serif;
+    font-size: 1.15rem;
+    margin: 0 0 4px 0;
+    color: #111111;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
+.dada-stat-val {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--dada-orange);
+    margin-bottom: 2px;
+}
+
+.dada-stat-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Platform Tag Pills */
+.dada-platform-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #111111;
+    color: #FFFFFF;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: var(--radius-pill);
+    margin-right: 6px;
+}
+
+/* Prizes & Rewards Grid */
+.dada-rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 36px;
+}
+
+.dada-prize-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 32px 24px;
+    box-shadow: 0 8px 24px rgba(17, 17, 17, 0.04);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dada-prize-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 36px rgba(17, 17, 17, 0.08);
+}
+
+.dada-prize-card.gold-border {
+    border: 2px solid var(--sa-yellow);
+    background: linear-gradient(180deg, #FFFFFF 0%, #FFFDF0 100%);
+}
+
+.dada-prize-card.silver-border {
+    border: 2px solid #D1D5DB;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%);
+}
+
+.dada-prize-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.dada-prize-badge {
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: var(--radius-pill);
+}
+
+.dada-prize-badge.gold {
+    background: var(--sa-yellow);
+    color: #111111;
+}
+
+.dada-prize-badge.silver {
+    background: #E5E7EB;
+    color: #374151;
+}
+
+.dada-prize-badge.jury {
+    background: #F3F4F6;
+    color: var(--dada-orange);
+    border: 1px solid var(--border-color);
+}
+
+.dada-prize-amount {
+    font-family: var(--font-heading), 'Bebas Neue', sans-serif;
+    font-size: 2.8rem;
+    line-height: 1;
+    color: #111111;
+    margin: 12px 0 8px 0;
+    letter-spacing: 0.02em;
+}
+
+.dada-prize-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #111111;
+    margin-bottom: 8px;
+}
+
+.dada-prize-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* DADA World Academy Special Banner */
+.dada-academy-card {
+    background: linear-gradient(135deg, #111111 0%, #1A1A1A 100%);
+    color: #FFFFFF;
+    border-radius: 28px;
+    padding: 48px 40px;
+    margin-top: 48px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.dada-academy-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(235, 90, 28, 0.25) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.dada-academy-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--dada-orange);
+    color: #FFFFFF;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: var(--radius-pill);
+    margin-bottom: 20px;
+}
+
+.dada-academy-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.dada-academy-title {
+    font-family: var(--font-heading), 'Bebas Neue', sans-serif;
+    font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+    line-height: 1.05;
+    margin: 0 0 16px 0;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.dada-academy-body {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.65;
+    margin: 0 0 24px 0;
+}
+
+.dada-academy-details-box {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 24px;
+    backdrop-filter: blur(10px);
+}
+
+.dada-academy-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dada-academy-detail-item:last-child {
+    border-bottom: none;
+}
+
+.dada-academy-detail-item i, .dada-academy-detail-item svg {
+    color: var(--sa-yellow);
+    flex-shrink: 0;
+}
+
+.dada-academy-detail-item strong {
+    color: #FFFFFF;
+    font-size: 0.95rem;
+}
+
+.dada-academy-detail-item span {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.9rem;
+    margin-left: auto;
+}
+
+/* Vision Highlight Box */
+.dada-vision-quote-card {
+    background: var(--sa-yellow);
+    color: #111111;
+    border-radius: 24px;
+    padding: 40px 36px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.dada-vision-quote-text {
+    font-family: var(--font-heading), 'Bebas Neue', sans-serif;
+    font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+    line-height: 1.15;
+    margin: 0 0 14px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+}
+
+.dada-vision-quote-sub {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: rgba(17, 17, 17, 0.85);
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .dada-academy-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .dada-academy-card {
+        padding: 32px 24px;
+    }
+}
+
+
