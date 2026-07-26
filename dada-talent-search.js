@@ -1,6 +1,6 @@
 /* ==========================================================================
    STRATEGY ARENA x DADA MANAGEMENT — DADA TALENT SEARCH
-   Public Notion Form Link Integration
+   Public Notion Form Link Integration & Fail-Safe Handlers
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // FAQ Accordion Handler
     const faqItems = document.querySelectorAll('.dada-faq-item');
     faqItems.forEach(item => {
-        const btn = item.querySelector('.dada-faq-question-btn');
+        const btn = item.querySelector('.dada-faq-btn');
         if (btn) {
             btn.addEventListener('click', () => {
                 const isActive = item.classList.contains('active');
@@ -34,13 +34,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Smooth Scroll to Form Section
+    // Smooth Scroll to Form Section with Header Offset
     document.querySelectorAll('.js-scroll-to-form').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             const formTarget = document.getElementById('application-form');
             if (formTarget) {
-                formTarget.scrollIntoView({ behavior: 'smooth' });
+                const header = document.getElementById('navbar');
+                const headerHeight = header ? header.offsetHeight : 80;
+                const elementPosition = formTarget.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - headerHeight - 20;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
             }
         });
     });

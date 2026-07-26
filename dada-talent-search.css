@@ -649,7 +649,12 @@ body.dada-page {
 
 
 
-/* FAQ SECTION */
+/* SECTION SCROLL MARGIN TO PREVENT NAVBAR OVERLAP */
+section[id] {
+    scroll-margin-top: 100px;
+}
+
+/* FAQ SECTION & TEXT OVERLAP FIX */
 .dada-faq-wrapper {
     max-width: 780px;
     margin: 0 auto;
@@ -670,15 +675,31 @@ body.dada-page {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 16px;
     padding: 20px 24px;
     background: none;
     border: none;
     font-family: inherit;
     font-size: 1rem;
     font-weight: 700;
+    line-height: 1.45 !important;
     color: #111111;
     cursor: pointer;
     text-align: left;
+    height: auto !important;
+    min-height: auto !important;
+}
+
+.dada-faq-btn span {
+    flex: 1;
+    display: block;
+    line-height: 1.45 !important;
+    text-align: left;
+}
+
+.dada-faq-btn i,
+.dada-faq-btn svg {
+    flex-shrink: 0;
 }
 
 .dada-faq-content {
