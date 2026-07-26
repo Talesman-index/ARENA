@@ -1109,7 +1109,7 @@ section[id] {
 /* Prizes & Rewards Grid */
 .dada-rewards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
     margin-top: 36px;
 }
@@ -1118,7 +1118,7 @@ section[id] {
     background: #FFFFFF;
     border: 1px solid var(--border-color);
     border-radius: 20px;
-    padding: 32px 24px;
+    padding: 32px 26px;
     box-shadow: 0 8px 24px rgba(17, 17, 17, 0.04);
     position: relative;
     overflow: hidden;
@@ -1147,16 +1147,22 @@ section[id] {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 16px;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
 .dada-prize-badge {
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.06em;
+    font-family: 'Whyte Inktrap', 'WhyteInktrap-Bold', var(--font-body), sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
-    padding: 4px 12px;
+    padding: 6px 14px;
     border-radius: var(--radius-pill);
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
 }
 
 .dada-prize-badge.gold {
@@ -1175,6 +1181,15 @@ section[id] {
     border: 1px solid var(--border-color);
 }
 
+.dada-prize-tagline {
+    font-family: 'Whyte Inktrap', 'WhyteInktrap-Bold', var(--font-body), sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--dada-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
 .dada-prize-amount {
     font-family: var(--font-heading), 'Bebas Neue', sans-serif;
     font-size: 2.8rem;
@@ -1185,17 +1200,45 @@ section[id] {
 }
 
 .dada-prize-title {
-    font-size: 1.1rem;
-    font-weight: 800;
+    font-family: 'Whyte Inktrap', 'WhyteInktrap-Bold', var(--font-body), sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
     color: #111111;
-    margin-bottom: 8px;
+    line-height: 1.28;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.01em;
 }
 
 .dada-prize-desc {
-    font-size: 0.9rem;
+    font-family: var(--font-body), sans-serif;
+    font-size: 0.92rem;
     color: var(--text-muted);
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 0;
+}
+
+.dada-prize-bonus-row {
+    margin-top: 22px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.dada-prize-bonus-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.dada-prize-bonus-val {
+    font-family: var(--font-heading), 'Bebas Neue', sans-serif;
+    font-size: 1.7rem;
+    line-height: 1;
+    color: var(--dada-orange);
+    letter-spacing: 0.02em;
 }
 
 /* DADA World Academy Special Banner */
