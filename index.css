@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital,wght@0,400;1,400&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
 
 /* ==========================================================================
-   STRATEGY ARENA - DESIGN SYSTEM & GLOBAL STYLES (SANDRIO V2 STYLE)
+   STRATEGY ARENA - EDITORIAL DESIGN SYSTEM & GLOBAL STYLES
    ========================================================================== */
 
 /* Font Declarations */
@@ -57,16 +57,20 @@
 
 /* Theme Variables */
 :root {
-    /* Brand Colors (Canary Yellow + Dark/Black accents) */
-    --primary-color: #F4E723;      /* Vibrant Canary Yellow */
+    /* Official Palette */
+    --primary-color: #F4E723;      /* Vibrant Canary Yellow (Signature) */
     --primary-hover: #dbce16;
-    --primary-dark: #0F100F;       /* Pitch Black (Neutral Accent) */
+    --primary-dark: #0F100F;       /* Dark Ink */
     --primary-dark-hover: #000000;
+    --blue-accent: #0000F0;        /* Secondary Blue (10-15% of composition) */
+    --blue-hover: #0000c8;
+    --blue-light-bg: rgba(0, 0, 240, 0.06);
     
-    /* Neutral Colors */
-    --bg-dark: #080808;            /* Pitch Black (Matching Sandrio Hero background) */
-    --bg-light: #FAFAFA;           /* Crisp Off-White */
-    --bg-card: #FFFFFF;            /* Cards background */
+    /* Neutral & Background Colors */
+    --bg-dark: #0F100F;            /* Pitch Dark */
+    --bg-paper: #F7F6F1;           /* Editorial Subtle Ivory Paper */
+    --bg-light: #F7F6F1;           /* Off-White Paper Default */
+    --bg-card: #FFFFFF;            /* Pure Crisp White Cards */
     --text-light: #FFFFFF;         /* Light text */
     --text-dark: #0F100F;          /* Deep Dark body text */
     --text-muted-dark: #555856;    /* Muted body text */
@@ -75,13 +79,16 @@
     /* Layout Tokens */
     --border-color-dark: rgba(244, 231, 35, 0.2);
     --border-color-light: rgba(15, 16, 15, 0.08);
+    --border-color-blue: rgba(0, 0, 240, 0.3);
     --border-radius: 12px;
     --border-radius-lg: 32px;
     --container-max-width: 1320px;
     
-    /* Typography Scales */
+    /* Editorial Typography Scales */
     --font-heading: 'Bebas Neue', sans-serif;
-    --font-body: 'Whyte Inktrap', sans-serif; /* Use Whyte Inktrap uniformly for premium editorial identity */
+    --font-serif: 'Instrument Serif', Georgia, serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
     
     /* Transition standard */
     --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -156,6 +163,267 @@ a {
 .section-light {
     background-color: var(--bg-light);
     color: var(--text-dark);
+}
+
+/* ==========================================================================
+   CAROUSEL EDITORIAL DESIGN SYSTEM UTILITIES
+   ========================================================================== */
+
+/* Dot Grid Background (Subtle construction/method grid: 3%-5% opacity) */
+.dot-grid-bg {
+    background-color: var(--bg-paper);
+    background-image: radial-gradient(rgba(15, 16, 15, 0.08) 1.2px, transparent 1.2px);
+    background-size: 24px 24px;
+}
+
+/* Expressive Serif Magazine Typography */
+.font-editorial-serif {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: -0.01em;
+}
+
+/* Yellow Organic Highlighter */
+mark,
+.highlight-yellow,
+mark.highlight-yellow {
+    background-color: var(--primary-color) !important;
+    color: var(--primary-dark) !important;
+    -webkit-text-fill-color: var(--primary-dark) !important;
+    background-clip: border-box !important;
+    -webkit-background-clip: border-box !important;
+    padding: 0.05em 0.35em;
+    display: inline;
+    line-height: 1.1;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    border-radius: 2px;
+}
+
+/* Blue Vector Selection Box with Anchor Handles (Carousel Signature) */
+.selection-blue-box {
+    position: relative;
+    display: inline-block;
+    color: var(--text-dark) !important;
+    -webkit-text-fill-color: var(--text-dark) !important;
+    background-clip: border-box !important;
+    -webkit-background-clip: border-box !important;
+    padding: 0 0.2em;
+    margin: 0 0.1em;
+    outline: 1.5px solid var(--blue-accent);
+    outline-offset: 2px;
+}
+
+.selection-blue-box::before,
+.selection-blue-box::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background-color: var(--blue-accent);
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.selection-blue-box::before {
+    top: -5px;
+    left: -5px;
+}
+
+.selection-blue-box::after {
+    bottom: -5px;
+    right: -5px;
+}
+
+/* Inline Blue Text Highlight */
+.highlight-blue-text {
+    color: var(--blue-accent) !important;
+    -webkit-text-fill-color: var(--blue-accent) !important;
+    background-clip: border-box !important;
+    -webkit-background-clip: border-box !important;
+}
+
+/* Ensure highlights inside scroll-fill-title are never clipped/transparent */
+.scroll-fill-title mark,
+.scroll-fill-title .highlight-yellow,
+.scroll-fill-title .selection-blue-box,
+.scroll-fill-title .highlight-blue-text {
+    background-clip: border-box !important;
+    -webkit-background-clip: border-box !important;
+}
+
+.scroll-fill-title mark,
+.scroll-fill-title .highlight-yellow {
+    -webkit-text-fill-color: var(--primary-dark) !important;
+    color: var(--primary-dark) !important;
+}
+
+.scroll-fill-title .selection-blue-box {
+    -webkit-text-fill-color: var(--text-dark) !important;
+    color: var(--text-dark) !important;
+}
+
+.scroll-fill-title .highlight-blue-text {
+    -webkit-text-fill-color: var(--blue-accent) !important;
+    color: var(--blue-accent) !important;
+}
+
+/* Monospace Annotation Badges */
+.annotation-num {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--blue-accent);
+    border: 1.5px solid var(--blue-accent);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.annotation-mono {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--blue-accent);
+    letter-spacing: 0.03em;
+}
+
+/* Strategic Paper Cards */
+.paper-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color-light);
+    border-radius: 8px;
+    padding: 32px;
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 4px 20px rgba(15, 16, 15, 0.03);
+}
+
+.paper-card:hover {
+    transform: translateY(-4px) rotate(0.2deg);
+    border-color: var(--border-color-blue);
+    box-shadow: 0 12px 32px rgba(0, 0, 240, 0.08);
+}
+
+.paper-card-tilted-left {
+    transform: rotate(-0.6deg);
+}
+
+.paper-card-tilted-right {
+    transform: rotate(0.6deg);
+}
+
+/* Section Blue #0000F0 (KPI / High Impact Section) */
+.section-blue {
+    background-color: var(--blue-accent);
+    color: #FFFFFF;
+}
+
+.section-blue h1,
+.section-blue h2,
+.section-blue h3,
+.section-blue h4,
+.section-blue p,
+.section-blue span,
+.section-blue div {
+    color: #FFFFFF;
+}
+
+.section-blue .kpi-num {
+    font-family: var(--font-serif);
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    color: #FFFFFF;
+    line-height: 1;
+    font-weight: 400;
+}
+
+.section-blue .kpi-yellow-tag {
+    background-color: var(--primary-color);
+    color: var(--primary-dark) !important;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* Editorial Blue Action Links */
+.link-editorial-blue {
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    color: var(--blue-accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    position: relative;
+}
+
+.link-editorial-blue::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--blue-accent);
+    transform: scaleX(0.4);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.link-editorial-blue:hover::after {
+    transform: scaleX(1);
+}
+
+/* CTA Buttons Overhaul */
+.btn-cta-primary {
+    background-color: var(--primary-color);
+    color: var(--primary-dark);
+    font-family: var(--font-body);
+    font-weight: 600;
+    padding: 16px 32px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.25s ease;
+    border: 1px solid var(--primary-color);
+    text-transform: none;
+}
+
+.btn-cta-primary:hover {
+    background-color: #e2d51d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(244, 231, 35, 0.3);
+}
+
+.btn-cta-secondary-blue {
+    background-color: transparent;
+    color: var(--blue-accent);
+    font-family: var(--font-body);
+    font-weight: 600;
+    padding: 16px 32px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.25s ease;
+    border: 1.5px solid var(--blue-accent);
+    text-transform: none;
+}
+
+.btn-cta-secondary-blue:hover {
+    background-color: var(--blue-accent);
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 240, 0.2);
 }
 
 /* ==========================================================================
@@ -1364,8 +1632,8 @@ a {
 }
 
 .service-card:hover {
-    border-color: var(--primary-color);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    border-color: var(--border-color-blue);
+    box-shadow: 0 15px 40px rgba(0, 0, 240, 0.08);
 }
 
 @media (min-width: 1024px) {
@@ -1456,16 +1724,18 @@ a {
 }
 
 .service-num {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-dark);
+    font-family: var(--font-mono);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--blue-accent);
 }
 
 .service-title-text {
-    font-family: var(--font-body);
-    font-size: 1.85rem;
-    font-weight: 700;
+    font-family: var(--font-serif);
+    font-size: 2.1rem;
+    font-weight: 400;
     color: var(--text-dark);
+    text-transform: none;
     letter-spacing: -0.01em;
 }
 
@@ -3701,13 +3971,19 @@ a {
    CASE STUDY PAGES STYLES
    ========================================================================== */
 
+/* ==========================================================================
+   CASE STUDY & ARTICLE PAGES EDITORIAL STYLES
+   ========================================================================== */
+
 html:has(body.case-page) {
-    background-color: var(--bg-dark);
+    background-color: var(--bg-paper);
 }
 
 .case-page {
-    background-color: var(--bg-dark);
-    color: var(--text-light);
+    background-color: var(--bg-paper);
+    background-image: radial-gradient(rgba(15, 16, 15, 0.08) 1.2px, transparent 1.2px);
+    background-size: 24px 24px;
+    color: var(--text-dark);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -3721,23 +3997,24 @@ html:has(body.case-page) {
 }
 
 .case-hero {
-    padding: 160px 0 60px 0;
+    padding: 140px 0 50px 0;
 }
 
 .case-back-link {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: var(--text-muted-light);
+    color: var(--blue-accent);
     text-decoration: none;
+    font-family: var(--font-mono);
     font-size: 0.95rem;
     font-weight: 500;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
     transition: var(--transition-smooth);
 }
 
 .case-back-link:hover {
-    color: var(--primary-color);
+    color: var(--blue-hover);
     transform: translateX(-4px);
 }
 
@@ -3746,32 +4023,39 @@ html:has(body.case-page) {
 }
 
 .case-meta-tag {
-    color: var(--primary-color);
-    font-weight: 700;
+    color: var(--blue-accent);
+    font-family: var(--font-mono);
+    font-weight: 600;
     text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 0.05em;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
     margin-bottom: 16px;
-    display: block;
+    display: inline-block;
+    border: 1.5px solid var(--blue-accent);
+    padding: 4px 14px;
+    border-radius: 50px;
+    background: #FFFFFF;
 }
 
 .case-main-title {
-    font-family: var(--font-heading);
-    font-weight: 900;
-    font-size: clamp(2.5rem, 5vw, 4.5rem);
-    line-height: 1.1;
-    text-transform: uppercase;
-    letter-spacing: -0.02em;
-    margin-bottom: 40px;
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(2.6rem, 5.5vw, 4.8rem);
+    line-height: 1.12;
+    text-transform: none;
+    letter-spacing: -0.01em;
+    color: var(--text-dark);
+    margin-bottom: 36px;
 }
 
 .case-banner-wrapper {
     position: relative;
-    border-radius: var(--border-radius-lg);
+    border-radius: 12px;
     overflow: hidden;
-    height: 500px;
+    height: 480px;
     margin-bottom: 60px;
-    border: 1px solid var(--border-color-dark);
+    border: 1px solid var(--border-color-light);
+    box-shadow: 0 8px 30px rgba(15, 16, 15, 0.06);
 }
 
 .case-banner-img {
@@ -3786,7 +4070,7 @@ html:has(body.case-page) {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(8, 8, 8, 0) 40%, rgba(8, 8, 8, 0.8) 100%);
+    background: linear-gradient(180deg, rgba(247, 246, 241, 0) 50%, rgba(247, 246, 241, 0.4) 100%);
 }
 
 .case-layout-grid {
@@ -3803,7 +4087,7 @@ html:has(body.case-page) {
 }
 
 .case-content-section {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid var(--border-color-light);
     padding-bottom: 40px;
 }
 
@@ -3813,35 +4097,37 @@ html:has(body.case-page) {
 }
 
 .case-sidebar-title {
-    font-family: var(--font-body);
-    font-weight: 700;
-    font-size: 1.3rem;
-    text-transform: uppercase;
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 1.6rem;
+    text-transform: none;
     margin-bottom: 20px;
-    color: var(--text-light);
-    letter-spacing: 0.04em;
+    color: var(--text-dark);
 }
 
 .case-section-title {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    font-size: 1.8rem;
-    text-transform: uppercase;
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 2.2rem;
+    text-transform: none;
     margin-bottom: 20px;
-    color: var(--text-light);
+    color: var(--text-dark);
     letter-spacing: -0.01em;
+    border-bottom: 1.5px solid var(--border-color-light);
+    padding-bottom: 12px;
 }
 
 .case-section-p {
-    font-size: 1.05rem;
-    line-height: 1.65;
-    color: rgba(255, 255, 255, 0.8);
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-muted-dark);
     font-weight: 300;
 }
 
 .case-section-p strong {
-    font-weight: 500;
-    color: var(--text-light);
+    font-weight: 600;
+    color: var(--text-dark);
 }
 
 .case-sidebar {
@@ -3851,30 +4137,37 @@ html:has(body.case-page) {
 }
 
 .case-sidebar-card {
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: var(--border-radius);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color-light);
+    border-radius: 12px;
     padding: 32px;
+    box-shadow: 0 4px 20px rgba(15, 16, 15, 0.03);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.case-sidebar-card:hover {
+    border-color: var(--border-color-blue);
+    transform: translateY(-2px);
 }
 
 .case-sidebar-card.highlighted {
-    border-color: var(--primary-color);
-    background-color: rgba(244, 231, 35, 0.02);
+    border: 1.5px solid var(--blue-accent);
+    background-color: #FFFFFF;
 }
 
 .case-card-title {
-    font-size: 1.1rem;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: none;
     margin-bottom: 24px;
-    color: var(--text-light);
-    letter-spacing: 0.05em;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-dark);
+    border-bottom: 1px solid var(--border-color-light);
     padding-bottom: 12px;
 }
 
 .case-card-title.yellow {
-    color: var(--primary-color);
+    color: var(--text-dark);
 }
 
 .case-info-list {
@@ -3891,15 +4184,16 @@ html:has(body.case-page) {
 }
 
 .case-info-label {
-    color: var(--text-muted-light);
-    font-weight: 300;
+    color: var(--text-muted-dark);
+    font-family: var(--font-mono);
+    font-weight: 400;
     display: flex;
     align-items: center;
 }
 
 .case-info-value {
-    font-weight: 500;
-    color: var(--text-light);
+    font-weight: 600;
+    color: var(--text-dark);
 }
 
 .case-results-grid {
@@ -3915,49 +4209,220 @@ html:has(body.case-page) {
 }
 
 .case-result-num {
-    font-family: var(--font-heading);
-    font-weight: 900;
-    font-size: 2.8rem;
-    color: var(--primary-color);
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 3.2rem;
+    color: var(--blue-accent);
     line-height: 1;
 }
 
 .case-result-label {
     font-size: 0.9rem;
-    color: var(--text-muted-light);
+    color: var(--text-muted-dark);
     line-height: 1.4;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 /* Next Case Banner */
 .case-next-nav {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid var(--border-color-light);
     padding: 80px 0;
     text-align: center;
 }
 
 .case-next-label {
+    font-family: var(--font-mono);
     font-size: 0.9rem;
     text-transform: uppercase;
-    color: var(--text-muted-light);
+    color: var(--blue-accent);
     letter-spacing: 0.05em;
     margin-bottom: 12px;
     display: block;
 }
 
 .case-next-title {
-    font-family: var(--font-heading);
-    font-weight: 900;
+    font-family: var(--font-serif);
+    font-weight: 400;
     font-size: clamp(2rem, 4vw, 3.5rem);
-    text-transform: uppercase;
-    color: var(--text-light);
+    text-transform: none;
+    color: var(--text-dark);
     text-decoration: none;
     transition: var(--transition-smooth);
     display: inline-block;
 }
 
 .case-next-title:hover {
-    color: var(--primary-color);
+    color: var(--blue-accent);
+}
+
+/* Article Carousel Conclusion Box */
+.article-carousel-conclusion {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color-light);
+    border-radius: 12px;
+    padding: 48px 36px;
+    margin-top: 60px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(15, 16, 15, 0.04);
+}
+
+.article-carousel-conclusion .conclusion-badge {
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.article-carousel-conclusion .conclusion-text {
+    font-family: var(--font-mono);
+    font-size: 1.05rem;
+    color: var(--text-muted-dark);
+    line-height: 1.7;
+    max-width: 680px;
+    margin: 0 auto 32px auto;
+}
+
+.article-carousel-conclusion .conclusion-heading {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    color: var(--text-dark);
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.article-carousel-conclusion .conclusion-blue-hero-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.8rem, 6vw, 4.8rem);
+    color: var(--blue-accent);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 32px;
+}
+
+.article-carousel-conclusion .conclusion-questions-mono {
+    font-family: var(--font-mono);
+    font-size: 0.92rem;
+    color: var(--text-muted-dark);
+    margin-top: 28px;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   HIGH CONTRAST OVERRIDES FOR LIGHT PAPER SURFACES (CASE & SERVICE PAGES)
+   ========================================================================== */
+.case-page .nav-logo img {
+    filter: none !important;
+}
+
+.case-page #nav-btn-home,
+.case-page #nav-btn-blog {
+    background-color: var(--text-dark) !important;
+    color: #FFFFFF !important;
+    border: 1px solid var(--text-dark) !important;
+    font-weight: 600;
+}
+
+.case-page #nav-btn-home:hover,
+.case-page #nav-btn-blog:hover {
+    background-color: var(--blue-accent) !important;
+    border-color: var(--blue-accent) !important;
+    color: #FFFFFF !important;
+}
+
+/* Headings on case/service pages MUST be Dark Ink */
+.case-page h1,
+.case-page h2,
+.case-page h3,
+.case-page h5,
+.case-page h6 {
+    color: var(--text-dark) !important;
+}
+
+.case-page h4 {
+    color: var(--text-dark) !important;
+    font-family: var(--font-serif) !important;
+    font-weight: 400 !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+}
+
+/* Sidebar Cards Contrast Overrides */
+.case-sidebar-card {
+    background: #FFFFFF !important;
+    border: 1px solid rgba(15, 16, 15, 0.1) !important;
+}
+
+.case-sidebar-card h3,
+.case-sidebar-card h4,
+.case-sidebar-card .case-card-title {
+    color: var(--text-dark) !important;
+}
+
+.case-sidebar-card a {
+    color: var(--text-dark) !important;
+}
+
+.case-sidebar-card a:hover {
+    color: var(--blue-accent) !important;
+}
+
+/* Text elements on case/service pages */
+.case-page p,
+.case-page li,
+.case-page span:not(.highlight-yellow):not(.btn-pill):not(.selection-blue-box):not(.case-meta-tag) {
+    color: var(--text-dark);
+}
+
+.case-page .case-section-p,
+.case-page ul p,
+.case-page div p {
+    color: var(--text-muted-dark) !important;
+}
+
+.case-page .case-section-p strong,
+.case-page li strong {
+    color: var(--text-dark) !important;
+}
+
+/* Links inside article/service content must be Blue, NEVER Yellow on light background */
+.case-page .case-body-content a,
+.case-page .case-content-section a:not(.btn-cta-primary):not(.btn-cta-secondary-blue) {
+    color: var(--blue-accent) !important;
+    text-decoration: underline !important;
+    font-weight: 600;
+}
+
+.case-page .case-body-content a:hover,
+.case-page .case-content-section a:not(.btn-cta-primary):not(.btn-cta-secondary-blue):hover {
+    color: var(--blue-hover) !important;
+}
+
+/* Breadcrumb nav readability fix */
+.case-page .breadcrumb-nav {
+    color: var(--text-muted-dark) !important;
+}
+
+.case-page .breadcrumb-nav a {
+    color: var(--text-muted-dark) !important;
+    text-decoration: none !important;
+}
+
+.case-page .breadcrumb-nav a:hover {
+    color: var(--blue-accent) !important;
+}
+
+.case-page .breadcrumb-nav span {
+    color: var(--blue-accent) !important;
+    font-weight: 600 !important;
+}
+
+/* Lucide and SVG icons in service lists */
+.case-page [data-lucide="alert-circle"],
+.case-page [data-lucide="file-check"],
+.case-page [data-lucide="book-open"],
+.case-page [data-lucide="target"],
+.case-page [data-lucide="globe"],
+.case-page [data-lucide="check"] {
+    color: var(--blue-accent) !important;
+    stroke: var(--blue-accent) !important;
 }
 
 /* Responsive CSS */

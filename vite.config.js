@@ -25,6 +25,7 @@ export default defineConfig({
         aPropos: resolve(__dirname, 'a-propos.html'),
         devisBestWinner: resolve(__dirname, 'devis-best-winner.html'),
         dadaTalentSearch: resolve(__dirname, 'dada-talent-search.html'),
+        articlesPage: resolve(__dirname, 'articles.html'),
 
 
       }
