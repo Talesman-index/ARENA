@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https:;">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>Contactez Strategy Arena | Conseil & Transformation</title>
+    <title>Contactez Strategy Arena | Audit & Transformation</title>
     <meta name="description" content="Prenez contact avec Strategy Arena pour auditer vos opérations, structurer votre organisation et accélérer votre croissance en Afrique de l'Ouest.">
-    
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://strategie-arena.com/contact.html">
 
     <!-- Open Graph -->
@@ -18,7 +16,7 @@
     <meta property="og:description" content="Prenez contact avec Strategy Arena pour auditer vos opérations, structurer votre organisation et accélérer votre croissance.">
     <meta property="og:image" content="https://strategie-arena.com/images/visuel_previsualisation.png">
 
-        <!-- Favicon & PWA Manifest -->
+    <!-- Favicon & PWA Manifest -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2">
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png?v=2">
     <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png?v=2">
@@ -27,201 +25,263 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180x180.png?v=2">
     <link rel="manifest" href="site.webmanifest">
 
-    <!-- Font Preloads (Core Web Vitals LCP optimization) -->
-    <link rel="preload" href="whyte-inktrap/WhyteInktrap-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="whyte-inktrap/WhyteInktrap-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="index.css?v=4.3">
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="index.css?v=4.6">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest" defer></script>
-</head>
-<body class="case-page contact-page-body" style="background-color: #080808; color: #ffffff; min-height: 100vh; display: flex; flex-direction: column;">
 
-    <!-- Header / Navbar Minimal -->
-    <header class="navbar-floating" id="navbar" style="position: fixed; top: 0; left: 0; right: 0; padding: 24px 0; background: rgba(8, 8, 8, 0.8); backdrop-filter: blur(12px); z-index: 1000; border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
-        <div class="case-container" style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 24px; width: 100%;">
+    <!-- Page Specific Responsive Styles -->
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.15fr;
+            gap: 56px;
+            align-items: start;
+        }
+        .form-row-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .contact-card-box {
+            background: #FFFFFF;
+            border: 1px solid rgba(15, 16, 15, 0.08);
+            border-radius: 12px;
+            padding: 40px 36px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+        }
+        
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr !important;
+                gap: 40px !important;
+            }
+            .contact-info-col {
+                position: static !important;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .form-row-grid {
+                grid-template-columns: 1fr !important;
+                gap: 16px !important;
+                margin-bottom: 16px !important;
+            }
+            .contact-card-box {
+                padding: 24px 18px !important;
+            }
+            .case-hero {
+                padding-top: 110px !important;
+                padding-bottom: 40px !important;
+            }
+        }
+    </style>
+</head>
+<body class="case-page" style="background-color: #FAFAFA; color: var(--text-dark); min-height: 100vh; display: flex; flex-direction: column;">
+
+    <!-- Header / Navbar Minimal (Articles Style) -->
+    <header class="navbar-floating" id="navbar" style="position: fixed; top: 0; left: 0; right: 0; padding: 24px 0; background: rgba(250,250,250,0.88); backdrop-filter: blur(12px); z-index: 1000; border-bottom: 1px solid rgba(15, 16, 15, 0.08);">
+        <div class="case-container" style="display: flex; justify-content: space-between; align-items: center;">
             <a href="index.html" class="nav-logo" style="text-decoration: none;">
-                <img src="/Logoss.svg" alt="Strategy Arena Logo" style="height: 28px; display: block; border: none; filter: invert(0);">
+                <img src="strategy-arena-logo-dark.svg" alt="Strategy Arena Logo" style="height: 28px; display: block; border: none;">
             </a>
-            <a href="index.html" id="nav-btn-home" class="btn-pill" style="text-decoration: none;">Accueil</a>
+            <div style="display: flex; align-items: center; gap: 16px;">
+                <a href="index.html" id="nav-btn-home" class="btn-pill" style="text-decoration: none;">Accueil</a>
+                <a href="articles.html" id="nav-btn-blog" class="btn-pill" style="text-decoration: none; color: var(--blue-accent); border-color: var(--blue-accent);">Blog</a>
+            </div>
         </div>
     </header>
 
-    <main style="flex: 1; padding-top: 140px; padding-bottom: 80px;">
-        <div class="case-container" style="max-width: 1200px; margin: 0 auto; padding: 0 24px; width: 100%;">
-            
-            <!-- Grid Layout -->
-            <div class="contact-grid">
+    <main style="flex: 1;">
+        <section class="case-hero">
+            <div class="case-container">
                 
-                <!-- Left Column: Copy & Details -->
-                <div class="contact-info-col">
-
-                    <h1 style="font-family: var(--font-heading); font-size: clamp(3.5rem, 7vw, 5.5rem); line-height: 0.95; margin-bottom: 24px; text-transform: uppercase; letter-spacing: 0.01em;">
-                        Bâtir votre<br><span style="color: var(--primary-color);">croissance</span>
-                    </h1>
-                    
-                    <p style="font-size: 1.15rem; line-height: 1.6; color: rgba(255, 255, 255, 0.7); margin-bottom: 40px; max-width: 480px;">
-                        Que ce soit pour un diagnostic complet, une restructuration organisationnelle ou un accompagnement dans votre transformation digitale, nous étudions votre besoin avec pragmatisme.
-                    </p>
-                    
-                    <!-- Steps / Guarantees -->
-                    <div class="contact-guarantees" style="margin-bottom: 48px;">
-                        <div class="guarantee-item" style="display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px;">
-                            <div style="background: rgba(255,255,255,0.05); padding: 10px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-color);">
-                                <i data-lucide="clock" style="width: 20px; height: 20px;"></i>
-                            </div>
-                            <div>
-                                <h4 style="font-family: system-ui, -apple-system, sans-serif; font-size: 1.05rem; font-weight: 600; letter-spacing: 0.02em; margin-bottom: 4px; color: #ffffff;">Réponse sous 24h</h4>
-                                <p style="font-family: system-ui, -apple-system, sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.5; letter-spacing: 0.01em;">Nous analysons chaque demande personnellement et revenons vers vous rapidement.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="guarantee-item" style="display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px;">
-                            <div style="background: rgba(255,255,255,0.05); padding: 10px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-color);">
-                                <i data-lucide="phone-call" style="width: 20px; height: 20px;"></i>
-                            </div>
-                            <div>
-                                <h4 style="font-family: system-ui, -apple-system, sans-serif; font-size: 1.05rem; font-weight: 600; letter-spacing: 0.02em; margin-bottom: 4px; color: #ffffff;">Échange exploratoire offert</h4>
-                                <p style="font-family: system-ui, -apple-system, sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.5; letter-spacing: 0.01em;">Un premier appel de 30 minutes sans engagement pour qualifier votre friction majeure.</p>
-                            </div>
-                        </div>
-
-                        <div class="guarantee-item" style="display: flex; align-items: flex-start; gap: 16px;">
-                            <div style="background: rgba(255,255,255,0.05); padding: 10px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-color);">
-                                <i data-lucide="shield-check" style="width: 20px; height: 20px;"></i>
-                            </div>
-                            <div>
-                                <h4 style="font-family: system-ui, -apple-system, sans-serif; font-size: 1.05rem; font-weight: 600; letter-spacing: 0.02em; margin-bottom: 4px; color: #ffffff;">Confidentialité stricte</h4>
-                                <p style="font-family: system-ui, -apple-system, sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.6); line-height: 1.5; letter-spacing: 0.01em;">Toutes les informations partagées restent couvertes par le secret professionnel.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Direct contact details -->
-                    <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 32px;">
-                        <a href="mailto:contact@strategie-arena.com" class="menu-contact-link" style="margin-bottom: 16px; font-size: 1rem; color: rgba(255,255,255,0.8); text-decoration: none; display: flex; align-items: center; gap: 12px;">
-                            <i data-lucide="mail" style="color: var(--primary-color); width: 18px; height: 18px;"></i>
-                            <span>contact@strategie-arena.com</span>
-                        </a>
-                        <a href="https://wa.me/22940789921" target="_blank" rel="noopener" class="menu-contact-link" style="margin-bottom: 16px; font-size: 1rem; color: rgba(255,255,255,0.8); text-decoration: none; display: flex; align-items: center; gap: 12px;">
-                            <i data-lucide="message-circle" style="color: var(--primary-color); width: 18px; height: 18px;"></i>
-                            <span>WhatsApp : +229 40 78 99 21</span>
-                        </a>
-                        <div class="menu-contact-link" style="font-size: 1rem; color: rgba(255,255,255,0.8); display: flex; align-items: center; gap: 12px;">
-                            <i data-lucide="map-pin" style="color: var(--primary-color); width: 18px; height: 18px;"></i>
-                            <span>Cotonou, Bénin</span>
-                        </div>
-                    </div>
-                </div>
+                <!-- Articles Style Back Link -->
+                <a href="index.html" class="case-back-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 4px; display: inline-block; vertical-align: middle;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    Retour à l'accueil
+                </a>
                 
-                <!-- Right Column: Interactive Form -->
-                <div class="contact-form-col">
-                    <div class="contact-form-card">
+                
+                <!-- Articles Style Title -->
+                <h1 class="case-main-title">
+                    Bâtir votre <mark class="highlight-yellow" style="background: var(--primary-color); color: var(--text-dark); padding: 2px 10px; border-radius: 4px;">croissance</mark>
+                </h1>
+                
+                <p style="font-size: 1.15rem; color: var(--text-muted-dark); max-width: 680px; line-height: 1.65; margin-bottom: 48px;">
+                    Que ce soit pour un diagnostic complet, une restructuration organisationnelle ou un accompagnement dans votre transformation digitale, nous étudions votre besoin avec pragmatisme.
+                </p>
+
+                <!-- Grid Layout (Articles Style) -->
+                <div class="contact-grid">
+                    
+                    <!-- Left Column: Copy & Details (Articles Blue Accents) -->
+                    <div class="contact-info-col">
                         
-                        <!-- Form State -->
-                        <div id="contact-form-state">
-                            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; color: #ffffff;">Parlez-nous de votre entreprise</h3>
-                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.5); margin-bottom: 32px;">Remplissez ce formulaire rapide pour lancer l'analyse de votre besoin.</p>
+                        <!-- Guarantees Cards -->
+                        <div class="contact-guarantees" style="margin-bottom: 40px; display: flex; flex-direction: column; gap: 16px;">
                             
-                            <form id="arena-contact-form">
-                                
-                                <div class="form-row-grid">
-                                    <div class="form-group">
-                                        <label for="form-name">Votre Nom Complet *</label>
-                                        <input type="text" id="form-name" name="name" required placeholder="Ex: Jean Dupont">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="form-email">Adresse Email Pro *</label>
-                                        <input type="email" id="form-email" name="email" required placeholder="Ex: contact@pme.com">
-                                    </div>
+                            <div style="background: #FFFFFF; border: 1px solid rgba(15, 16, 15, 0.08); border-radius: 12px; padding: 20px; display: flex; align-items: flex-start; gap: 18px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);">
+                                <div style="width: 42px; height: 42px; border-radius: 50%; background: rgba(0, 0, 240, 0.08); color: var(--blue-accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid rgba(0, 0, 240, 0.2);">
+                                    <i data-lucide="clock" style="width: 20px; height: 20px;"></i>
                                 </div>
-
-                                <div class="form-row-grid">
-                                    <div class="form-group">
-                                        <label for="form-company">Nom de l'Entreprise *</label>
-                                        <input type="text" id="form-company" name="company" required placeholder="Ex: Acme SARL">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="form-phone">Téléphone (WhatsApp) *</label>
-                                        <input type="tel" id="form-phone" name="phone" required placeholder="Ex: +229 01 02 03 04">
-                                    </div>
+                                <div>
+                                    <h4 style="font-family: var(--font-body); font-size: 1.05rem; font-weight: 700; color: var(--text-dark); margin-bottom: 4px;">Réponse sous 24h</h4>
+                                    <p style="font-family: var(--font-body); font-size: 0.93rem; color: var(--text-muted-dark); line-height: 1.5; margin: 0;">Nous analysons chaque demande personnellement et revenons vers vous rapidement.</p>
                                 </div>
-
-                                <div class="form-row-grid">
-                                    <div class="form-group">
-                                        <label for="form-service">Expertise ciblée</label>
-                                        <select id="form-service" name="service">
-                                            <option value="">-- Choisir une expertise --</option>
-                                            <option value="diagnostiquer">Diagnostiquer (Audit)</option>
-                                            <option value="structurer">Structurer l'organisation</option>
-                                            <option value="transformer">Transformer les opérations</option>
-                                            <option value="supply-chain">Accélérer la croissance</option>
-                                            <option value="autre">Autre besoin / Général</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="form-formula">Formule souhaitée</label>
-                                        <select id="form-formula" name="formula">
-                                            <option value="non-definie">À définir / Je ne sais pas</option>
-                                            <option value="diagnostic">Diagnostic (Audit)</option>
-                                            <option value="prescription">Prescription (Plan d'action)</option>
-                                            <option value="pilotage">Pilotage (Accompagnement)</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group" style="margin-bottom: 32px;">
-                                    <label for="form-message">Décrivez votre problème ou friction majeure *</label>
-                                    <textarea id="form-message" name="message" rows="4" required placeholder="Ex: Ruptures de stocks fréquentes, ressaisie manuelle sur Excel qui prend trop de temps, manque de clarté dans les rôles des équipes..."></textarea>
-                                </div>
-
-                                <button type="submit" class="pricing-card-btn contact-submit-btn" style="width: 100%; border: none; font-size: 1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px;">
-                                    <span>Envoyer ma demande</span>
-                                    <i data-lucide="send" style="width: 16px; height: 16px;"></i>
-                                </button>
-                                
-                            </form>
-                        </div>
-                        
-                        <!-- Success State (Hidden by default) -->
-                        <div id="contact-success-state" style="display: none; text-align: center; padding: 40px 20px;">
-                            <div style="background: rgba(244, 231, 35, 0.1); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; border: 2px solid var(--primary-color); color: var(--primary-color);">
-                                <i data-lucide="check-circle" style="width: 40px; height: 40px;"></i>
                             </div>
-                            <h3 style="font-size: 1.85rem; font-weight: 700; margin-bottom: 12px; color: #ffffff; text-transform: uppercase; font-family: var(--font-body);">Demande reçue !</h3>
-                            <p style="font-size: 1.05rem; color: rgba(255, 255, 255, 0.7); line-height: 1.6; margin-bottom: 32px; max-width: 420px; margin-left: auto; margin-right: auto;">
-                                Merci pour votre confiance. Notre équipe étudie vos éléments avec la plus grande attention. Vous recevrez un retour par email ou WhatsApp sous 24 heures.
-                            </p>
-                            <a href="index.html" class="btn-pill" style="text-decoration: none; padding: 12px 32px;">Retour à l'accueil</a>
+                            
+                            <div style="background: #FFFFFF; border: 1px solid rgba(15, 16, 15, 0.08); border-radius: 12px; padding: 20px; display: flex; align-items: flex-start; gap: 18px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);">
+                                <div style="width: 42px; height: 42px; border-radius: 50%; background: var(--blue-accent); color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i data-lucide="phone-call" style="width: 20px; height: 20px;"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-family: var(--font-body); font-size: 1.05rem; font-weight: 700; color: var(--text-dark); margin-bottom: 4px;">Échange exploratoire offert</h4>
+                                    <p style="font-family: var(--font-body); font-size: 0.93rem; color: var(--text-muted-dark); line-height: 1.5; margin: 0;">Un premier appel de 30 minutes sans engagement pour qualifier votre friction majeure.</p>
+                                </div>
+                            </div>
+
+                            <div style="background: #FFFFFF; border: 1px solid rgba(15, 16, 15, 0.08); border-radius: 12px; padding: 20px; display: flex; align-items: flex-start; gap: 18px; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);">
+                                <div style="width: 42px; height: 42px; border-radius: 50%; background: rgba(0, 0, 240, 0.08); color: var(--blue-accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid rgba(0, 0, 240, 0.2);">
+                                    <i data-lucide="shield-check" style="width: 20px; height: 20px;"></i>
+                                </div>
+                                <div>
+                                    <h4 style="font-family: var(--font-body); font-size: 1.05rem; font-weight: 700; color: var(--text-dark); margin-bottom: 4px;">Confidentialité stricte</h4>
+                                    <p style="font-family: var(--font-body); font-size: 0.93rem; color: var(--text-muted-dark); line-height: 1.5; margin: 0;">Toutes les informations partagées restent couvertes par le secret professionnel.</p>
+                                </div>
+                            </div>
+
                         </div>
 
+                        <!-- Direct contact details with Articles Blue Links -->
+                        <div style="border-top: 1px solid rgba(15, 16, 15, 0.1); padding-top: 28px; display: flex; flex-direction: column; gap: 16px;">
+                            <a href="mailto:contact@strategie-arena.com" style="color: var(--blue-accent); font-weight: 600; font-size: 1.05rem; text-decoration: none; display: flex; align-items: center; gap: 12px;">
+                                <div style="width: 34px; height: 34px; border-radius: 50%; background: var(--blue-accent); color: #FFFFFF; display: flex; align-items: center; justify-content: center;">
+                                    <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
+                                </div>
+                                <span>contact@strategie-arena.com</span>
+                            </a>
+                            <a href="https://wa.me/22940789921" target="_blank" rel="noopener" style="color: var(--blue-accent); font-weight: 600; font-size: 1.05rem; text-decoration: none; display: flex; align-items: center; gap: 12px;">
+                                <div style="width: 34px; height: 34px; border-radius: 50%; background: var(--blue-accent); color: #FFFFFF; display: flex; align-items: center; justify-content: center;">
+                                    <i data-lucide="message-circle" style="width: 16px; height: 16px;"></i>
+                                </div>
+                                <span>WhatsApp : +229 40 78 99 21</span>
+                            </a>
+                            <div style="color: var(--text-dark); font-weight: 600; font-size: 1.05rem; display: flex; align-items: center; gap: 12px;">
+                                <div style="width: 34px; height: 34px; border-radius: 50%; background: var(--text-dark); color: #FFFFFF; display: flex; align-items: center; justify-content: center;">
+                                    <i data-lucide="map-pin" style="width: 16px; height: 16px;"></i>
+                                </div>
+                                <span>Cotonou, Bénin</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    
+                    <!-- Right Column: Form (Articles Styled Card) -->
+                    <div class="contact-form-col">
+                        <div class="contact-card-box">
+                            
+                            <!-- Form State -->
+                            <div id="contact-form-state">
+                                <span style="font-family: var(--font-mono); color: var(--blue-accent); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 8px; display: block;">Formulaire de Contact</span>
+                                <h3 style="font-family: var(--font-body); font-size: 1.6rem; font-weight: 700; color: var(--text-dark); margin-bottom: 8px;">Parlez-nous de votre entreprise</h3>
+                                <p style="font-size: 0.95rem; color: var(--text-muted-dark); margin-bottom: 28px;">Remplissez ce formulaire rapide pour lancer l'analyse de votre besoin.</p>
+                                
+                                <form id="arena-contact-form">
+                                    
+                                    <div class="form-row-grid">
+                                        <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+                                            <label for="form-name" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.05em;">Votre Nom Complet *</label>
+                                            <input type="text" id="form-name" name="name" required placeholder="Ex: Jean Dupont" style="background: #FAF9F6; border: 1px solid rgba(15, 16, 15, 0.15); color: var(--text-dark); padding: 14px 18px; border-radius: 8px; font-family: var(--font-body); font-size: 0.95rem; width: 100%; box-sizing: border-box;">
+                                        </div>
+                                        <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+                                            <label for="form-email" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.05em;">Adresse Email Pro *</label>
+                                            <input type="email" id="form-email" name="email" required placeholder="Ex: contact@pme.com" style="background: #FAF9F6; border: 1px solid rgba(15, 16, 15, 0.15); color: var(--text-dark); padding: 14px 18px; border-radius: 8px; font-family: var(--font-body); font-size: 0.95rem; width: 100%; box-sizing: border-box;">
+                                        </div>
+                                    </div>
 
+                                    <div class="form-row-grid">
+                                        <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+                                            <label for="form-company" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.05em;">Nom de l'Entreprise *</label>
+                                            <input type="text" id="form-company" name="company" required placeholder="Ex: Acme SARL" style="background: #FAF9F6; border: 1px solid rgba(15, 16, 15, 0.15); color: var(--text-dark); padding: 14px 18px; border-radius: 8px; font-family: var(--font-body); font-size: 0.95rem; width: 100%; box-sizing: border-box;">
+                                        </div>
+                                        <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+                                            <label for="form-phone" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.05em;">Téléphone (WhatsApp) *</label>
+                                            <input type="tel" id="form-phone" name="phone" required placeholder="Ex: +229 01 02 03 04" style="background: #FAF9F6; border: 1px solid rgba(15, 16, 15, 0.15); color: var(--text-dark); padding: 14px 18px; border-radius: 8px; font-family: var(--font-body); font-size: 0.95rem; width: 100%; box-sizing: border-box;">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row-grid">
+                                        <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+                                            <label for="form-service" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.05em;">Expertise ciblée</label>
+                                            <select id="form-service" name="service" style="background: #FAF9F6; border: 1px solid rgba(15, 16, 15, 0.15); color: var(--text-dark); padding: 14px 18px; border-radius: 8px; font-family: var(--font-body); font-size: 0.95rem; width: 100%; box-sizing: border-box;">
+                                                <option value="">-- Choisir une expertise --</option>
+                                                <option value="diagnostiquer">Diagnostiquer (Audit)</option>
+                                                <option value="structurer">Structurer l'organisation</option>
+                                                <option value="transformer">Transformer les opérations</option>
+                                                <option value="supply-chain">Accélérer la croissance</option>
+                                                <option value="autre">Autre besoin / Général</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+                                            <label for="form-formula" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.05em;">Formule souhaitée</label>
+                                            <select id="form-formula" name="formula" style="background: #FAF9F6; border: 1px solid rgba(15, 16, 15, 0.15); color: var(--text-dark); padding: 14px 18px; border-radius: 8px; font-family: var(--font-body); font-size: 0.95rem; width: 100%; box-sizing: border-box;">
+                                                <option value="non-definie">À définir / Je ne sais pas</option>
+                                                <option value="diagnostic">Diagnostic (Audit)</option>
+                                                <option value="prescription">Prescription (Plan d'action)</option>
+                                                <option value="pilotage">Pilotage (Accompagnement)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" style="display: flex; flex-direction: column; gap: 6px; margin-bottom: 28px;">
+                                        <label for="form-message" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.05em;">Décrivez votre problème ou friction majeure *</label>
+                                        <textarea id="form-message" name="message" rows="4" required placeholder="Ex: Ruptures de stocks fréquentes, ressaisie manuelle sur Excel qui prend trop de temps, manque de clarté dans les rôles des équipes..." style="background: #FAF9F6; border: 1px solid rgba(15, 16, 15, 0.15); color: var(--text-dark); padding: 14px 18px; border-radius: 8px; font-family: var(--font-body); font-size: 0.95rem; width: 100%; min-height: 110px; box-sizing: border-box;"></textarea>
+                                    </div>
+
+                                    <!-- Articles Style Blue Accent CTA Button (Guaranteed Pure White High-Contrast Text) -->
+                                    <button type="submit" style="width: 100%; border: none; background: #0000F0 !important; color: #FFFFFF !important; font-weight: 700; font-size: 1.05rem; border-radius: 32px; padding: 16px 32px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; transition: opacity 0.25s ease;">
+                                        <span style="color: #FFFFFF !important; -webkit-text-fill-color: #FFFFFF !important; font-weight: 700; opacity: 1 !important;">Envoyer ma demande</span>
+                                        <i data-lucide="send" style="width: 18px; height: 18px; color: #FFFFFF !important; stroke: #FFFFFF !important;"></i>
+                                    </button>
+                                    
+                                </form>
+                            </div>
+                            
+                            <!-- Success State -->
+                            <div id="contact-success-state" style="display: none; text-align: center; padding: 32px 16px;">
+                                <div style="background: rgba(0, 0, 240, 0.08); width: 72px; height: 72px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; border: 2px solid var(--blue-accent); color: var(--blue-accent);">
+                                    <i data-lucide="check-circle" style="width: 36px; height: 36px;"></i>
+                                </div>
+                                <h3 style="font-family: var(--font-body); font-size: 1.8rem; font-weight: 700; margin-bottom: 12px; color: var(--text-dark);">Demande reçue !</h3>
+                                <p style="font-size: 1rem; color: var(--text-muted-dark); line-height: 1.6; margin-bottom: 28px; max-width: 400px; margin-left: auto; margin-right: auto;">
+                                    Merci pour votre confiance. Notre équipe étudie vos éléments avec la plus grande attention. Vous recevrez un retour par email ou WhatsApp sous 24 heures.
+                                </p>
+                                <a href="index.html" class="btn-pill" style="text-decoration: none; padding: 12px 32px; display: inline-block;">Retour à l'accueil</a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                
             </div>
-            
-        </div>
+        </section>
     </main>
 
-    <!-- Simple Footer -->
-    <footer class="footer" style="padding: 40px 0; background-color: #121212; border-top: 1px solid rgba(255, 255, 255, 0.05);">
-        <div class="case-container" style="text-align: center; max-width: 1200px; margin: 0 auto; padding: 0 24px; width: 100%;">
-            <p style="color: var(--text-muted-light); font-size: 0.9rem; font-weight: 300; margin: 0;">
-                © 2026 Strategy Arena. Tous droits réservés. Cabinet de conseil en stratégie & organisation.
-            </p>
-        </div>
-    </footer>
-
-    <!-- Form script -->
+    <!-- Script for Lucide & Form handling -->
     <script>
         window.addEventListener('DOMContentLoaded', () => {
-            // Initialize Lucide icons
             if (window.lucide) {
                 lucide.createIcons();
             }
             
-            // Read query parameters
             const urlParams = new URLSearchParams(window.location.search);
             const packageParam = urlParams.get('package');
             const serviceParam = urlParams.get('service');
@@ -229,33 +289,22 @@
             if (packageParam) {
                 const formulaSelect = document.getElementById('form-formula');
                 if (formulaSelect) {
-                    if (packageParam === 'diagnostic') {
-                        formulaSelect.value = 'diagnostic';
-                    } else if (packageParam === 'prescription') {
-                        formulaSelect.value = 'prescription';
-                    } else if (packageParam === 'pilotage') {
-                        formulaSelect.value = 'pilotage';
-                    }
+                    if (packageParam === 'diagnostic') formulaSelect.value = 'diagnostic';
+                    else if (packageParam === 'prescription') formulaSelect.value = 'prescription';
+                    else if (packageParam === 'pilotage') formulaSelect.value = 'pilotage';
                 }
             }
             
-            // Auto-select service category
             if (serviceParam) {
                 const serviceSelect = document.getElementById('form-service');
                 if (serviceSelect) {
-                    if (serviceParam === 'diagnostiquer') {
-                        serviceSelect.value = 'diagnostiquer';
-                    } else if (serviceParam === 'structurer') {
-                        serviceSelect.value = 'structurer';
-                    } else if (serviceParam === 'transformer') {
-                        serviceSelect.value = 'transformer';
-                    } else if (serviceParam === 'supply-chain') {
-                        serviceSelect.value = 'supply-chain';
-                    }
+                    if (serviceParam === 'diagnostiquer') serviceSelect.value = 'diagnostiquer';
+                    else if (serviceParam === 'structurer') serviceSelect.value = 'structurer';
+                    else if (serviceParam === 'transformer') serviceSelect.value = 'transformer';
+                    else if (serviceParam === 'supply-chain') serviceSelect.value = 'supply-chain';
                 }
             }
             
-            // Handle form submission
             const form = document.getElementById('arena-contact-form');
             const successState = document.getElementById('contact-success-state');
             const formState = document.getElementById('contact-form-state');
@@ -264,21 +313,16 @@
                 form.addEventListener('submit', (e) => {
                     e.preventDefault();
                     
-                    // Show loading status
                     const submitBtn = form.querySelector('button[type="submit"]');
                     const btnText = submitBtn.querySelector('span');
-                    const btnIcon = submitBtn.querySelector('i');
                     
                     if (submitBtn && btnText) {
                         submitBtn.disabled = true;
                         btnText.textContent = 'Envoi de votre demande...';
-                        if (btnIcon) btnIcon.style.display = 'none';
                     }
                     
-                    // Collect form data
                     const formData = new FormData(form);
                     
-                    // Send to PHP mailer script
                     fetch('send_contact.php', {
                         method: 'POST',
                         body: formData
@@ -290,31 +334,23 @@
                             setTimeout(() => {
                                 formState.style.display = 'none';
                                 successState.style.display = 'block';
-                                // Scroll to success state
-                                successState.scrollIntoView({ behavior: 'smooth', block: 'center' });
                             }, 300);
                         } else {
-                            alert(result.error || "Une erreur est survenue lors de l'envoi de votre demande.");
-                            // Re-enable submit button
+                            alert(result.error || "Une erreur est survenue lors de l'envoi.");
                             submitBtn.disabled = false;
                             btnText.textContent = 'Envoyer ma demande';
-                            if (btnIcon) btnIcon.style.display = 'inline-block';
                         }
                     })
                     .catch(error => {
                         console.error('Error submitting form:', error);
-                        alert("Erreur de connexion. Veuillez vérifier votre accès internet ou nous envoyer un message direct par WhatsApp.");
-                        // Re-enable submit button
+                        alert("Erreur de connexion. Veuillez vérifier votre accès internet ou nous contacter par WhatsApp.");
                         submitBtn.disabled = false;
                         btnText.textContent = 'Envoyer ma demande';
-                        if (btnIcon) btnIcon.style.display = 'inline-block';
                     });
                 });
             }
         });
     </script>
-
-    <script type="module" src="app.js"></script>
 
 </body>
 </html>
