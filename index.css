@@ -865,6 +865,7 @@ mark.highlight-yellow {
 .menu-links-list li:nth-child(4) .menu-link-item { transition-delay: 0.25s; }
 .menu-links-list li:nth-child(5) .menu-link-item { transition-delay: 0.3s; }
 .menu-links-list li:nth-child(6) .menu-link-item { transition-delay: 0.35s; }
+.menu-links-list li:nth-child(7) .menu-link-item { transition-delay: 0.4s; }
 
 .menu-link-item:hover {
     color: var(--primary-color);
@@ -3295,6 +3296,138 @@ mark.highlight-yellow {
 
 .footer-contact-item:hover {
     color: var(--primary-color);
+}
+
+/* --- Footer Branches & Minimalist WhatsApp Pill --- */
+.footer-branch-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 16px;
+}
+
+.footer-branch-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-branch-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--primary-color);
+}
+
+.footer-branch-badge {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.footer-branch-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.footer-branch-phone {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 0.92rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color 0.2s ease;
+}
+
+.footer-branch-phone:hover {
+    color: var(--primary-color);
+}
+
+.footer-wa-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 9999px;
+    padding: 5px 12px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    line-height: 1;
+}
+
+.footer-wa-pill svg {
+    width: 12px;
+    height: 12px;
+    fill: currentColor;
+    opacity: 0.85;
+    transition: transform 0.2s ease, fill 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-wa-pill:hover {
+    background: rgba(37, 211, 102, 0.12);
+    border-color: rgba(37, 211, 102, 0.4);
+    color: #25D366;
+    transform: translateY(-1px);
+}
+
+.footer-wa-pill:hover svg {
+    fill: #25D366;
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Light mode card pill for contact.html */
+.contact-wa-pill-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(15, 16, 15, 0.04);
+    border: 1px solid rgba(15, 16, 15, 0.1);
+    border-radius: 9999px;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: all 0.25s ease;
+    line-height: 1;
+}
+
+.contact-wa-pill-light svg {
+    width: 13px;
+    height: 13px;
+    fill: currentColor;
+    opacity: 0.75;
+    transition: all 0.2s ease;
+}
+
+.contact-wa-pill-light:hover {
+    background: rgba(37, 211, 102, 0.12);
+    border-color: rgba(37, 211, 102, 0.45);
+    color: #128C7E;
+    transform: translateY(-1px);
+}
+
+.contact-wa-pill-light:hover svg {
+    fill: #128C7E;
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 .footer-col-title {

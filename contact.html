@@ -31,13 +31,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Global CSS -->
-    <link rel="stylesheet" href="index.css?v=4.6">
+    <link rel="stylesheet" href="index.css?v=4.7">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest" defer></script>
 
     <!-- Page Specific Responsive Styles -->
     <style>
+        .contact-wa-pill-light {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+            background: rgba(37, 211, 102, 0.08) !important;
+            border: 1px solid rgba(37, 211, 102, 0.3) !important;
+            border-radius: 9999px !important;
+            padding: 3px 10px !important;
+            font-size: 0.8rem !important;
+            font-weight: 600 !important;
+            color: #075E54 !important;
+            text-decoration: none !important;
+            line-height: 1 !important;
+            transition: all 0.2s ease !important;
+        }
+        .contact-wa-pill-light:hover {
+            background: rgba(37, 211, 102, 0.16) !important;
+            border-color: #25D366 !important;
+            transform: translateY(-1px) !important;
+        }
+        .contact-wa-pill-light svg {
+            width: 14px !important;
+            height: 14px !important;
+            min-width: 14px !important;
+            min-height: 14px !important;
+            max-width: 14px !important;
+            max-height: 14px !important;
+            flex-shrink: 0 !important;
+            display: inline-block !important;
+            vertical-align: middle !important;
+        }
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1.15fr;
@@ -160,25 +191,87 @@
 
                         </div>
 
-                        <!-- Direct contact details with Articles Blue Links -->
-                        <div style="border-top: 1px solid rgba(15, 16, 15, 0.1); padding-top: 28px; display: flex; flex-direction: column; gap: 16px;">
+                        <!-- Direct contact details & Regional Offices -->
+                        <div style="border-top: 1px solid rgba(15, 16, 15, 0.1); padding-top: 28px; display: flex; flex-direction: column; gap: 20px;">
                             <a href="mailto:contact@strategie-arena.com" style="color: var(--blue-accent); font-weight: 600; font-size: 1.05rem; text-decoration: none; display: flex; align-items: center; gap: 12px;">
-                                <div style="width: 34px; height: 34px; border-radius: 50%; background: var(--blue-accent); color: #FFFFFF; display: flex; align-items: center; justify-content: center;">
-                                    <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
+                                <div style="width: 38px; height: 38px; border-radius: 50%; background: var(--blue-accent); color: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                    <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
                                 </div>
-                                <span>contact@strategie-arena.com</span>
+                                <div>
+                                    <span style="display: block; font-size: 0.78rem; color: var(--text-muted-dark); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;">Email général</span>
+                                    <span>contact@strategie-arena.com</span>
+                                </div>
                             </a>
-                            <a href="https://wa.me/22940789921" target="_blank" rel="noopener" style="color: var(--blue-accent); font-weight: 600; font-size: 1.05rem; text-decoration: none; display: flex; align-items: center; gap: 12px;">
-                                <div style="width: 34px; height: 34px; border-radius: 50%; background: var(--blue-accent); color: #FFFFFF; display: flex; align-items: center; justify-content: center;">
-                                    <i data-lucide="message-circle" style="width: 16px; height: 16px;"></i>
+
+                            <div style="margin-top: 10px;">
+                                <h4 style="font-family: var(--font-body); font-size: 0.85rem; font-weight: 700; color: var(--text-muted-dark); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 14px;">
+                                    Nos implantations en Afrique de l'Ouest
+                                </h4>
+
+                                <div style="display: flex; flex-direction: column; gap: 12px;">
+                                    <!-- Bénin (Siège) -->
+                                    <div style="background: #FFFFFF; border: 1px solid rgba(15, 16, 15, 0.08); border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+                                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                                            <div style="display: flex; align-items: center; gap: 8px;">
+                                                <span style="font-size: 1.25rem; line-height: 1;">🇧🇯</span>
+                                                <strong style="color: var(--text-dark); font-size: 0.98rem;">Bénin (Siège Social)</strong>
+                                            </div>
+                                            <span style="font-size: 0.78rem; font-weight: 600; color: var(--text-muted-dark); background: rgba(0,0,0,0.05); padding: 3px 10px; border-radius: 20px;">Cotonou</span>
+                                        </div>
+                                        <div style="display: flex; flex-wrap: wrap; gap: 12px; font-size: 0.95rem; align-items: center; padding-top: 2px;">
+                                            <a href="tel:+22940789921" style="color: var(--text-dark); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 6px;">
+                                                <i data-lucide="phone" style="width: 15px; height: 15px; color: var(--blue-accent);"></i>
+                                                <span>+229 40 78 99 21</span>
+                                            </a>
+                                            <a href="https://wa.me/22940789921" target="_blank" rel="noopener" class="contact-wa-pill-light" title="Échanger sur WhatsApp" style="display: inline-flex !important; align-items: center !important; gap: 6px !important; background: rgba(37, 211, 102, 0.08) !important; border: 1px solid rgba(37, 211, 102, 0.3) !important; border-radius: 9999px !important; padding: 4px 10px !important; font-size: 0.8rem !important; font-weight: 600 !important; color: #075E54 !important; text-decoration: none !important; line-height: 1 !important;">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#25D366" style="width: 14px !important; height: 14px !important; min-width: 14px !important; min-height: 14px !important; max-width: 14px !important; max-height: 14px !important; flex-shrink: 0 !important; display: inline-block !important; vertical-align: middle !important;"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.288.043.088.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.174.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.071.043.419-.101.824z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.98-1.408C8.423 21.493 10.153 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2c-1.63 0-3.14-.46-4.42-1.26l-.31-.19-2.97.84.84-2.9-.2-.32C4.1 14.98 3.6 13.54 3.6 12c0-4.63 3.77-8.4 8.4-8.4s8.4 3.77 8.4 8.4-3.77 8.4-8.4 8.4z"/></svg>
+                                                <span>WhatsApp</span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Côte d'Ivoire (Annexe) -->
+                                    <div style="background: #FFFFFF; border: 1px solid rgba(15, 16, 15, 0.08); border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+                                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                                            <div style="display: flex; align-items: center; gap: 8px;">
+                                                <span style="font-size: 1.25rem; line-height: 1;">🇨🇮</span>
+                                                <strong style="color: var(--text-dark); font-size: 0.98rem;">Côte d'Ivoire (Annexe)</strong>
+                                            </div>
+                                            <span style="font-size: 0.78rem; font-weight: 600; color: var(--text-muted-dark); background: rgba(0,0,0,0.05); padding: 3px 10px; border-radius: 20px;">Abidjan</span>
+                                        </div>
+                                        <div style="display: flex; flex-wrap: wrap; gap: 12px; font-size: 0.95rem; align-items: center; padding-top: 2px;">
+                                            <a href="tel:+2250706386035" style="color: var(--text-dark); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 6px;">
+                                                <i data-lucide="phone" style="width: 15px; height: 15px; color: var(--blue-accent);"></i>
+                                                <span>+225 07 06 38 60 35</span>
+                                            </a>
+                                            <a href="https://wa.me/2250706386035" target="_blank" rel="noopener" class="contact-wa-pill-light" title="Échanger sur WhatsApp" style="display: inline-flex !important; align-items: center !important; gap: 6px !important; background: rgba(37, 211, 102, 0.08) !important; border: 1px solid rgba(37, 211, 102, 0.3) !important; border-radius: 9999px !important; padding: 4px 10px !important; font-size: 0.8rem !important; font-weight: 600 !important; color: #075E54 !important; text-decoration: none !important; line-height: 1 !important;">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#25D366" style="width: 14px !important; height: 14px !important; min-width: 14px !important; min-height: 14px !important; max-width: 14px !important; max-height: 14px !important; flex-shrink: 0 !important; display: inline-block !important; vertical-align: middle !important;"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.288.043.088.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.174.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.071.043.419-.101.824z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.98-1.408C8.423 21.493 10.153 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2c-1.63 0-3.14-.46-4.42-1.26l-.31-.19-2.97.84.84-2.9-.2-.32C4.1 14.98 3.6 13.54 3.6 12c0-4.63 3.77-8.4 8.4-8.4s8.4 3.77 8.4 8.4-3.77 8.4-8.4 8.4z"/></svg>
+                                                <span>WhatsApp</span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Burkina Faso (Annexe) -->
+                                    <div style="background: #FFFFFF; border: 1px solid rgba(15, 16, 15, 0.08); border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
+                                        <div style="display: flex; align-items: center; justify-content: space-between;">
+                                            <div style="display: flex; align-items: center; gap: 8px;">
+                                                <span style="font-size: 1.25rem; line-height: 1;">🇧🇫</span>
+                                                <strong style="color: var(--text-dark); font-size: 0.98rem;">Burkina Faso (Annexe)</strong>
+                                            </div>
+                                            <span style="font-size: 0.78rem; font-weight: 600; color: var(--text-muted-dark); background: rgba(0,0,0,0.05); padding: 3px 10px; border-radius: 20px;">Ouagadougou</span>
+                                        </div>
+                                        <div style="display: flex; flex-wrap: wrap; gap: 12px; font-size: 0.95rem; align-items: center; padding-top: 2px;">
+                                            <a href="tel:+22607897687" style="color: var(--text-dark); text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 6px;">
+                                                <i data-lucide="phone" style="width: 15px; height: 15px; color: var(--blue-accent);"></i>
+                                                <span>+226 07 89 76 87</span>
+                                            </a>
+                                            <a href="https://wa.me/22607897687" target="_blank" rel="noopener" class="contact-wa-pill-light" title="Échanger sur WhatsApp" style="display: inline-flex !important; align-items: center !important; gap: 6px !important; background: rgba(37, 211, 102, 0.08) !important; border: 1px solid rgba(37, 211, 102, 0.3) !important; border-radius: 9999px !important; padding: 4px 10px !important; font-size: 0.8rem !important; font-weight: 600 !important; color: #075E54 !important; text-decoration: none !important; line-height: 1 !important;">
+                                                <svg width="14" height="14" viewBox="0 0 24 24" fill="#25D366" style="width: 14px !important; height: 14px !important; min-width: 14px !important; min-height: 14px !important; max-width: 14px !important; max-height: 14px !important; flex-shrink: 0 !important; display: inline-block !important; vertical-align: middle !important;"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.288.043.088.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.861.174.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.174.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.071.043.419-.101.824z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.98-1.408C8.423 21.493 10.153 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2c-1.63 0-3.14-.46-4.42-1.26l-.31-.19-2.97.84.84-2.9-.2-.32C4.1 14.98 3.6 13.54 3.6 12c0-4.63 3.77-8.4 8.4-8.4s8.4 3.77 8.4 8.4-3.77 8.4-8.4 8.4z"/></svg>
+                                                <span>WhatsApp</span>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <span>WhatsApp : +229 40 78 99 21</span>
-                            </a>
-                            <div style="color: var(--text-dark); font-weight: 600; font-size: 1.05rem; display: flex; align-items: center; gap: 12px;">
-                                <div style="width: 34px; height: 34px; border-radius: 50%; background: var(--text-dark); color: #FFFFFF; display: flex; align-items: center; justify-content: center;">
-                                    <i data-lucide="map-pin" style="width: 16px; height: 16px;"></i>
-                                </div>
-                                <span>Cotonou, Bénin</span>
                             </div>
                         </div>
                     </div>
@@ -213,7 +306,7 @@
                                         </div>
                                         <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
                                             <label for="form-phone" style="font-family: var(--font-body); font-size: 0.8rem; font-weight: 700; color: var(--text-dark); text-transform: uppercase; letter-spacing: 0.05em;">Téléphone (WhatsApp) *</label>
-                                            <input type="tel" id="form-phone" name="phone" required placeholder="Ex: +229 01 02 03 04" style="background: #FAF9F6; border: 1px solid rgba(15, 16, 15, 0.15); color: var(--text-dark); padding: 14px 18px; border-radius: 8px; font-family: var(--font-body); font-size: 0.95rem; width: 100%; box-sizing: border-box;">
+                                            <input type="tel" id="form-phone" name="phone" required placeholder="Ex: +225... / +226... / +229..." style="background: #FAF9F6; border: 1px solid rgba(15, 16, 15, 0.15); color: var(--text-dark); padding: 14px 18px; border-radius: 8px; font-family: var(--font-body); font-size: 0.95rem; width: 100%; box-sizing: border-box;">
                                         </div>
                                     </div>
 

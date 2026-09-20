@@ -199,6 +199,21 @@ Le site propose cinq articles de fond orientés SEO pour asseoir l'expertise loc
 *   *Thématique :* Logistique & Transport
 *   *Pitch :* Analyse similaire adaptée aux flux logistiques ivoiriens, abordant la gestion des stocks déportés, la numérisation des bons de livraison et la fluidité des communications entre expéditeurs et transporteurs.
 
+### Article 6 : Testez-vous : votre entreprise a-t-elle besoin d'un diagnostic ?
+*   *Fichier :* `articles/diagnostic-entreprise-cote-divoire.html`
+*   *Thématique :* Auto-diagnostic · Côte d'Ivoire
+*   *Pitch :* Test en 5 questions pour évaluer la maîtrise du coût de revient, la dépendance humaine, l'objectivité des stocks et la visibilité financière des PME ivoiriennes.
+
+### Article 7 : Pourquoi votre entreprise de BTP s'arrête dès que vous n'êtes pas sur le chantier
+*   *Fichier :* `articles/entreprise-btp-chantier-cote-divoire.html`
+*   *Thématique :* Réalité Terrain · BTP Côte d'Ivoire
+*   *Pitch :* Cas pratique basé à Yopougon démontrant comment l'absence de processus écrits paralyse les chantiers dès l'absence du patron, et méthode pour débloquer la délégation.
+
+### Article 8 : La stratégie qui permet aux entreprises de BTP de décrocher deux fois plus de chantiers
+*   *Fichier :* `articles/strategie-btp-doubler-chantiers-cote-divoire.html`
+*   *Thématique :* Stratégie & Croissance · BTP Côte d'Ivoire
+*   *Pitch :* Séparation de la tête stratégique de l'exécution terrain pour doubler la capacité de chantiers simultanés à Abidjan et accéder aux appels d'offres d'envergure.
+
 ---
 
 ## 6. Mentions Légales & Informations Administratives (`mentions-legales.html`)
@@ -206,7 +221,9 @@ Le site propose cinq articles de fond orientés SEO pour asseoir l'expertise loc
 *   **Nom Commercial / Éditeur :** Strategy Arena
 *   **Type d’Activité :** Cabinet de Conseil en Stratégie & Organisation
 *   **Siège Social :** Cotonou, Bénin
+*   **Annexe Côte d'Ivoire :** Abidjan (+225 07 06 38 60 35)
+*   **Annexe Burkina Faso :** Ouagadougou (+226 07 89 76 87)
 *   **Adresse Email Officielle :** `contact@strategie-arena.com`
-*   **Téléphone :** `+229 01 40 78 99 21`
+*   **Téléphone Siège :** `+229 01 40 78 99 21`
 *   **Numéro Registre du Commerce et du Crédit Mobilier (RCCM) :** `RB/ABC/25 B 1024`
 *   **Date d'entrée en vigueur des conditions :** 2 juillet 2026

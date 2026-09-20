@@ -608,12 +608,13 @@ const initApp = () => {
                         Nous refusons de prescrire une solution sans une immersion terrain préalable.`;
             }
             
-            if (txt.includes('contact') || txt.includes('rendez') || txt.includes('rdv') || txt.includes('whatsapp') || txt.includes('téléphone') || txt.includes('email') || txt.includes('adresse') || txt.includes('écrire') || txt.includes('basé')) {
-                return `Pour échanger sur vos problématiques ou planifier un diagnostic gratuit, voici comment nous contacter :<br><br>
-                        • <strong>Email</strong> : <a href="mailto:contact@strategie-arena.com">contact@strategie-arena.com</a><br>
-                        • <strong>Téléphone</strong> : <a href="tel:+2290140789921">+229 01 40 78 99 21</a><br>
-                        • <strong>WhatsApp</strong> : <a href="https://wa.me/22940789921" target="_blank">Discuter directement</a><br><br>
-                        Notre cabinet est basé à Cotonou, Bénin, et nous intervenons sur toute la région.`;
+            if (txt.includes('contact') || txt.includes('rendez') || txt.includes('rdv') || txt.includes('whatsapp') || txt.includes('téléphone') || txt.includes('telephone') || txt.includes('email') || txt.includes('adresse') || txt.includes('écrire') || txt.includes('basé') || txt.includes('burkina') || txt.includes('ivoire') || txt.includes('abidjan') || txt.includes('ouaga') || txt.includes('annexe')) {
+                return `Pour échanger sur vos problématiques ou planifier un diagnostic gratuit, voici nos contacts directs :<br><br>
+                        • <strong>Email</strong> : <a href="mailto:contact@strategie-arena.com">contact@strategie-arena.com</a><br><br>
+                        • <strong>🇧🇯 Bénin (Siège - Cotonou)</strong> : <a href="tel:+22940789921">+229 40 78 99 21</a> (Tél & WhatsApp)<br>
+                        • <strong>🇨🇮 Côte d'Ivoire (Annexe)</strong> : <a href="tel:+2250706386035">+225 07 06 38 60 35</a> (Tél & WhatsApp)<br>
+                        • <strong>🇧🇫 Burkina Faso (Annexe)</strong> : <a href="tel:+22607897687">+226 07 89 76 87</a> (Tél & WhatsApp)<br><br>
+                        Tous ces numéros sont joignables directement par appel téléphonique et sur WhatsApp.`;
             }
             
             if (txt.includes('bonjour') || txt.includes('salut') || txt.includes('hello') || txt.includes('bonsoir') || txt.includes('hey')) {
