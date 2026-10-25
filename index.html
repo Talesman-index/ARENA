@@ -35,88 +35,226 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <!-- Font Preloads (Core Web Vitals LCP optimization) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="preload" href="/whyte-inktrap/WhyteInktrap-Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/whyte-inktrap/WhyteInktrap-Bold.woff2" as="font" type="font/woff2" crossorigin>
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css?v=6.0">
     
     <!-- Lucide Icons for clean SVGs -->
     <script src="https://unpkg.com/lucide@latest" defer></script>
 
-    <!-- Schema.org Organization structured data -->
+    <!-- Schema.org Organization, LocalBusiness, WebSite & FAQPage structured data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Strategy Arena",
-      "url": "https://strategie-arena.com",
-      "logo": "https://strategie-arena.com/Logoss.svg",
-      "image": "https://strategie-arena.com/images/visuel_previsualisation.png",
-      "description": "Cabinet de conseil en stratégie, organisation et transformation digitale en Afrique de l'Ouest, basé à Cotonou, Bénin.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Cotonou",
-        "addressCountry": "BJ"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+2290140789921",
-        "contactType": "customer service",
-        "email": "contact@strategie-arena.com"
-      },
-      "sameAs": [
-        "https://strategie-arena.com"
-      ],
-      "knowsAbout": [
-        "Planification stratégique",
-        "Gestion d'organisation",
-        "Gestion du changement",
-        "Architecture des systèmes",
-        "Audit opérationnel",
-        "Digitalisation",
-        "Automatisation",
-        "ERP",
-        "CRM",
-        "Supply Chain"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Services de Conseil",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Diagnostiquer votre entreprise",
-              "url": "https://strategie-arena.com/services/diagnostiquer.html"
-            }
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://strategie-arena.com/#organization",
+          "name": "Strategy Arena",
+          "url": "https://strategie-arena.com",
+          "logo": "https://strategie-arena.com/Logoss.svg",
+          "image": "https://strategie-arena.com/images/visuel_previsualisation.png",
+          "description": "Cabinet de conseil en stratégie, organisation et transformation digitale en Afrique de l'Ouest, basé à Cotonou (Bénin) et intervenant en Côte d'Ivoire.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Cotonou",
+            "addressCountry": "BJ"
           },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Structurer votre organisation",
-              "url": "https://strategie-arena.com/services/structurer.html"
-            }
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+2290140789921",
+            "contactType": "customer service",
+            "email": "contact@strategie-arena.com",
+            "availableLanguage": ["French", "English"]
           },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Transformer vos opérations",
-              "url": "https://strategie-arena.com/services/transformer.html"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Accélérer votre croissance",
-              "url": "https://strategie-arena.com/services/supply-chain-et-croissance.html"
-            }
+          "sameAs": [
+            "https://strategie-arena.com"
+          ],
+          "knowsAbout": [
+            "Audit opérationnel PME",
+            "Digitalisation Afrique de l'Ouest",
+            "Transformation organisationnelle",
+            "Optimisation logistique Cotonou",
+            "Management de transition BTP Côte d'Ivoire",
+            "Architecture ERP et CRM léger",
+            "Automatisation de flux opérationnels",
+            "Supply Chain Afrique subsaharienne"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Services de Conseil en Stratégie & Organisation",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Diagnostiquer votre entreprise",
+                  "url": "https://strategie-arena.com/services/diagnostiquer.html",
+                  "description": "Audit opérationnel terrain, cartographie des frictions et identification des goulots d'étranglement."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Structurer votre organisation",
+                  "url": "https://strategie-arena.com/services/structurer.html",
+                  "description": "Formalisation des process, fiches de postes claires et protocoles opérationnels fiables."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Transformer vos opérations",
+                  "url": "https://strategie-arena.com/services/transformer.html",
+                  "description": "Mise en place d'outils digitaux adaptés au terrain : CRM, gestion des stocks, automatisation."
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Accélérer votre croissance & Supply Chain",
+                  "url": "https://strategie-arena.com/services/supply-chain-et-croissance.html",
+                  "description": "Pilotage par la data, optimisation des flux d'approvisionnement et passage à l'échelle."
+                }
+              }
+            ]
           }
-        ]
-      }
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://strategie-arena.com/#localbusiness",
+          "name": "Strategy Arena — Conseil & Ingénierie Opérationnelle",
+          "url": "https://strategie-arena.com",
+          "logo": "https://strategie-arena.com/Logoss.svg",
+          "image": "https://strategie-arena.com/images/visuel_previsualisation.png",
+          "telephone": "+2290140789921",
+          "email": "contact@strategie-arena.com",
+          "priceRange": "$$",
+          "currenciesAccepted": "XOF",
+          "paymentAccepted": "Virement bancaire, Chèque, Mobile Money",
+          "subOrganization": [
+            {
+              "@type": "LocalBusiness",
+              "name": "Strategy Arena Bénin (Siège)",
+              "telephone": "+22940789921",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Cotonou",
+                "addressCountry": "BJ"
+              }
+            },
+            {
+              "@type": "LocalBusiness",
+              "name": "Strategy Arena Côte d'Ivoire",
+              "telephone": "+2250706386035",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Abidjan",
+                "addressCountry": "CI"
+              }
+            },
+            {
+              "@type": "LocalBusiness",
+              "name": "Strategy Arena Burkina Faso",
+              "telephone": "+22607897687",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ouagadougou",
+                "addressCountry": "BF"
+              }
+            }
+          ],
+          "areaServed": [
+            {
+              "@type": "Country",
+              "name": "Bénin"
+            },
+            {
+              "@type": "Country",
+              "name": "Côte d'Ivoire"
+            },
+            {
+              "@type": "Country",
+              "name": "Togo"
+            },
+            {
+              "@type": "Country",
+              "name": "Sénégal"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Haie Vive / Boulevard de la Marina",
+            "addressLocality": "Cotonou",
+            "addressRegion": "Littoral",
+            "addressCountry": "BJ"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://strategie-arena.com/#website",
+          "url": "https://strategie-arena.com",
+          "name": "Strategy Arena",
+          "description": "Cabinet de conseil en stratégie, organisation et digitalisation des PME en Afrique de l'Ouest",
+          "publisher": {
+            "@id": "https://strategie-arena.com/#organization"
+          },
+          "inLanguage": "fr"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://strategie-arena.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Pourquoi un accompagnement local au Bénin ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le contexte local comporte des spécificités uniques en matière d'infrastructures Internet, de canaux de vente (WhatsApp, points physiques), et de culture managériale. Nous concevons des systèmes adaptés à ces contraintes, évitant les solutions prêtes à l'emploi inapplicables sur le terrain."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Proposez-vous toujours une solution digitale ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La majorité de nos interventions incluent un volet digital léger, mais toujours après diagnostic, jamais imposé par défaut. Notre méthode reste applicable à des chantiers 100% organisationnels. Quand un outil technologique est effectivement la bonne réponse, nous nous appuyons sur des solutions ergonomiques et économiques : CRM légers, bases de données flexibles, outils d'automatisation simples."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Comment savez-vous quelle solution recommander ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Notre méthode s'appuie sur le Design Thinking : nous explorons toujours plusieurs pistes de réponse avant de prescrire. Le choix final dépend de votre contexte réel, incluant le budget, l'équipe, l'infrastructure et la culture managériale, loin de toute solution standard appliquée par défaut."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Sous quel délai voit-on des résultats concrets ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Grâce à notre méthodologie agile, les premières actions prioritaires et ajustements opérationnels ou technologiques sont mis en œuvre et fonctionnels dans vos équipes entre 4 et 8 semaines après la phase de cadrage initial."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Formez-vous nos équipes après déploiement ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui. La formation et l'autonomie de vos équipes font partie de nos engagements clés. Nous organisons des ateliers pratiques à Cotonou ou à distance, et mettons à disposition des guides d'utilisation simplifiés."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
 </head>
@@ -271,7 +409,7 @@
     <!-- ==========================================================================
        ABOUT SECTION
        ========================================================================== -->
-    <section class="section section-light dot-grid-bg" id="about" style="border-top: 1px solid var(--border-color-light);">
+    <section class="section section-light" id="about" style="border-top: 1px solid var(--border-color-light);">
         <div class="container">
             <div class="about-grid">
                 
@@ -412,7 +550,7 @@
     <!-- ==========================================================================
        SERVICES SECTION
        ========================================================================== -->
-    <section class="section section-light dot-grid-bg" id="services" style="border-top: 1px solid var(--border-color-light);">
+    <section class="section section-light" id="services" style="border-top: 1px solid var(--border-color-light);">
         <div class="container">
             
             <div class="services-header" style="margin-bottom: 48px;">
@@ -728,7 +866,7 @@
     <!-- ==========================================================================
        METHODOLOGY SECTION (ÉTAPES STRATÉGIQUES)
        ========================================================================== -->
-    <section class="section section-light dot-grid-bg" id="methodology" style="border-top: 1px solid var(--border-color-light);">
+    <section class="section section-light" id="methodology" style="border-top: 1px solid var(--border-color-light);">
         <div class="container">
             
             <div class="sectors-layout" style="margin-bottom: 60px;">
@@ -931,7 +1069,7 @@
     <!-- ==========================================================================
        PRICING TIER SECTION
        ========================================================================== -->
-    <section class="section section-light dot-grid-bg" id="pricing" style="border-top: 1px solid var(--border-color-light);">
+    <section class="section section-light" id="pricing" style="border-top: 1px solid var(--border-color-light);">
         <div class="container">
             
             <div class="pricing-header" style="margin-bottom: 48px;">
@@ -1256,7 +1394,7 @@
                 <div class="footer-nav-grid">
 
                     <div class="footer-brand-col">
-                        <span class="footer-brand-name">Strategy Arena</span>
+                        <span class="footer-brand-name" style="font-family: 'Instrument Serif', Georgia, serif; font-size: 1.55rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.03em;">Strategy Arena</span>
                         <p class="footer-brand-tagline">Conseil en stratégie & organisation · Afrique de l'Ouest</p>
                         <div class="footer-social-links">
                             <a href="https://www.linkedin.com/company/strategy-arena/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn Strategy Arena">
@@ -1291,7 +1429,7 @@
                     </div>
 
                     <div class="footer-nav-col">
-                        <h3 class="footer-col-title">Navigation</h3>
+                        <h3 class="footer-col-title" style="font-family: 'Instrument Serif', Georgia, serif; font-size: 1.55rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.03em;">Navigation</h3>
                         <ul class="footer-links">
                             <li><a href="#hero">Accueil</a></li>
                             <li><a href="a-propos.html">À propos</a></li>
@@ -1304,7 +1442,7 @@
                     </div>
 
                     <div class="footer-nav-col">
-                        <h3 class="footer-col-title">Expertises</h3>
+                        <h3 class="footer-col-title" style="font-family: 'Instrument Serif', Georgia, serif; font-size: 1.55rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.03em;">Expertises</h3>
                         <ul class="footer-links">
                             <li><a href="services/diagnostiquer.html">Diagnostiquer l'entreprise</a></li>
                             <li><a href="services/structurer.html">Structurer l'organisation</a></li>
@@ -1314,7 +1452,7 @@
                     </div>
 
                     <div class="footer-nav-col">
-                        <h3 class="footer-col-title">Contact & Annexes</h3>
+                        <h3 class="footer-col-title" style="font-family: 'Instrument Serif', Georgia, serif; font-size: 1.55rem; font-weight: 400; text-transform: uppercase; letter-spacing: 0.03em;">Contact & Annexes</h3>
                         <div class="footer-contact-block" style="display: flex; flex-direction: column; gap: 14px;">
                             <a href="mailto:contact@strategie-arena.com" class="footer-contact-item">
                                 contact@strategie-arena.com

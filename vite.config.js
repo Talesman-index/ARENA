@@ -27,8 +27,10 @@ export default defineConfig({
         supplyChainEtCroissance: resolve(__dirname, 'services/supply-chain-et-croissance.html'),
         aPropos: resolve(__dirname, 'a-propos.html'),
         devisBestWinner: resolve(__dirname, 'devis-best-winner.html'),
+        devisQueenOfNails: resolve(__dirname, 'devis-queen-of-nails.html'),
         dadaTalentSearch: resolve(__dirname, 'dada-talent-search.html'),
         articlesPage: resolve(__dirname, 'articles.html'),
+        contratSaccaDafia: resolve(__dirname, 'contrat-sacca-dafia.html'),
 
 
       }

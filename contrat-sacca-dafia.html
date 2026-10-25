@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https:;">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Contrat de Prestation — SACCA Dafia | Stratégie Arena</title>
+    <meta name="description" content="Contrat de prestation de services professionnels pour SACCA Dafia, Product Designer à Stratégie Arena. Date d'effet : 15 Juin 2026. Rémunération : 200 000 FCFA/mois (Cash / MoMo).">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    
+    <!-- HTML2PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+
+    <style>
+        :root {
+            --bg: #0A0A0A;
+            --surface: #121212;
+            --text-primary: #FFFFFF;
+            --text-secondary: #9E9E9E;
+            --text-tertiary: #666666;
+            --border: #262626;
+            --border-light: #1E1E1E;
+            --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            --font-hand: 'Caveat', cursive;
+            --ink-color: #E6E6E6;
+            --stamp-color: #CCCCCC;
+        }
+
+        body.light-theme {
+            --bg: #F8F8F8;
+            --surface: #FFFFFF;
+            --text-primary: #0A0A0A;
+            --text-secondary: #555555;
+            --text-tertiary: #888888;
+            --border: #E0E0E0;
+            --border-light: #EBEBEB;
+            --ink-color: #111111;
+            --stamp-color: #222222;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            font-size: 15px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        /* Top Minimal Header */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            padding: 16px 0;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .header-container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-title {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-minimal {
+            background: transparent;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            padding: 6px 14px;
+            font-size: 12px;
+            font-weight: 500;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.15s ease;
+        }
+
+        .btn-minimal:hover {
+            color: var(--text-primary);
+            border-color: var(--text-primary);
+        }
+
+        /* Main Document Wrapper */
+        .document-wrapper {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 100px 24px 140px 24px;
+        }
+
+        /* The Contract Sheet */
+        .contract-sheet {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 64px 64px 80px 64px;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+        }
+
+        @media (max-width: 768px) {
+            .contract-sheet {
+                padding: 32px 20px 48px 20px;
+            }
+            .document-wrapper {
+                padding: 80px 14px 120px 14px;
+            }
+        }
+
+        /* Meta Header Strip */
+        .meta-strip {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 36px;
+            font-size: 12px;
+            font-family: var(--font-mono);
+            color: var(--text-tertiary);
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .meta-strip span {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* Main Headings */
+        .doc-title-block {
+            margin-bottom: 40px;
+        }
+
+        .doc-category {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--text-tertiary);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .doc-title {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            line-height: 1.25;
+        }
+
+        .doc-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        /* Key Metrics Table */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            margin-bottom: 44px;
+            overflow: hidden;
+        }
+
+        @media (max-width: 600px) {
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .summary-cell {
+            padding: 16px 20px;
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .summary-cell:nth-child(2n) {
+            border-right: none;
+        }
+
+        .summary-cell:nth-last-child(-n+2) {
+            border-bottom: none;
+        }
+
+        @media (max-width: 600px) {
+            .summary-cell {
+                border-right: none !important;
+                border-bottom: 1px solid var(--border) !important;
+            }
+            .summary-cell:last-child {
+                border-bottom: none !important;
+            }
+        }
+
+        .cell-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .cell-value {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .cell-value.highlight {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        /* Parties Section */
+        .parties-wrapper {
+            margin-bottom: 44px;
+            padding-bottom: 36px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-tertiary);
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .parties-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        @media (max-width: 640px) {
+            .parties-columns {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        .party-block {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .party-role {
+            font-size: 11px;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 600;
+        }
+
+        .party-name {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .party-desc {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Preamble */
+        .preamble-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 44px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border);
+            font-style: italic;
+        }
+
+        /* Articles */
+        .article {
+            margin-bottom: 36px;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .page-break-target {
+            page-break-before: always;
+            break-before: page;
+        }
+
+        .article-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .article-num {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--text-tertiary);
+        }
+
+        .article-body {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.75;
+        }
+
+        .article-body p {
+            margin-bottom: 12px;
+        }
+
+        .article-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .article-body ul {
+            list-style: none;
+            margin: 12px 0 14px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .article-body ul li {
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .article-body ul li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--text-tertiary);
+        }
+
+        /* Clean Remuneration Highlight Box */
+        .remun-box {
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 20px;
+            margin: 16px 0;
+            background: var(--bg);
+        }
+
+        .remun-figure {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+            letter-spacing: -0.01em;
+        }
+
+        .remun-details {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        .remun-details strong {
+            color: var(--text-primary);
+        }
+
+        /* Signatures Block */
+        .signatures-section {
+            margin-top: 56px;
+            padding-top: 36px;
+            border-top: 1px solid var(--border);
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        .signature-location {
+            font-size: 13px;
+            color: var(--text-tertiary);
+            margin-bottom: 32px;
+        }
+
+        .signatures-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+        }
+
+        @media (max-width: 640px) {
+            .signatures-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+        }
+
+        .signature-card {
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 24px;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            background: var(--surface);
+        }
+
+        .sig-header {
+            margin-bottom: 10px;
+        }
+
+        .sig-role {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+
+        .sig-name {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 2px;
+        }
+
+        .sig-mention {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-family: var(--font-hand);
+            letter-spacing: 0.02em;
+        }
+
+        /* Clean Simple Signature Area */
+        .sig-canvas-area {
+            height: 95px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 4px 6px;
+            margin: 8px 0;
+        }
+
+        .simple-sig-name {
+            font-family: var(--font-hand);
+            font-size: 34px;
+            font-weight: 700;
+            color: var(--text-primary);
+            transform: rotate(-2deg);
+            display: inline-block;
+            line-height: 1.1;
+            letter-spacing: 0.01em;
+            user-select: none;
+        }
+
+        .simple-sig-stroke {
+            width: 140px;
+            height: 14px;
+            margin-top: 3px;
+            color: var(--text-primary);
+        }
+
+        .simple-sig-stroke path {
+            stroke: currentColor;
+            stroke-width: 1.6;
+            stroke-linecap: round;
+        }
+
+        .sig-footer-meta {
+            padding-top: 10px;
+            border-top: 1px dashed var(--border);
+            font-size: 11px;
+            color: var(--text-tertiary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: var(--font-mono);
+        }
+
+        .sig-status-badge {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .doc-footer {
+            margin-top: 48px;
+            text-align: center;
+            font-size: 11px;
+            color: var(--text-tertiary);
+            font-family: var(--font-mono);
+            line-height: 1.6;
+        }
+
+        /* Floating Minimal Actions Bar */
+        .action-dock {
+            position: fixed;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            padding: 6px 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 99;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            max-width: calc(100vw - 32px);
+        }
+
+        body.light-theme .action-dock {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .btn-dock-main {
+            background: var(--text-primary);
+            color: var(--bg);
+            border: none;
+            padding: 9px 18px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 100px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            white-space: nowrap;
+            transition: opacity 0.15s ease;
+        }
+
+        .btn-dock-main:hover {
+            opacity: 0.88;
+        }
+
+        .btn-dock-sub {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+            padding: 8px 16px;
+            font-size: 13px;
+            font-weight: 500;
+            border-radius: 100px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+            transition: all 0.15s ease;
+        }
+
+        .btn-dock-sub:hover {
+            border-color: var(--text-primary);
+        }
+
+        @media (max-width: 540px) {
+            .action-dock {
+                bottom: 14px;
+                padding: 4px 6px;
+                gap: 4px;
+                width: calc(100vw - 20px);
+            }
+            .btn-dock-main, .btn-dock-sub {
+                padding: 8px 12px;
+                font-size: 12px;
+                flex: 1;
+                justify-content: center;
+            }
+            .hide-xs {
+                display: none;
+            }
+        }
+
+        /* Toast Feedback */
+        .toast-msg {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--text-primary);
+            color: var(--bg);
+            padding: 10px 18px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+            transform: translateY(-80px);
+            opacity: 0;
+            transition: all 0.25s ease;
+            z-index: 1000;
+        }
+
+        .toast-msg.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* PRINT STYLES — PURE BLACK & WHITE A4 (NO BROWSER HEADERS/FOOTERS) */
+        @page {
+            size: A4 portrait;
+            margin: 0;
+        }
+
+        @media print {
+            body {
+                background: #FFFFFF !important;
+                color: #000000 !important;
+                font-size: 10.5pt !important;
+                line-height: 1.55 !important;
+                margin: 0 !important;
+                padding: 16mm 14mm 16mm 14mm !important;
+                box-sizing: border-box !important;
+            }
+
+            .site-header,
+            .action-dock,
+            .toast-msg,
+            .btn-minimal {
+                display: none !important;
+            }
+
+            .document-wrapper {
+                padding: 0 !important;
+                margin: 0 !important;
+                max-width: 100% !important;
+            }
+
+            .contract-sheet {
+                background: #FFFFFF !important;
+                border: none !important;
+                padding: 0 !important;
+                border-radius: 0 !important;
+            }
+
+            .meta-strip,
+            .summary-grid,
+            .summary-cell,
+            .parties-wrapper,
+            .preamble-text,
+            .remun-box,
+            .signatures-section,
+            .signature-card,
+            .sig-footer-meta {
+                border-color: #AAAAAA !important;
+                background: #FFFFFF !important;
+                color: #000000 !important;
+            }
+
+            .doc-title,
+            .party-name,
+            .cell-value,
+            .article-title,
+            .sig-name,
+            .remun-figure,
+            .sig-status-badge {
+                color: #000000 !important;
+            }
+
+            .doc-subtitle,
+            .party-desc,
+            .article-body,
+            .remun-details,
+            .meta-strip,
+            .meta-strip span,
+            .cell-label,
+            .party-role,
+            .section-label,
+            .signature-location,
+            .sig-role,
+            .sig-mention,
+            .sig-footer-meta,
+            .doc-footer,
+            .article-num {
+                color: #222222 !important;
+            }
+
+            .simple-sig-name {
+                color: #000000 !important;
+            }
+
+            .simple-sig-stroke path {
+                stroke: #000000 !important;
+            }
+
+            .article,
+            .signatures-section {
+                page-break-inside: avoid !important;
+                break-inside: avoid !important;
+            }
+
+            .parties-columns {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 32px !important;
+            }
+
+            .signatures-grid {
+                display: grid !important;
+                grid-template-columns: 1fr 1fr !important;
+                gap: 32px !important;
+            }
+
+            .summary-grid {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .summary-cell {
+                border-right: 1px solid #AAAAAA !important;
+                border-bottom: 1px solid #AAAAAA !important;
+            }
+            .summary-cell:nth-child(2n) {
+                border-right: none !important;
+            }
+            .summary-cell:nth-last-child(-n+2) {
+                border-bottom: none !important;
+            }
+
+            .page-break-target {
+                page-break-before: always !important;
+                break-before: page !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Minimal Header -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-title">
+                STRATÉGIE ARENA
+            </a>
+
+            <div class="header-actions">
+                <button class="btn-minimal" id="themeBtn" onclick="toggleTheme();">
+                    <span id="themeLabel">Fond Blanc</span>
+                </button>
+                <a href="index.html" class="btn-minimal hide-xs">
+                    Retour
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Document -->
+    <main class="document-wrapper">
+        <article class="contract-sheet" id="contractContent">
+
+            <!-- Meta Reference -->
+            <div class="meta-strip">
+                <div>RÉF : <span>SA-CTR-2026-06-PD04</span></div>
+                <div>VERSION : <span>NUMÉRIQUE ORIGINALE</span></div>
+                <div>LIEU : <span>COTONOU, BÉNIN</span></div>
+                <div>DATE D'EFFET : <span>15 JUIN 2026</span></div>
+            </div>
+
+            <!-- Title -->
+            <div class="doc-title-block">
+                <div class="doc-category">Contrat de Prestation de Services · Version Numérique Officielle</div>
+                <h1 class="doc-title">CONTRAT DE PRESTATION DE SERVICES</h1>
+                <div class="doc-subtitle">Product Designer — SACCA Dafia</div>
+            </div>
+
+            <!-- Summary Table (Clean Grid) -->
+            <div class="summary-grid">
+                <div class="summary-cell">
+                    <div class="cell-label">Poste / Rôle</div>
+                    <div class="cell-value">Product Designer (UI/UX)</div>
+                </div>
+                <div class="summary-cell">
+                    <div class="cell-label">Rémunération Mensuelle</div>
+                    <div class="cell-value highlight">200 000 FCFA / mois</div>
+                </div>
+                <div class="summary-cell">
+                    <div class="cell-label">Modalité de Paiement</div>
+                    <div class="cell-value">Cash (Espèces) ou Mobile Money (MoMo)</div>
+                </div>
+                <div class="summary-cell">
+                    <div class="cell-label">Prise d'effet & Durée</div>
+                    <div class="cell-value">15 Juin 2026 · 6 mois (Renouvelable)</div>
+                </div>
+            </div>
+
+            <!-- Parties -->
+            <div class="parties-wrapper">
+                <div class="section-label">Entre les soussignés</div>
+                <div class="parties-columns">
+                    <div class="party-block">
+                        <div class="party-role">Le Donneur d'Ordre</div>
+                        <div class="party-name">STRATÉGIE ARENA</div>
+                        <div class="party-desc">
+                            Cabinet de conseil en stratégie, ingénierie produit et technologies.<br>
+                            Siège social : Cotonou, République du Bénin.<br>
+                            <strong>RCCM :</strong> RB/ABC/25 B 1024 · <strong>IFU :</strong> 3202560033143<br>
+                            Représenté par sa Direction Générale.
+                        </div>
+                    </div>
+
+                    <div class="party-block">
+                        <div class="party-role">Le Prestataire</div>
+                        <div class="party-name">SACCA Dafia</div>
+                        <div class="party-desc">
+                            Product Designer Indépendant.<br>
+                            Domicilié à Cotonou, République du Bénin.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preamble -->
+            <div class="preamble-text">
+                Stratégie Arena conçoit et déploie des solutions stratégiques et des produits numériques à fort impact. Dans le cadre de l'expansion de ses projets, Stratégie Arena mandate SACCA Dafia en qualité de Product Designer afin d'assurer la recherche utilisateur, l'architecture d'information, le design d'interfaces et l'ingénierie de ses Design Systems.
+            </div>
+
+            <!-- Article 1 -->
+            <section class="article">
+                <h2 class="article-title">
+                    <span class="article-num">01.</span>
+                    Objet du contrat
+                </h2>
+                <div class="article-body">
+                    <p>
+                        Le présent contrat a pour objet la réalisation par le Prestataire, <strong>SACCA Dafia</strong>, de prestations professionnelles et indépendantes de <strong>Product Designer (UI/UX)</strong> pour le compte de Stratégie Arena et de ses projets partenaires.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Article 2 -->
+            <section class="article">
+                <h2 class="article-title">
+                    <span class="article-num">02.</span>
+                    Missions & Livrables
+                </h2>
+                <div class="article-body">
+                    <p>Dans le cadre de cette mission, le Prestataire assure notamment :</p>
+                    <ul>
+                        <li><strong>Recherche utilisateur & cadrage produit :</strong> Interviews, benchmark concurrentiel, définition des personas et parcours utilisateurs (User Journeys).</li>
+                        <li><strong>Architecture de l'information :</strong> Arborescences, zonages et wireframes fonctionnels.</li>
+                        <li><strong>Design d'interfaces (UI) :</strong> Maquettes haute fidélité (Figma), structuration et maintenance des Design Systems (composants réutilisables, styles, auto-layouts).</li>
+                        <li><strong>Prototypage :</strong> Réalisation de prototypes interactifs pour tests d'utilisabilité et démonstrations.</li>
+                        <li><strong>Spécifications & Hand-off technique :</strong> Documentation détaillée pour l'intégration et accompagnement des équipes de développement frontend.</li>
+                        <li><strong>Contrôle qualité (Design QA) :</strong> Vérification de la conformité visuelle et ergonomique des écrans intégrés.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Article 3 -->
+            <section class="article">
+                <h2 class="article-title">
+                    <span class="article-num">03.</span>
+                    Rémunération & Modalités de règlement
+                </h2>
+                <div class="article-body">
+                    <p>
+                        En contrepartie de l'accomplissement des prestations convenues, Stratégie Arena verse au Prestataire une rémunération mensuelle forfaitaire :
+                    </p>
+
+                    <div class="remun-box">
+                        <div class="remun-figure">200 000 FCFA / mois</div>
+                        <div class="remun-details">
+                            Montant forfaitaire net : <strong>Deux cent mille francs CFA</strong> par mois calendaire.<br><br>
+                            <strong>Modes de règlement acceptés :</strong><br>
+                            • <strong>En espèces (Cash) :</strong> Remise directe en main propre.<br>
+                            • <strong>Par Mobile Money (MoMo) :</strong> Transfert direct sur le compte mobile du Prestataire (MTN MoMo, Moov Money ou Celtiis Cash).<br><br>
+                            <strong>Périodicité :</strong> Versement mensuel à terme échu, à la fin de chaque mois calendaire (au plus tard le 5 du mois suivant).
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Article 4 -->
+            <section class="article">
+                <h2 class="article-title">
+                    <span class="article-num">04.</span>
+                    Durée & Prise d'effet
+                </h2>
+                <div class="article-body">
+                    <p>
+                        Le présent contrat est conclu pour une durée initiale ferme de <strong>six (06) mois</strong>, prenant effet à compter du <strong>15 juin 2026</strong>.
+                    </p>
+                    <p>
+                        À l'issue de cette période, la collaboration se poursuit et se renouvelle par tacite reconduction pour des périodes successives de même durée, sauf dénonciation écrite notifiée par l'une des Parties avec un préavis de trente (30) jours.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Article 5 -->
+            <section class="article page-break-target">
+                <h2 class="article-title">
+                    <span class="article-num">05.</span>
+                    Statut d'indépendance
+                </h2>
+                <div class="article-body">
+                    <p>
+                        Le Prestataire intervient en qualité de consultant indépendant. Le contrat exclut tout lien de subordination juridique, toute qualification de contrat de travail et tout statut de salarié.
+                    </p>
+                    <p>
+                        Le Prestataire gère librement l'organisation de son temps de travail, dans le respect des plannings de livraison et des réunions de synchronisation hebdomadaires définies avec l'équipe produit.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Article 6 -->
+            <section class="article">
+                <h2 class="article-title">
+                    <span class="article-num">06.</span>
+                    Propriété intellectuelle
+                </h2>
+                <div class="article-body">
+                    <p>
+                        Le Prestataire cède à Stratégie Arena, à titre exclusif et définitif, l'ensemble des droits patrimoniaux d'auteur sur les créations, maquettes, fichiers sources Figma, composants et documentations produits dans le cadre du contrat.
+                    </p>
+                    <p>
+                        Cette cession prend effet au fur et à mesure du versement des honoraires correspondants et couvre tous les modes de reproduction, représentation, adaptation et exploitation.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Article 7 -->
+            <section class="article">
+                <h2 class="article-title">
+                    <span class="article-num">07.</span>
+                    Confidentialité
+                </h2>
+                <div class="article-body">
+                    <p>
+                        Le Prestataire est tenu au secret professionnel absolu concernant l'ensemble des informations, données stratégiques, projets clients et méthodes internes de Stratégie Arena portés à sa connaissance.
+                    </p>
+                    <p>
+                        Cette obligation demeure en vigueur pendant toute la durée du contrat et pour une période de trois (3) ans suivant sa cessation.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Article 8 -->
+            <section class="article">
+                <h2 class="article-title">
+                    <span class="article-num">08.</span>
+                    Équipements & Outils
+                </h2>
+                <div class="article-body">
+                    <p>
+                        Le Prestataire utilise son propre matériel informatique. Stratégie Arena lui accorde les accès nécessaires à ses environnements de travail collaboratifs (espace Figma, messagerie d'équipe et gestionnaire de tâches).
+                    </p>
+                </div>
+            </section>
+
+            <!-- Article 9 -->
+            <section class="article">
+                <h2 class="article-title">
+                    <span class="article-num">09.</span>
+                    Résiliation
+                </h2>
+                <div class="article-body">
+                    <p>
+                        Chaque Partie peut résilier le contrat par écrit sous réserve d'un préavis de trente (30) jours. En cas de faute grave ou manquement répété non régularisé sous sept (7) jours après mise en demeure, la résiliation intervient de plein droit.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Article 10 -->
+            <section class="article">
+                <h2 class="article-title">
+                    <span class="article-num">10.</span>
+                    Droit applicable & Litiges
+                </h2>
+                <div class="article-body">
+                    <p>
+                        Le contrat est régi par le droit de la République du Bénin et les règles du droit commercial OHADA. Tout différend sera soumis en priorité à une conciliation amiable. À défaut d'accord sous quinze (15) jours, compétence exclusive est attribuée aux tribunaux compétents de Cotonou.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Signatures Section with integrated realistic signatures & official stamp -->
+            <section class="signatures-section">
+                <div class="signature-location">
+                    Fait à Cotonou (République du Bénin), le <strong>15 juin 2026</strong>. <strong>Version numérique certifiée conforme</strong>, revêtue des signatures et mentions d'usage des Parties.
+                </div>
+
+                <div class="signatures-grid">
+                    <!-- Pour Stratégie Arena -->
+                    <div class="signature-card">
+                        <div class="sig-header">
+                            <div class="sig-role">Pour le Donneur d'Ordre</div>
+                            <div class="sig-name">STRATÉGIE ARENA</div>
+                            <div class="sig-mention">« Bon pour accord et engagement ferme »</div>
+                        </div>
+
+                        <!-- Simple Signature without stamp -->
+                        <div class="sig-canvas-area">
+                            <span class="simple-sig-name">Direction S. Arena</span>
+                            <svg class="simple-sig-stroke" viewBox="0 0 140 14" fill="none">
+                                <path d="M 4,6 Q 70,12 136,4"/>
+                            </svg>
+                        </div>
+
+                        <div class="sig-footer-meta">
+                            <span>Signé le 15/06/2026</span>
+                            <span class="sig-status-badge">Direction Générale</span>
+                        </div>
+                    </div>
+
+                    <!-- Pour SACCA Dafia -->
+                    <div class="signature-card">
+                        <div class="sig-header">
+                            <div class="sig-role">Pour le Prestataire</div>
+                            <div class="sig-name">SACCA Dafia</div>
+                            <div class="sig-mention">« Lu et approuvé, bon pour accord »</div>
+                        </div>
+
+                        <!-- Simple Signature without stamp -->
+                        <div class="sig-canvas-area">
+                            <span class="simple-sig-name">Sacca Dafia</span>
+                            <svg class="simple-sig-stroke" viewBox="0 0 140 14" fill="none">
+                                <path d="M 6,7 Q 65,13 134,5"/>
+                            </svg>
+                        </div>
+
+                        <div class="sig-footer-meta">
+                            <span>Signé le 15/06/2026</span>
+                            <span class="sig-status-badge">SACCA Dafia</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Document Footer Note -->
+            <div class="doc-footer">
+                STRATÉGIE ARENA — CONSEIL & INGÉNIERIE PRODUIT · COTONOU, BÉNIN<br>
+                RCCM : RB/ABC/25 B 1024 · IFU : 3202560033143 · RÉFÉRENCE CONTRAT : SA-CTR-2026-06-PD04 · VERSION NUMÉRIQUE OFFICIELLE · DATE D'EFFET : 15/06/2026
+            </div>
+
+        </article>
+    </main>
+
+    <!-- Floating Actions Dock -->
+    <div class="action-dock">
+        <button class="btn-dock-main" onclick="downloadPDF();" id="pdfBtn">
+            <i data-lucide="download" style="width: 14px; height: 14px;"></i>
+            <span>Télécharger PDF</span>
+        </button>
+
+        <button class="btn-dock-sub" onclick="printDoc();">
+            <i data-lucide="printer" style="width: 14px; height: 14px;"></i>
+            <span>Imprimer</span>
+        </button>
+
+        <button class="btn-dock-sub hide-xs" onclick="copyLink();">
+            <i data-lucide="link" style="width: 14px; height: 14px;"></i>
+            <span>Copier lien</span>
+        </button>
+    </div>
+
+    <!-- Toast Notice -->
+    <div class="toast-msg" id="toast">Lien copié</div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+        });
+
+        // Toggle Light / Dark Theme
+        function toggleTheme() {
+            const isLight = document.body.classList.toggle('light-theme');
+            const label = document.getElementById('themeLabel');
+            if (label) {
+                label.textContent = isLight ? 'Fond Noir' : 'Fond Blanc';
+            }
+            showToast(isLight ? 'Thème clair activé' : 'Thème sombre activé');
+        }
+
+        // Print Document
+        function printDoc() {
+            window.print();
+        }
+
+        // Download PDF
+        async function downloadPDF() {
+            const btn = document.getElementById('pdfBtn');
+            const initialHtml = btn.innerHTML;
+
+            btn.disabled = true;
+            btn.innerHTML = `<i data-lucide="loader-2" style="width: 14px; height: 14px;" class="spin"></i> <span>Génération...</span>`;
+            if (window.lucide) window.lucide.createIcons();
+
+            const source = document.getElementById('contractContent');
+
+            // Wait for fonts to be ready
+            if (document.fonts && document.fonts.ready) {
+                await document.fonts.ready;
+            }
+
+            // Save scroll position
+            const currentScroll = window.scrollY;
+            window.scrollTo(0, 0);
+
+            // Build an exact A4-dimensioned staging container (794px = 210mm at 96dpi)
+            const isLight = document.body.classList.contains('light-theme');
+            const staging = document.createElement('div');
+            staging.className = isLight ? 'light-theme' : '';
+            staging.style.position = 'fixed';
+            staging.style.top = '0';
+            staging.style.left = '0';
+            staging.style.width = '794px';
+            staging.style.background = isLight ? '#F8F8F8' : '#0A0A0A';
+            staging.style.color = isLight ? '#0A0A0A' : '#FFFFFF';
+            staging.style.zIndex = '999999';
+            staging.style.margin = '0';
+            staging.style.padding = '24px 32px';
+            staging.style.boxSizing = 'border-box';
+            staging.style.setProperty('--bg', isLight ? '#F8F8F8' : '#0A0A0A');
+            staging.style.setProperty('--surface', isLight ? '#FFFFFF' : '#121212');
+            staging.style.setProperty('--text-primary', isLight ? '#0A0A0A' : '#FFFFFF');
+            staging.style.setProperty('--text-secondary', isLight ? '#555555' : '#9E9E9E');
+            staging.style.setProperty('--text-tertiary', isLight ? '#888888' : '#666666');
+            staging.style.setProperty('--border', isLight ? '#E0E0E0' : '#262626');
+            staging.style.setProperty('--ink-color', isLight ? '#111111' : '#E6E6E6');
+
+            // Clone contractContent into staging
+            const clone = source.cloneNode(true);
+            clone.style.width = '100%';
+            clone.style.margin = '0';
+            clone.style.padding = '36px 40px';
+            clone.style.boxSizing = 'border-box';
+            clone.style.background = isLight ? '#FFFFFF' : '#121212';
+            clone.style.border = isLight ? '1px solid #E0E0E0' : '1px solid #262626';
+            clone.style.borderRadius = '4px';
+            clone.style.boxShadow = 'none';
+
+            staging.appendChild(clone);
+            document.body.appendChild(staging);
+
+            try {
+                if (typeof html2pdf !== 'undefined') {
+                    const opt = {
+                        margin:       0,
+                        filename:     'Contrat-Prestation-SACCA-Dafia-Strategy-Arena.pdf',
+                        image:        { type: 'jpeg', quality: 0.98 },
+                        html2canvas:  { 
+                            scale: 2, 
+                            useCORS: true, 
+                            logging: false,
+                            width: 794,
+                            windowWidth: 794,
+                            scrollX: 0,
+                            scrollY: 0
+                        },
+                        jsPDF:        { unit: 'px', format: [794, 1123], orientation: 'portrait', hotfixes: ['px_scaling'] },
+                        pagebreak:    { mode: ['css', 'legacy'], before: '.page-break-target' }
+                    };
+
+                    await html2pdf().set(opt).from(staging).save();
+                    showToast('PDF téléchargé avec succès (2 pages)');
+                } else {
+                    window.print();
+                }
+            } catch (e) {
+                console.error(e);
+                window.print();
+            } finally {
+                if (staging.parentNode) {
+                    staging.parentNode.removeChild(staging);
+                }
+                window.scrollTo(0, currentScroll);
+                btn.disabled = false;
+                btn.innerHTML = initialHtml;
+                if (window.lucide) window.lucide.createIcons();
+            }
+        }
+
+        // Copy link
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                showToast('Lien du contrat copié');
+            });
+        }
+
+        // Toast
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            if (!toast) return;
+            toast.textContent = msg;
+            toast.classList.add('visible');
+            setTimeout(() => toast.classList.remove('visible'), 2800);
+        }
+    </script>
+</body>
+</html>

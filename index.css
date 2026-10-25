@@ -162,6 +162,7 @@ a {
 
 .section-light {
     background-color: var(--bg-light);
+    background-image: none !important;
     color: var(--text-dark);
 }
 
@@ -169,11 +170,10 @@ a {
    CAROUSEL EDITORIAL DESIGN SYSTEM UTILITIES
    ========================================================================== */
 
-/* Dot Grid Background (Subtle construction/method grid: 3%-5% opacity) */
+/* Clean Paper Background */
 .dot-grid-bg {
     background-color: var(--bg-paper);
-    background-image: radial-gradient(rgba(15, 16, 15, 0.08) 1.2px, transparent 1.2px);
-    background-size: 24px 24px;
+    background-image: none !important;
 }
 
 /* Expressive Serif Magazine Typography */
@@ -3191,11 +3191,13 @@ mark.highlight-yellow {
 }
 
 .footer-brand-name {
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: -0.01em;
+    font-family: 'Instrument Serif', Georgia, serif !important;
+    font-size: 1.5rem !important;
+    font-weight: 400 !important;
+    color: #ffffff !important;
+    letter-spacing: 0.03em !important;
+    text-transform: uppercase !important;
+    line-height: 1.2 !important;
 }
 
 .footer-brand-tagline {
@@ -3430,14 +3432,17 @@ mark.highlight-yellow {
     transform: scale(1.1);
 }
 
-.footer-col-title {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin-bottom: 14px;
+.footer-col-title,
+.footer-nav-col h3,
+.footer-nav-col .footer-col-title {
+    font-family: 'Instrument Serif', Georgia, serif !important;
+    font-size: 1.5rem !important;
+    font-weight: 400 !important;
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.03em !important;
+    margin-bottom: 16px !important;
+    line-height: 1.2 !important;
 }
 
 .footer-links {
@@ -4109,8 +4114,6 @@ html:has(body.case-page) {
 
 .case-page {
     background-color: var(--bg-paper);
-    background-image: radial-gradient(rgba(15, 16, 15, 0.08) 1.2px, transparent 1.2px);
-    background-size: 24px 24px;
     color: var(--text-dark);
     min-height: 100vh;
     display: flex;
@@ -4128,6 +4131,14 @@ html:has(body.case-page) {
     padding: 140px 0 50px 0;
 }
 
+.case-header-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+}
+
 .case-back-link {
     display: inline-flex;
     align-items: center;
@@ -4137,8 +4148,14 @@ html:has(body.case-page) {
     font-family: var(--font-mono);
     font-size: 0.95rem;
     font-weight: 500;
-    margin-bottom: 28px;
+    margin-right: 20px;
+    margin-bottom: 24px;
     transition: var(--transition-smooth);
+}
+
+.case-header-nav .case-back-link {
+    margin-right: 0;
+    margin-bottom: 0;
 }
 
 .case-back-link:hover {
@@ -4157,12 +4174,16 @@ html:has(body.case-page) {
     text-transform: uppercase;
     font-size: 0.82rem;
     letter-spacing: 0.04em;
-    margin-bottom: 16px;
+    margin-bottom: 28px;
     display: inline-block;
     border: 1.5px solid var(--blue-accent);
-    padding: 4px 14px;
+    padding: 6px 16px;
     border-radius: 50px;
     background: #FFFFFF;
+}
+
+.case-header-nav .case-meta-tag {
+    margin-bottom: 0;
 }
 
 .case-main-title {
