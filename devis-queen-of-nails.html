@@ -531,24 +531,101 @@
             background: var(--btn-ghost-hover);
         }
 
+        .act-label-short {
+            display: none;
+        }
+
         @media (max-width: 600px) {
+            .devis-wrapper {
+                padding: 85px 16px 110px 16px;
+            }
+
+            /* --- Navbar Mobile --- */
+            .min-navbar {
+                padding: 12px 0;
+            }
+
+            .min-navbar-inner {
+                padding: 0 16px;
+                gap: 12px;
+            }
+
+            #navLogo {
+                height: 20px !important;
+            }
+
+            .min-navbar-actions {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+
+            .btn-theme-pill {
+                width: 36px !important;
+                height: 36px !important;
+                padding: 0 !important;
+                border-radius: 50% !important;
+                justify-content: center !important;
+                flex-shrink: 0 !important;
+            }
+
+            .btn-theme-pill span,
+            #navThemeText {
+                display: none !important;
+            }
+
+            .min-navbar-inner .btn-pill {
+                padding: 6px 14px !important;
+                font-size: 11px !important;
+                letter-spacing: 0.04em;
+            }
+
+            /* --- Floating Action Bar Mobile --- */
             .action-bar {
                 bottom: 16px;
+                left: 50%;
+                transform: translateX(-50%);
                 padding: 6px 8px;
-                gap: 6px;
-                width: calc(100vw - 24px);
-                max-width: 440px;
+                gap: 8px;
+                width: max-content;
+                max-width: calc(100vw - 24px);
+                border-radius: 100px;
+                box-sizing: border-box;
             }
 
             .btn-act {
-                padding: 9px 12px;
-                font-size: 11px;
-                flex: 1;
+                padding: 8px 14px !important;
+                font-size: 12px !important;
+                flex: 0 1 auto !important;
+                gap: 6px !important;
+                border-radius: 100px !important;
+            }
+
+            .btn-act-theme {
+                width: 38px !important;
+                height: 38px !important;
+                padding: 0 !important;
+                border-radius: 50% !important;
+                flex: 0 0 38px !important;
+                justify-content: center !important;
+            }
+
+            #barThemeText {
+                display: none !important;
+            }
+
+            .act-label-full {
+                display: none !important;
+            }
+
+            .act-label-short {
+                display: inline !important;
             }
 
             .btn-act i {
-                width: 14px;
-                height: 14px;
+                width: 15px !important;
+                height: 15px !important;
+                flex-shrink: 0;
             }
         }
 
@@ -669,8 +746,8 @@
             <a href="index.html" style="text-decoration: none;">
                 <img id="navLogo" src="/strategy-arena-logo-dark.svg" alt="Strategy Arena Logo" style="height: 24px; display: block;">
             </a>
-            <div style="display: flex; align-items: center; gap: 12px;">
-                <button class="btn-theme-pill" onclick="toggleTheme()" id="navThemeBtn" title="Basculer le thème" type="button">
+            <div class="min-navbar-actions" style="display: flex; align-items: center; gap: 12px;">
+                <button class="btn-theme-pill" onclick="toggleTheme()" id="navThemeBtn" title="Basculer le thème" type="button" aria-label="Basculer le thème">
                     <i data-lucide="moon" id="navThemeIcon"></i>
                     <span id="navThemeText">Mode Sombre</span>
                 </button>
@@ -880,17 +957,19 @@
 
     <!-- Floating Action Bar -->
     <div class="action-bar">
-        <button class="btn-act btn-act-primary" onclick="window.print();" type="button">
+        <button class="btn-act btn-act-primary" onclick="window.print();" type="button" title="Imprimer ou enregistrer en PDF">
             <i data-lucide="printer"></i>
-            <span>Imprimer / PDF</span>
+            <span class="act-label-full">Imprimer / PDF</span>
+            <span class="act-label-short">Imprimer</span>
         </button>
-        <button class="btn-act btn-act-ghost" onclick="toggleTheme();" id="barThemeBtn" type="button">
+        <button class="btn-act btn-act-ghost btn-act-theme" onclick="toggleTheme();" id="barThemeBtn" type="button" title="Basculer le thème" aria-label="Basculer le thème">
             <i data-lucide="moon" id="barThemeIcon"></i>
-            <span id="barThemeText">Mode Sombre</span>
+            <span id="barThemeText" class="act-label-full">Mode Sombre</span>
         </button>
-        <button class="btn-act btn-act-ghost" onclick="copyDevisLink();" type="button">
+        <button class="btn-act btn-act-ghost" onclick="copyDevisLink();" type="button" title="Copier le lien du devis">
             <i data-lucide="share-2"></i>
-            <span>Copier le lien</span>
+            <span class="act-label-full">Copier le lien</span>
+            <span class="act-label-short">Copier</span>
         </button>
     </div>
 
